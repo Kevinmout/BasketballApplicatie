@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BasketbalDAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,17 @@ namespace BasketballLogic
         public UserCollection()
         {
             users = new List<User>();
+        }
+
+        public void UsersDal()
+        {
+            BasketbalDAL.UsersDal DAL = new BasketbalDAL.UsersDal();
+            foreach (UserDal userDal in DAL.GetUsers())
+            {
+                users.Add(new User(
+                    userDal.Username,
+                    userDal.Password));
+            }
         }
     }
 }

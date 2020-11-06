@@ -9,11 +9,15 @@ namespace BasketballLogic
 {
     public class User
     {
+        public string Username { get; }
+        public string Password { get; }
         private List<Team> teams { get; set; }
 
-        public User()
+        public User(string username, string password)
         {
             teams = new List<Team>();
+            Username = username;
+            Password = password;
         }
 
         public List<Team> GetTeams()

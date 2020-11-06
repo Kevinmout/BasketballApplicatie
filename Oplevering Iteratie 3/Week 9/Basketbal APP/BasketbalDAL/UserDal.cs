@@ -8,6 +8,12 @@ namespace BasketbalDAL
 {
     public class UserDal
     {
-        public string Username { get; set; }
+        public string Username { get;}
+        public string Password { get;}
+        public UserDal(string username, string password)
+        {
+            Username = username;
+            Password = password;
+        }
     }
 }
