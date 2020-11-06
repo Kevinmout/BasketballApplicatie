@@ -1,0 +1,91 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ContainerOpdracht Logic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/ContainerOpdracht Logic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ContainerOpdracht Logic.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ContainerOpdracht Logic/1.0.0": {
+      "type": "project",
+      "path": "../ContainerOpdracht Logic/ContainerOpdracht Logic.csproj",
+      "msbuildProject": "../ContainerOpdracht Logic/ContainerOpdracht Logic.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "ContainerOpdracht Logic >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Kevin\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 8\\ContainerOpdracht\\ContainerOpdracht.csproj",
+      "projectName": "ContainerOpdracht",
+      "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 8\\ContainerOpdracht\\ContainerOpdracht.csproj",
+      "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
+      "outputPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 8\\ContainerOpdracht\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 8\\ContainerOpdracht Logic\\ContainerOpdracht Logic.csproj": {
+              "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 8\\ContainerOpdracht Logic\\ContainerOpdracht Logic.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

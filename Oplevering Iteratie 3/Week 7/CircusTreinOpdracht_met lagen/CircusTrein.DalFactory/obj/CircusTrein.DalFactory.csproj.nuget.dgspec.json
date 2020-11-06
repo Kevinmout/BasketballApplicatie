@@ -1,0 +1,175 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.DalFactory\\CircusTrein.DalFactory.csproj": {}
+  },
+  "projects": {
+    "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.DalFactory\\CircusTrein.DalFactory.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.DalFactory\\CircusTrein.DalFactory.csproj",
+        "projectName": "CircusTrein.DalFactory",
+        "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.DalFactory\\CircusTrein.DalFactory.csproj",
+        "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
+        "outputPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.DalFactory\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj": {
+                "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj"
+              },
+              "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\CircusTrein.Persistence.csproj": {
+                "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\CircusTrein.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj",
+        "projectName": "CircusTrein.Persistence.Interface",
+        "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj",
+        "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
+        "outputPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\CircusTrein.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\CircusTrein.Persistence.csproj",
+        "projectName": "CircusTrein.Persistence",
+        "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\CircusTrein.Persistence.csproj",
+        "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
+        "outputPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj": {
+                "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

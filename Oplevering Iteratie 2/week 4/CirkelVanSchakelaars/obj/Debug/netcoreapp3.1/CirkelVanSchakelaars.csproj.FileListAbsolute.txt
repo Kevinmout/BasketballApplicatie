@@ -1,0 +1,13 @@
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\CirkelVanSchakelaars\bin\Debug\netcoreapp3.1\CirkelVanSchakelaars.exe
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\CirkelVanSchakelaars\bin\Debug\netcoreapp3.1\CirkelVanSchakelaars.deps.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\CirkelVanSchakelaars\bin\Debug\netcoreapp3.1\CirkelVanSchakelaars.runtimeconfig.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\CirkelVanSchakelaars\bin\Debug\netcoreapp3.1\CirkelVanSchakelaars.runtimeconfig.dev.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\CirkelVanSchakelaars\bin\Debug\netcoreapp3.1\CirkelVanSchakelaars.dll
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\CirkelVanSchakelaars\bin\Debug\netcoreapp3.1\CirkelVanSchakelaars.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\CirkelVanSchakelaars\obj\Debug\netcoreapp3.1\CirkelVanSchakelaars.csprojAssemblyReference.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\CirkelVanSchakelaars\obj\Debug\netcoreapp3.1\CirkelVanSchakelaars.AssemblyInfoInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\CirkelVanSchakelaars\obj\Debug\netcoreapp3.1\CirkelVanSchakelaars.AssemblyInfo.cs
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\CirkelVanSchakelaars\obj\Debug\netcoreapp3.1\CirkelVanSchakelaars.csproj.CoreCompileInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\CirkelVanSchakelaars\obj\Debug\netcoreapp3.1\CirkelVanSchakelaars.dll
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\CirkelVanSchakelaars\obj\Debug\netcoreapp3.1\CirkelVanSchakelaars.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\CirkelVanSchakelaars\obj\Debug\netcoreapp3.1\CirkelVanSchakelaars.genruntimeconfig.cache

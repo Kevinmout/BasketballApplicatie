@@ -1,0 +1,6 @@
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein\obj\Debug\netcoreapp3.1\CircusTrein.UI.csprojAssemblyReference.cache
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein\obj\Debug\netcoreapp3.1\CircusTrein.Form1.resources
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein\obj\Debug\netcoreapp3.1\CircusTrein.UI.csproj.GenerateResource.cache
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein\obj\Debug\netcoreapp3.1\CircusTrein.UI.AssemblyInfoInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein\obj\Debug\netcoreapp3.1\CircusTrein.UI.AssemblyInfo.cs
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein\obj\Debug\netcoreapp3.1\CircusTrein.UI.csproj.CoreCompileInputs.cache

@@ -1,0 +1,12 @@
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.exe
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.deps.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.runtimeconfig.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.runtimeconfig.dev.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.dll
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.AssemblyInfoInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.AssemblyInfo.cs
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.csproj.CoreCompileInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.dll
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.genruntimeconfig.cache

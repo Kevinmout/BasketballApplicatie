@@ -1,0 +1,13 @@
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\BesteTijdVoorWetenschappers\bin\Debug\netcoreapp3.1\BesteTijdVoorWetenschappers.exe
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\BesteTijdVoorWetenschappers\bin\Debug\netcoreapp3.1\BesteTijdVoorWetenschappers.deps.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\BesteTijdVoorWetenschappers\bin\Debug\netcoreapp3.1\BesteTijdVoorWetenschappers.runtimeconfig.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\BesteTijdVoorWetenschappers\bin\Debug\netcoreapp3.1\BesteTijdVoorWetenschappers.runtimeconfig.dev.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\BesteTijdVoorWetenschappers\bin\Debug\netcoreapp3.1\BesteTijdVoorWetenschappers.dll
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\BesteTijdVoorWetenschappers\bin\Debug\netcoreapp3.1\BesteTijdVoorWetenschappers.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\BesteTijdVoorWetenschappers\obj\Debug\netcoreapp3.1\BesteTijdVoorWetenschappers.csprojAssemblyReference.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\BesteTijdVoorWetenschappers\obj\Debug\netcoreapp3.1\BesteTijdVoorWetenschappers.AssemblyInfoInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\BesteTijdVoorWetenschappers\obj\Debug\netcoreapp3.1\BesteTijdVoorWetenschappers.AssemblyInfo.cs
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\BesteTijdVoorWetenschappers\obj\Debug\netcoreapp3.1\BesteTijdVoorWetenschappers.csproj.CoreCompileInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\BesteTijdVoorWetenschappers\obj\Debug\netcoreapp3.1\BesteTijdVoorWetenschappers.dll
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\BesteTijdVoorWetenschappers\obj\Debug\netcoreapp3.1\BesteTijdVoorWetenschappers.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\BesteTijdVoorWetenschappers\obj\Debug\netcoreapp3.1\BesteTijdVoorWetenschappers.genruntimeconfig.cache

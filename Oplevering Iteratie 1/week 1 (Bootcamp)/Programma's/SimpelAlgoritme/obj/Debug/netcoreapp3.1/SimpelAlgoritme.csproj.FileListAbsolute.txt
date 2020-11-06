@@ -1,0 +1,13 @@
+D:\090 - School\FHICT\semester 2\Individuele project\week 1 (Bootcamp)\Programma's\SimpelAlgoritme\obj\Debug\netcoreapp3.1\SimpelAlgoritme.csprojAssemblyReference.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 1 (Bootcamp)\Programma's\SimpelAlgoritme\obj\Debug\netcoreapp3.1\SimpelAlgoritme.AssemblyInfoInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 1 (Bootcamp)\Programma's\SimpelAlgoritme\obj\Debug\netcoreapp3.1\SimpelAlgoritme.AssemblyInfo.cs
+D:\090 - School\FHICT\semester 2\Individuele project\week 1 (Bootcamp)\Programma's\SimpelAlgoritme\obj\Debug\netcoreapp3.1\SimpelAlgoritme.csproj.CoreCompileInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 1 (Bootcamp)\Programma's\SimpelAlgoritme\bin\Debug\netcoreapp3.1\SimpelAlgoritme.exe
+D:\090 - School\FHICT\semester 2\Individuele project\week 1 (Bootcamp)\Programma's\SimpelAlgoritme\bin\Debug\netcoreapp3.1\SimpelAlgoritme.deps.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 1 (Bootcamp)\Programma's\SimpelAlgoritme\bin\Debug\netcoreapp3.1\SimpelAlgoritme.runtimeconfig.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 1 (Bootcamp)\Programma's\SimpelAlgoritme\bin\Debug\netcoreapp3.1\SimpelAlgoritme.runtimeconfig.dev.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 1 (Bootcamp)\Programma's\SimpelAlgoritme\bin\Debug\netcoreapp3.1\SimpelAlgoritme.dll
+D:\090 - School\FHICT\semester 2\Individuele project\week 1 (Bootcamp)\Programma's\SimpelAlgoritme\bin\Debug\netcoreapp3.1\SimpelAlgoritme.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\week 1 (Bootcamp)\Programma's\SimpelAlgoritme\obj\Debug\netcoreapp3.1\SimpelAlgoritme.dll
+D:\090 - School\FHICT\semester 2\Individuele project\week 1 (Bootcamp)\Programma's\SimpelAlgoritme\obj\Debug\netcoreapp3.1\SimpelAlgoritme.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\week 1 (Bootcamp)\Programma's\SimpelAlgoritme\obj\Debug\netcoreapp3.1\SimpelAlgoritme.genruntimeconfig.cache

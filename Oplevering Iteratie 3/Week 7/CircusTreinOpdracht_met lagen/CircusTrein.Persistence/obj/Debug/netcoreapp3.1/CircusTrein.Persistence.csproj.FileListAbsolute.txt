@@ -1,0 +1,12 @@
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Persistence\bin\Debug\netcoreapp3.1\CircusTrein.Persistence.deps.json
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Persistence\bin\Debug\netcoreapp3.1\CircusTrein.Persistence.dll
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Persistence\bin\Debug\netcoreapp3.1\CircusTrein.Persistence.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Persistence\bin\Debug\netcoreapp3.1\CircusTrein.Persistence.Interface.dll
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Persistence\bin\Debug\netcoreapp3.1\CircusTrein.Persistence.Interface.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Persistence\obj\Debug\netcoreapp3.1\CircusTrein.Persistence.csprojAssemblyReference.cache
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Persistence\obj\Debug\netcoreapp3.1\CircusTrein.Persistence.AssemblyInfoInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Persistence\obj\Debug\netcoreapp3.1\CircusTrein.Persistence.AssemblyInfo.cs
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Persistence\obj\Debug\netcoreapp3.1\CircusTrein.Persistence.csproj.CoreCompileInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Persistence\obj\Debug\netcoreapp3.1\CircusTrein.Persistence.csproj.CopyComplete
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Persistence\obj\Debug\netcoreapp3.1\CircusTrein.Persistence.dll
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Persistence\obj\Debug\netcoreapp3.1\CircusTrein.Persistence.pdb

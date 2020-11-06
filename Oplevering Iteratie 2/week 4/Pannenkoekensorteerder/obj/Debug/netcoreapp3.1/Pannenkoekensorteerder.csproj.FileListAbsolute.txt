@@ -1,0 +1,26 @@
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\Pannenkoekensorteerder\bin\Debug\netcoreapp3.1\Pannenkoekensorteerder.exe
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\Pannenkoekensorteerder\bin\Debug\netcoreapp3.1\Pannenkoekensorteerder.deps.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\Pannenkoekensorteerder\bin\Debug\netcoreapp3.1\Pannenkoekensorteerder.runtimeconfig.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\Pannenkoekensorteerder\bin\Debug\netcoreapp3.1\Pannenkoekensorteerder.runtimeconfig.dev.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\Pannenkoekensorteerder\bin\Debug\netcoreapp3.1\Pannenkoekensorteerder.dll
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\Pannenkoekensorteerder\bin\Debug\netcoreapp3.1\Pannenkoekensorteerder.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\Pannenkoekensorteerder\obj\Debug\netcoreapp3.1\Pannenkoekensorteerder.csprojAssemblyReference.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\Pannenkoekensorteerder\obj\Debug\netcoreapp3.1\Pannenkoekensorteerder.AssemblyInfoInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\Pannenkoekensorteerder\obj\Debug\netcoreapp3.1\Pannenkoekensorteerder.AssemblyInfo.cs
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\Pannenkoekensorteerder\obj\Debug\netcoreapp3.1\Pannenkoekensorteerder.csproj.CoreCompileInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\Pannenkoekensorteerder\obj\Debug\netcoreapp3.1\Pannenkoekensorteerder.dll
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\Pannenkoekensorteerder\obj\Debug\netcoreapp3.1\Pannenkoekensorteerder.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\week 4\Pannenkoekensorteerder\obj\Debug\netcoreapp3.1\Pannenkoekensorteerder.genruntimeconfig.cache
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 2\week 4\Pannenkoekensorteerder\bin\Debug\netcoreapp3.1\Pannenkoekensorteerder.exe
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 2\week 4\Pannenkoekensorteerder\bin\Debug\netcoreapp3.1\Pannenkoekensorteerder.deps.json
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 2\week 4\Pannenkoekensorteerder\bin\Debug\netcoreapp3.1\Pannenkoekensorteerder.runtimeconfig.json
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 2\week 4\Pannenkoekensorteerder\bin\Debug\netcoreapp3.1\Pannenkoekensorteerder.runtimeconfig.dev.json
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 2\week 4\Pannenkoekensorteerder\bin\Debug\netcoreapp3.1\Pannenkoekensorteerder.dll
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 2\week 4\Pannenkoekensorteerder\bin\Debug\netcoreapp3.1\Pannenkoekensorteerder.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 2\week 4\Pannenkoekensorteerder\obj\Debug\netcoreapp3.1\Pannenkoekensorteerder.csprojAssemblyReference.cache
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 2\week 4\Pannenkoekensorteerder\obj\Debug\netcoreapp3.1\Pannenkoekensorteerder.AssemblyInfoInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 2\week 4\Pannenkoekensorteerder\obj\Debug\netcoreapp3.1\Pannenkoekensorteerder.AssemblyInfo.cs
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 2\week 4\Pannenkoekensorteerder\obj\Debug\netcoreapp3.1\Pannenkoekensorteerder.csproj.CoreCompileInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 2\week 4\Pannenkoekensorteerder\obj\Debug\netcoreapp3.1\Pannenkoekensorteerder.dll
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 2\week 4\Pannenkoekensorteerder\obj\Debug\netcoreapp3.1\Pannenkoekensorteerder.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 2\week 4\Pannenkoekensorteerder\obj\Debug\netcoreapp3.1\Pannenkoekensorteerder.genruntimeconfig.cache

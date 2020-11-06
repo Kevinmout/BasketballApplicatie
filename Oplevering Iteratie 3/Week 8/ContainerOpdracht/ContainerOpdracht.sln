@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainerOpdracht", "ContainerOpdracht.csproj", "{E1613B9E-63D9-4708-BF33-87BAAE8DA378}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainerOpdracht Logic", "..\ContainerOpdracht Logic\ContainerOpdracht Logic.csproj", "{34B6CB04-95B5-43BF-879F-98C9AC6645DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1613B9E-63D9-4708-BF33-87BAAE8DA378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1613B9E-63D9-4708-BF33-87BAAE8DA378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1613B9E-63D9-4708-BF33-87BAAE8DA378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1613B9E-63D9-4708-BF33-87BAAE8DA378}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34B6CB04-95B5-43BF-879F-98C9AC6645DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34B6CB04-95B5-43BF-879F-98C9AC6645DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34B6CB04-95B5-43BF-879F-98C9AC6645DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34B6CB04-95B5-43BF-879F-98C9AC6645DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66B484A4-82BF-4F04-AC1E-1FB565CC1128}
+	EndGlobalSection
+EndGlobal

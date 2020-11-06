@@ -1,0 +1,13 @@
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\DeKonijnenboerderij\obj\Debug\netcoreapp3.1\DeKonijnenboerderij.csprojAssemblyReference.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\DeKonijnenboerderij\obj\Debug\netcoreapp3.1\DeKonijnenboerderij.AssemblyInfoInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\DeKonijnenboerderij\obj\Debug\netcoreapp3.1\DeKonijnenboerderij.AssemblyInfo.cs
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\DeKonijnenboerderij\obj\Debug\netcoreapp3.1\DeKonijnenboerderij.csproj.CoreCompileInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\DeKonijnenboerderij\bin\Debug\netcoreapp3.1\DeKonijnenboerderij.exe
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\DeKonijnenboerderij\bin\Debug\netcoreapp3.1\DeKonijnenboerderij.deps.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\DeKonijnenboerderij\bin\Debug\netcoreapp3.1\DeKonijnenboerderij.runtimeconfig.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\DeKonijnenboerderij\bin\Debug\netcoreapp3.1\DeKonijnenboerderij.runtimeconfig.dev.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\DeKonijnenboerderij\bin\Debug\netcoreapp3.1\DeKonijnenboerderij.dll
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\DeKonijnenboerderij\bin\Debug\netcoreapp3.1\DeKonijnenboerderij.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\DeKonijnenboerderij\obj\Debug\netcoreapp3.1\DeKonijnenboerderij.dll
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\DeKonijnenboerderij\obj\Debug\netcoreapp3.1\DeKonijnenboerderij.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\DeKonijnenboerderij\obj\Debug\netcoreapp3.1\DeKonijnenboerderij.genruntimeconfig.cache

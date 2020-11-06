@@ -1,0 +1,16 @@
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Application\bin\Debug\netcoreapp3.1\CircusTrein.Application.deps.json
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Application\bin\Debug\netcoreapp3.1\CircusTrein.Application.dll
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Application\bin\Debug\netcoreapp3.1\CircusTrein.Application.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Application\obj\Debug\netcoreapp3.1\CircusTrein.Application.csprojAssemblyReference.cache
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Application\obj\Debug\netcoreapp3.1\CircusTrein.Application.AssemblyInfoInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Application\obj\Debug\netcoreapp3.1\CircusTrein.Application.AssemblyInfo.cs
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Application\obj\Debug\netcoreapp3.1\CircusTrein.Application.csproj.CoreCompileInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Application\obj\Debug\netcoreapp3.1\CircusTrein.Application.dll
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Application\obj\Debug\netcoreapp3.1\CircusTrein.Application.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Application\bin\Debug\netcoreapp3.1\CircusTrein.DalFactory.dll
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Application\bin\Debug\netcoreapp3.1\CircusTrein.Persistence.dll
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Application\bin\Debug\netcoreapp3.1\CircusTrein.Persistence.Interface.dll
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Application\bin\Debug\netcoreapp3.1\CircusTrein.DalFactory.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Application\bin\Debug\netcoreapp3.1\CircusTrein.Persistence.Interface.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Application\bin\Debug\netcoreapp3.1\CircusTrein.Persistence.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\Oplevering Iteratie 3\Week 7\New folder\CircusTrein.Application\obj\Debug\netcoreapp3.1\CircusTrein.Application.csproj.CopyComplete

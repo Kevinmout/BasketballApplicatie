@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "CircusTrein.DalFactory/1.0.0": {
+        "dependencies": {
+          "CircusTrein.Persistence": "1.0.0",
+          "CircusTrein.Persistence.Interface": "1.0.0"
+        },
+        "runtime": {
+          "CircusTrein.DalFactory.dll": {}
+        }
+      },
+      "CircusTrein.Persistence/1.0.0": {
+        "dependencies": {
+          "CircusTrein.Persistence.Interface": "1.0.0"
+        },
+        "runtime": {
+          "CircusTrein.Persistence.dll": {}
+        }
+      },
+      "CircusTrein.Persistence.Interface/1.0.0": {
+        "runtime": {
+          "CircusTrein.Persistence.Interface.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CircusTrein.DalFactory/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CircusTrein.Persistence/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CircusTrein.Persistence.Interface/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

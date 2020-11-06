@@ -1,0 +1,13 @@
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\PoolseNationaleVlag\bin\Debug\netcoreapp3.1\PoolseNationaleVlag.exe
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\PoolseNationaleVlag\bin\Debug\netcoreapp3.1\PoolseNationaleVlag.deps.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\PoolseNationaleVlag\bin\Debug\netcoreapp3.1\PoolseNationaleVlag.runtimeconfig.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\PoolseNationaleVlag\bin\Debug\netcoreapp3.1\PoolseNationaleVlag.runtimeconfig.dev.json
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\PoolseNationaleVlag\bin\Debug\netcoreapp3.1\PoolseNationaleVlag.dll
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\PoolseNationaleVlag\bin\Debug\netcoreapp3.1\PoolseNationaleVlag.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\PoolseNationaleVlag\obj\Debug\netcoreapp3.1\PoolseNationaleVlag.csprojAssemblyReference.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\PoolseNationaleVlag\obj\Debug\netcoreapp3.1\PoolseNationaleVlag.AssemblyInfoInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\PoolseNationaleVlag\obj\Debug\netcoreapp3.1\PoolseNationaleVlag.AssemblyInfo.cs
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\PoolseNationaleVlag\obj\Debug\netcoreapp3.1\PoolseNationaleVlag.csproj.CoreCompileInputs.cache
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\PoolseNationaleVlag\obj\Debug\netcoreapp3.1\PoolseNationaleVlag.dll
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\PoolseNationaleVlag\obj\Debug\netcoreapp3.1\PoolseNationaleVlag.pdb
+D:\090 - School\FHICT\semester 2\Individuele project\week 3\PoolseNationaleVlag\obj\Debug\netcoreapp3.1\PoolseNationaleVlag.genruntimeconfig.cache
