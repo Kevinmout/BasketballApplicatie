@@ -1,0 +1,12 @@
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Services\bin\Debug\netcoreapp3.1\BasketbalRazorPages.Services.deps.json
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Services\bin\Debug\netcoreapp3.1\BasketbalRazorPages.Services.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Services\bin\Debug\netcoreapp3.1\BasketbalRazorPages.Services.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Services\obj\Debug\netcoreapp3.1\BasketbalRazorPages.Services.csprojAssemblyReference.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Services\obj\Debug\netcoreapp3.1\BasketbalRazorPages.Services.AssemblyInfoInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Services\obj\Debug\netcoreapp3.1\BasketbalRazorPages.Services.AssemblyInfo.cs
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Services\obj\Debug\netcoreapp3.1\BasketbalRazorPages.Services.csproj.CopyComplete
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Services\obj\Debug\netcoreapp3.1\BasketbalRazorPages.Services.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Services\obj\Debug\netcoreapp3.1\BasketbalRazorPages.Services.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Services\bin\Debug\netcoreapp3.1\BasketbalRazorPages.LOGIC.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Services\bin\Debug\netcoreapp3.1\BasketbalRazorPages.LOGIC.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Services\obj\Debug\netcoreapp3.1\BasketbalRazorPages.Services.csproj.CoreCompileInputs.cache

@@ -1,0 +1,9 @@
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Models\bin\Debug\netcoreapp3.1\BasketbalRazorPages.Models.deps.json
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Models\bin\Debug\netcoreapp3.1\BasketbalRazorPages.Models.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Models\bin\Debug\netcoreapp3.1\BasketbalRazorPages.Models.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Models\obj\Debug\netcoreapp3.1\BasketbalRazorPages.Models.csprojAssemblyReference.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Models\obj\Debug\netcoreapp3.1\BasketbalRazorPages.Models.AssemblyInfoInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Models\obj\Debug\netcoreapp3.1\BasketbalRazorPages.Models.AssemblyInfo.cs
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Models\obj\Debug\netcoreapp3.1\BasketbalRazorPages.Models.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Models\obj\Debug\netcoreapp3.1\BasketbalRazorPages.Models.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\BasketbalRazorPages.Models\obj\Debug\netcoreapp3.1\BasketbalRazorPages.Models.pdb

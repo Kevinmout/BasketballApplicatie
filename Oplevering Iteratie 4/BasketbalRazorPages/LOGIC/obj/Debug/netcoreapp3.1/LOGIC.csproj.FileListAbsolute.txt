@@ -1,0 +1,9 @@
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\LOGIC\bin\Debug\netcoreapp3.1\LOGIC.deps.json
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\LOGIC\bin\Debug\netcoreapp3.1\LOGIC.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\LOGIC\bin\Debug\netcoreapp3.1\LOGIC.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\LOGIC\obj\Debug\netcoreapp3.1\LOGIC.csprojAssemblyReference.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\LOGIC\obj\Debug\netcoreapp3.1\LOGIC.AssemblyInfoInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\LOGIC\obj\Debug\netcoreapp3.1\LOGIC.AssemblyInfo.cs
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\LOGIC\obj\Debug\netcoreapp3.1\LOGIC.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\LOGIC\obj\Debug\netcoreapp3.1\LOGIC.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalRazorPages\LOGIC\obj\Debug\netcoreapp3.1\LOGIC.pdb

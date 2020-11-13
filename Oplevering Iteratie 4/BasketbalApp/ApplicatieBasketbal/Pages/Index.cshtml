@@ -1,0 +1,35 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @Model.spelers</h1>
+
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Active Team</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{int a = 0; }
+            @foreach (var player in @Model.spelers)
+            {
+                <tr>
+                    <th scope="row">@a</th>
+                    <td>@player.FirstName</td>
+                    <td>@player.LastName</td>
+                    <td>@player.ActiveTeam</td>
+                </tr>
+                a++;
+            }
+        </tbody>
+    </table>
+
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
