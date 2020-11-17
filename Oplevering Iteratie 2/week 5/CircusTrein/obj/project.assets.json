@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 2\\week 5\\CircusTrein\\CircusTrein.csproj",
+      "projectUniqueName": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 2\\week 5\\CircusTrein\\CircusTrein.csproj",
       "projectName": "CircusTrein",
-      "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 2\\week 5\\CircusTrein\\CircusTrein.csproj",
+      "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 2\\week 5\\CircusTrein\\CircusTrein.csproj",
       "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-      "outputPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 2\\week 5\\CircusTrein\\obj\\",
+      "outputPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 2\\week 5\\CircusTrein\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

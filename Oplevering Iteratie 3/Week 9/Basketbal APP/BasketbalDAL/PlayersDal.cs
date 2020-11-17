@@ -25,7 +25,7 @@ namespace BasketbalDAL
             string dbConnectionString = string.Format("server={0};uid={1};pwd={2};database={3};", serverIp, username, password, databaseName);
             string query = "SELECT * FROM speler";
 
-            var conn = new MySql.Data.MySqlClient.MySqlConnection(dbConnectionString);
+            var conn = new MySqlConnection(dbConnectionString);
             conn.Open();
 
             var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, conn);

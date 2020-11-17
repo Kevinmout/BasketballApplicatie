@@ -1,0 +1,12 @@
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.DAL\bin\Debug\netcoreapp3.1\Player.Logic.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.DAL\obj\Debug\netcoreapp3.1\Player.Dal.csprojAssemblyReference.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.DAL\obj\Debug\netcoreapp3.1\Player.Dal.AssemblyInfoInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.DAL\obj\Debug\netcoreapp3.1\Player.Dal.AssemblyInfo.cs
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.DAL\bin\Debug\netcoreapp3.1\Player.Dal.deps.json
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.DAL\bin\Debug\netcoreapp3.1\Player.Dal.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.DAL\bin\Debug\netcoreapp3.1\Player.Dal.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.DAL\bin\Debug\netcoreapp3.1\Player.Logic.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.DAL\obj\Debug\netcoreapp3.1\Player.Dal.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.DAL\obj\Debug\netcoreapp3.1\Player.Dal.csproj.CopyComplete
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.DAL\obj\Debug\netcoreapp3.1\Player.Dal.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.DAL\obj\Debug\netcoreapp3.1\Player.Dal.pdb

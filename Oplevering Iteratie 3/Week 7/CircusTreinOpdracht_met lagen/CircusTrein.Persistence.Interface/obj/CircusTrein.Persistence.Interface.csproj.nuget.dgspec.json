@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj": {}
+    "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj": {}
   },
   "projects": {
-    "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj": {
+    "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj",
+        "projectUniqueName": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj",
         "projectName": "CircusTrein.Persistence.Interface",
-        "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj",
+        "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj",
         "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-        "outputPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\obj\\",
+        "outputPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",

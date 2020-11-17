@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 4\\VoorbeeldAuto\\AutoApp\\Auto.Business\\Auto.Logic.csproj",
-      "projectName": "Auto.Logic",
-      "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 4\\VoorbeeldAuto\\AutoApp\\Auto.Business\\Auto.Logic.csproj",
+      "projectUniqueName": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 4\\VoorbeeldAuto\\AutoApp\\Auto.Business\\Player.Logic.csproj",
+      "projectName": "Player.Logic",
+      "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 4\\VoorbeeldAuto\\AutoApp\\Auto.Business\\Player.Logic.csproj",
       "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 4\\VoorbeeldAuto\\AutoApp\\Auto.Business\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,0 +1,8 @@
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.Business\bin\Debug\netcoreapp3.1\Player.Logic.deps.json
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.Business\bin\Debug\netcoreapp3.1\Player.Logic.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.Business\bin\Debug\netcoreapp3.1\Player.Logic.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.Business\obj\Debug\netcoreapp3.1\Player.Logic.AssemblyInfoInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.Business\obj\Debug\netcoreapp3.1\Player.Logic.AssemblyInfo.cs
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.Business\obj\Debug\netcoreapp3.1\Player.Logic.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.Business\obj\Debug\netcoreapp3.1\Player.Logic.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\VoorbeeldAuto\AutoApp\Auto.Business\obj\Debug\netcoreapp3.1\Player.Logic.pdb

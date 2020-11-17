@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein\\CircusTrein.csproj": {}
+    "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein\\CircusTrein.csproj": {}
   },
   "projects": {
-    "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Application\\CircusTrein.Application.csproj": {
+    "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Application\\CircusTrein.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Application\\CircusTrein.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Application\\CircusTrein.Application.csproj",
         "projectName": "CircusTrein.Application",
-        "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Application\\CircusTrein.Application.csproj",
+        "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Application\\CircusTrein.Application.csproj",
         "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-        "outputPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Application\\obj\\",
+        "outputPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,11 +27,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.DalFactory\\CircusTrein.DalFactory.csproj": {
-                "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.DalFactory\\CircusTrein.DalFactory.csproj"
+              "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.DalFactory\\CircusTrein.DalFactory.csproj": {
+                "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.DalFactory\\CircusTrein.DalFactory.csproj"
               },
-              "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj": {
-                "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj"
+              "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj": {
+                "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj"
               }
             }
           }
@@ -63,14 +63,14 @@
         }
       }
     },
-    "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.DalFactory\\CircusTrein.DalFactory.csproj": {
+    "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.DalFactory\\CircusTrein.DalFactory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.DalFactory\\CircusTrein.DalFactory.csproj",
+        "projectUniqueName": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.DalFactory\\CircusTrein.DalFactory.csproj",
         "projectName": "CircusTrein.DalFactory",
-        "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.DalFactory\\CircusTrein.DalFactory.csproj",
+        "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.DalFactory\\CircusTrein.DalFactory.csproj",
         "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-        "outputPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.DalFactory\\obj\\",
+        "outputPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.DalFactory\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -86,11 +86,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj": {
-                "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj"
+              "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj": {
+                "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj"
               },
-              "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\CircusTrein.Persistence.csproj": {
-                "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\CircusTrein.Persistence.csproj"
+              "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\CircusTrein.Persistence.csproj": {
+                "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\CircusTrein.Persistence.csproj"
               }
             }
           }
@@ -122,14 +122,14 @@
         }
       }
     },
-    "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj": {
+    "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj",
+        "projectUniqueName": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj",
         "projectName": "CircusTrein.Persistence.Interface",
-        "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj",
+        "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj",
         "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-        "outputPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\obj\\",
+        "outputPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -174,14 +174,14 @@
         }
       }
     },
-    "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\CircusTrein.Persistence.csproj": {
+    "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\CircusTrein.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\CircusTrein.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\CircusTrein.Persistence.csproj",
         "projectName": "CircusTrein.Persistence",
-        "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\CircusTrein.Persistence.csproj",
+        "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\CircusTrein.Persistence.csproj",
         "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-        "outputPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\obj\\",
+        "outputPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -197,8 +197,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj": {
-                "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj"
+              "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj": {
+                "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Persistence.Interface\\CircusTrein.Persistence.Interface.csproj"
               }
             }
           }
@@ -230,14 +230,14 @@
         }
       }
     },
-    "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein\\CircusTrein.csproj": {
+    "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein\\CircusTrein.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein\\CircusTrein.csproj",
+        "projectUniqueName": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein\\CircusTrein.csproj",
         "projectName": "CircusTrein",
-        "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein\\CircusTrein.csproj",
+        "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein\\CircusTrein.csproj",
         "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-        "outputPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein\\obj\\",
+        "outputPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -253,8 +253,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Application\\CircusTrein.Application.csproj": {
-                "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Application\\CircusTrein.Application.csproj"
+              "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Application\\CircusTrein.Application.csproj": {
+                "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 3\\Week 7\\CircusTreinOpdracht_met lagen\\CircusTrein.Application\\CircusTrein.Application.csproj"
               }
             }
           }

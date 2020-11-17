@@ -1,5 +1,6 @@
 ﻿using Auto.Logic;
 using Auto.Logic.Interfaces;
+using Player.Dal;
 using System;
 using System.Collections.Generic;
 
@@ -9,9 +10,12 @@ namespace AutoConsole
     {
         static void Main(string[] args)
         {
-            Car car = new Car();
-            ICar car1 = car;
-            car1.CarSound();
+            IPlayer obj = new PlayersDal();
+            obj.GetPlayers();
+            foreach(var item in obj.GetPlayers())
+            {
+                Console.WriteLine(item.FirstName); 
+            }
         }
     }
 }
