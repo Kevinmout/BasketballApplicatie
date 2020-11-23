@@ -26,7 +26,7 @@ namespace APPBasketbal.Pages
 
         private readonly IPlayer iplayer;
 
-        public IEnumerable<PlayerClass> Players { get; set; }
+        public IEnumerable<Player> Players { get; set; }
 
         public IndexModel(IPlayer iplayer)
         {

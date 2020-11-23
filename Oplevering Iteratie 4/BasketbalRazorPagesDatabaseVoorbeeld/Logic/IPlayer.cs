@@ -5,6 +5,6 @@ namespace Logic
 {
     public interface IPlayer
     {
-        IEnumerable<PlayerClass> GetPlayers();
+        IEnumerable<Player> GetPlayers();
     }
 }

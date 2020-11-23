@@ -9,10 +9,10 @@ namespace DAL
 {
     public class PlayersDAL : IPlayer
     {
-        private List<PlayerClass> _players;
+        private List<Player> _players;
         public PlayersDAL()
         {
-            _players = new List<PlayerClass>();
+            _players = new List<Player>();
             string connection = "server=Localhost;user id=root;password =root;database=basketbal;allowuservariables=True;persistsecurityinfo=True";
             string query = "SELECT * FROM speler";
 
@@ -24,7 +24,7 @@ namespace DAL
                 {
                     while (reader.Read())
                     {
-                        PlayerClass pc = new PlayerClass();
+                        Player pc = new Player();
                         pc.Id = Convert.ToInt32(reader["Id"]);
                         pc.FirstName = Convert.ToString(reader["FirstName"].ToString());
                         pc.LastName = Convert.ToString(reader["LastName"].ToString());
@@ -41,7 +41,7 @@ namespace DAL
             }
         }
 
-        public IEnumerable<PlayerClass> GetPlayers()
+        public IEnumerable<Player> GetPlayers()
         {
             return _players;
         }
