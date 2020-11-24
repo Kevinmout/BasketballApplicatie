@@ -1,4 +1,5 @@
 ﻿using Logic;
+using Logic.Interface.Dto_s;
 using Logic.Interface.DTOs;
 using MySql.Data.MySqlClient;
 using System;
@@ -10,11 +11,11 @@ namespace DAL
 {
     public class PlayersDAL : IPlayerDal
     {
-        PlayerDto playerDto = new PlayerDto();
-        private List<PlayerDto> players;
+        PlayerListDto playerListDto = new PlayerListDto();
+
         public PlayersDAL()
         {
-            players = new List<PlayerDto>();
+            playerListDto.players = new List<PlayerDto>();
             string connection = "server=Localhost;user id=root;password =root;database=basketbal;allowuservariables=True;persistsecurityinfo=True";
             string query = "SELECT * FROM speler";
 
@@ -26,10 +27,18 @@ namespace DAL
                 {
                     while (reader.Read())
                     {
-                        
-                        playerDto.Id = Convert.ToInt32(reader["Id"]);
-                        playerDto.FirstName = Convert.ToString(reader["FirstName"].ToString());
-                        players.Add(playerDto);
+                        playerListDto.players.Add(new PlayerDto
+                        {
+                            Id = Convert.ToInt32(reader["Id"].ToString()),
+                            LastName = Convert.ToString(reader["LastName"].ToString()),
+                            FirstName = Convert.ToString(reader["FirstName"].ToString()),
+                            ActiveTeam = Convert.ToString(reader["Active Team"].ToString()),
+                            Games = Convert.ToInt32(reader["Games"].ToString()),
+                            Points = Convert.ToDouble(reader["Points"].ToString()),
+                            Rebounds = Convert.ToDouble(reader["Rebounds"].ToString()),
+                            Assists = Convert.ToDouble(reader["Assists"].ToString()),
+                            Blocks = Convert.ToDouble(reader["Blocks"].ToString())
+                        });
                     }
                 }
                 sqlconnection.Close();
@@ -37,10 +46,33 @@ namespace DAL
 
         }
 
-        public PlayerDto GetPlayer()
+        public PlayerListDto GetPlayerList()
         {
-            return playerDto;
+            return playerListDto;
         }
+
+
+        //public PlayerListDto GetPlayerList()
+        //{
+        //    return new PlayerListDto
+        //    {
+        //        //Name = "Los Angeles Lakers",
+        //        players = new List<PlayerDto>
+        //        {
+        //            new PlayerDto
+        //            {
+        //                FirstName = "Lebron",
+        //                Id = 6
+        //            },
+        //            new PlayerDto
+        //            {
+        //                FirstName = "Anthony",
+        //                Id = 23
+        //            }
+        //        }
+        //    };
+        //}
     }
 }
+
 

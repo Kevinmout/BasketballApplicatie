@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketbalAPP", "BasketbalAPP.csproj", "{1B2D05CE-5E3F-4714-AFBB-CEB017BD2781}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasketbalAPP", "BasketbalAPP.csproj", "{1B2D05CE-5E3F-4714-AFBB-CEB017BD2781}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\DAL\DAL.csproj", "{31669E44-D560-49C4-9E05-86E7C23B2E38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "..\DAL\DAL.csproj", "{31669E44-D560-49C4-9E05-86E7C23B2E38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "..\Logic\Logic.csproj", "{635AF5C5-221A-40C9-BD4A-C318D650578C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic", "..\Logic\Logic.csproj", "{635AF5C5-221A-40C9-BD4A-C318D650578C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factory", "..\Factory\Factory.csproj", "{7A934E84-7326-44FC-BB96-B6928C512AC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factory", "..\Factory\Factory.csproj", "{7A934E84-7326-44FC-BB96-B6928C512AC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Interface", "..\Logic.Interfaces\Logic.Interface.csproj", "{F743085A-4AA3-4384-B526-75E06E28ABD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Interface", "..\Logic.Interfaces\Logic.Interface.csproj", "{F743085A-4AA3-4384-B526-75E06E28ABD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,29 +1,23 @@
-﻿using Logic.Interface.DTOs;
+﻿using Logic;
+using Logic.Interface.Dto_s;
+using Logic.Interface.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.Threading.Tasks;
 
 namespace APPBasketbal.Models
 {
-    [DataContract]
     public class Player
     {
-        [DataMember]
         public int Id { get; set; }
-        [DataMember]
+        public string LastName { get; set; }
         public string FirstName { get; set; }
-        
-        public Player(int id, string firstname)
-        {
-            Id = id;
-            FirstName = firstname;
-        }
-        public Player(PlayerDto playerDto):this(playerDto.Id,playerDto.FirstName)
-        {
-            
-        }
-
+        public string ActiveTeam { get; set; }
+        public int Games { get; set; }
+        public double Points { get; set; }
+        public double Rebounds { get; set; }
+        public double Assists { get; set; }
+        public double Blocks { get; set; }
     }
 }
