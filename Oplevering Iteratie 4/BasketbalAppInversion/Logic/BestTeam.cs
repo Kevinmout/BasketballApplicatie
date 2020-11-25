@@ -5,21 +5,24 @@ using System.Text;
 
 namespace Logic
 {
-    public class Team
+    public class BestTeam
     {
-        private List<Player> players;
-        public string Name { get; set; }
+        private readonly List<Player> players;
         public List<Player> GetPlayers()
         {
             return players;
         }
-        public Team()
+        public BestTeam()
         {
             players = new List<Player>();
         }
+
         public void AddPlayer(Player player)
         {
-            players.Add(player);
+            if (players.Count <= 5)
+            {
+                players.Add(player);
+            }
         }
     }
 }
