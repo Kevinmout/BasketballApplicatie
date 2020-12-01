@@ -1,4 +1,6 @@
 ﻿using APPBasketbal.Models;
+using Factory;
+using Logic.Interface.interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,19 +9,20 @@ namespace Logic
 {
     public class Team
     {
-        private List<Player> players;
-        public string Name { get; set; }
-        public List<Player> GetPlayers()
+        public string PlayerName { get; set; }
+        public string PlayerNameFromForm { get; set; }
+        public Team(string playerName)
         {
-            return players;
+            PlayerNameFromForm = playerName;
         }
-        public Team()
+        public void GetTeam()
         {
-            players = new List<Player>();
+            //ITeamDal dal = PlayerFactory.GetTeamDal();
+            //PlayerName = dal.PlayerName;
         }
-        public void AddPlayer(Player player)
+        public void PostTeam()
         {
-            players.Add(player);
+            ITeamDal dal = PlayerFactory.GetTeamDal(PlayerNameFromForm);
         }
     }
 }
