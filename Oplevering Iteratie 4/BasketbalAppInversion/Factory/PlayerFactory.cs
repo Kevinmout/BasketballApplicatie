@@ -15,9 +15,9 @@ namespace Factory
             return new PlayersDAL();
         }
 
-        public static ITeamDal GetTeamDal(string playerNameFromForm)
+        public static ITeamDal GetTeamDal(string playerNameFromForm, string teamNameFromForm)
         {
-            return new TeamDAL(playerNameFromForm);
+            return new TeamDAL(playerNameFromForm, teamNameFromForm);
         }
 
     }

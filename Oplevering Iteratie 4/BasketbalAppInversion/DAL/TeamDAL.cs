@@ -9,14 +9,14 @@ namespace DAL
     public class TeamDAL : ITeamDal
     {
         public string PlayerName { get; set; }
-        public TeamDAL(string invullen)
+        public TeamDAL(string playerName, string teamName)
         {
             string connString = "server=Localhost;user id=root;password =root;database=basketbal;allowuservariables=True;persistsecurityinfo=True";
 
             MySqlConnection mcon = new MySqlConnection(connString);
 
 
-            string cmdText = "INSERT INTO team(TeamName,PlayerName)Values('" + invullen + "','" + invullen + "')";
+            string cmdText = "INSERT INTO team(TeamName,PlayerName)Values('" + teamName + "','" + playerName + "')";
             MySqlCommand cmd = new MySqlCommand(cmdText, mcon);
             mcon.Open();
             cmd.ExecuteNonQuery();

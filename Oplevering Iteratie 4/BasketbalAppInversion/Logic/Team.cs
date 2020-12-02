@@ -11,9 +11,11 @@ namespace Logic
     {
         public string PlayerName { get; set; }
         public string PlayerNameFromForm { get; set; }
-        public Team(string playerName)
+        public string TeamName { get; set; }
+        public Team(string playerName, string teamName)
         {
             PlayerNameFromForm = playerName;
+            TeamName = teamName;
         }
         public void GetTeam()
         {
@@ -22,7 +24,7 @@ namespace Logic
         }
         public void PostTeam()
         {
-            ITeamDal dal = PlayerFactory.GetTeamDal(PlayerNameFromForm);
+            ITeamDal dal = PlayerFactory.GetTeamDal(PlayerNameFromForm, TeamName);
         }
     }
 }

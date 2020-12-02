@@ -3,13 +3,13 @@
 @{
     ViewData["Title"] = "Team page";
 }
-<h1>@Model.PlayerName</h1>
+<datalist id="data1" data-bind="options: @Model.GetPlayers()"></datalist>
 
 <form method="post">
-    <input type="text" name="PlayerName">
+    <input type="text" name="TeamName" placeholder="Give team name">
+    <input type="search" name="PlayerName" list="data1" id="searchid" placeholder="Enter Player..." />
     <input type="submit">
 </form>
-
 
 
 
@@ -58,42 +58,3 @@
     </div>
 
 </div>
-
-
-
-
-
-@*<div class="card-deck">
-
-        <div class="card">
-            <h1>Point Guard</h1>
-            <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <a href="#" class="btn btn-warning">Add</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-body">
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-        </div>
-    </div>*@
