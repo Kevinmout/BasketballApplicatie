@@ -1,0 +1,13 @@
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\ContainterVervoer\bin\Debug\netcoreapp3.1\ContainterVervoer.exe
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\ContainterVervoer\bin\Debug\netcoreapp3.1\ContainterVervoer.deps.json
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\ContainterVervoer\bin\Debug\netcoreapp3.1\ContainterVervoer.runtimeconfig.json
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\ContainterVervoer\bin\Debug\netcoreapp3.1\ContainterVervoer.runtimeconfig.dev.json
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\ContainterVervoer\bin\Debug\netcoreapp3.1\ContainterVervoer.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\ContainterVervoer\bin\Debug\netcoreapp3.1\ContainterVervoer.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\ContainterVervoer\obj\Debug\netcoreapp3.1\ContainterVervoer.csprojAssemblyReference.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\ContainterVervoer\obj\Debug\netcoreapp3.1\ContainterVervoer.AssemblyInfoInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\ContainterVervoer\obj\Debug\netcoreapp3.1\ContainterVervoer.AssemblyInfo.cs
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\ContainterVervoer\obj\Debug\netcoreapp3.1\ContainterVervoer.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\ContainterVervoer\obj\Debug\netcoreapp3.1\ContainterVervoer.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\ContainterVervoer\obj\Debug\netcoreapp3.1\ContainterVervoer.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\ContainterVervoer\obj\Debug\netcoreapp3.1\ContainterVervoer.genruntimeconfig.cache

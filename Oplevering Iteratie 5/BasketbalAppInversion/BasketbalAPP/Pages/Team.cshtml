@@ -1,0 +1,60 @@
+﻿@page
+@model BasketbalAPP.Pages.TeamModel
+@{
+    ViewData["Title"] = "Team page";
+}
+<datalist id="data1" data-bind="options: @Model.GetPlayers()"></datalist>
+
+<form method="post">
+    <input type="text" name="TeamName" placeholder="Give team name">
+    <input type="search" name="PlayerName" list="data1" id="searchid" placeholder="Enter Player..." />
+    <input type="submit">
+</form>
+
+
+
+
+
+<div class="card-deck">
+    <div class="card">
+        <h4>Point Guard</h4>
+        <div class="card-body">
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary">Add</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <h4>Shooting Guard</h4>
+        <div class="card-body">
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-secondary">Add</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <h4>Small Forward</h4>
+        <div class="card-body">
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-success">Add</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <h4>Power Forward</h4>
+        <div class="card-body">
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-danger">Add</a>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <h4>Center</h4>
+        <div class="card-body">
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-warning">Add</a>
+        </div>
+    </div>
+
+</div>
