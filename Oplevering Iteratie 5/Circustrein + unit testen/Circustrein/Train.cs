@@ -28,11 +28,30 @@ namespace Circustrein
 
 
 
+        ///// <summary>
+        ///// Puts all the carnivores in separate wagons.
+        ///// </summary>
+        ///// <param name="allAnimals"></param>
+        //public void SortCarnivore(List<Animal> allAnimals)
+        //{
+        //    foreach (Animal animal in allAnimals)
+        //    {
+        //        if (animal.IsCarnivore == true)
+        //        {
+        //            Wagon wagon = new Wagon();
+        //            wagons.Add(wagon);
+        //            wagon.AddAnimal(animal);
+        //            amountOfWagons++;
+        //        }
+        //    }
+        //}
+
+
         /// <summary>
-        /// Puts all the carnivores in separate wagons.
+        /// First sorts carnivores and then all the herbivores.
         /// </summary>
         /// <param name="allAnimals"></param>
-        public void SortCarnivore(List<Animal> allAnimals)
+        public void SortAnimals(List<Animal> allAnimals)
         {
             foreach (Animal animal in allAnimals)
             {
@@ -44,15 +63,6 @@ namespace Circustrein
                     amountOfWagons++;
                 }
             }
-        }
-
-
-        /// <summary>
-        /// Puts all the herbivores in wagons.
-        /// </summary>
-        /// <param name="allAnimals"></param>
-        public void SortAnimals(List<Animal> allAnimals)
-        {
             foreach (Animal animal in allAnimals)
             {
                 if (animal.IsCarnivore == false)

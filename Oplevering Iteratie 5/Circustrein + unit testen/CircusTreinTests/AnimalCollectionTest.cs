@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace CircusTreinTests
 {
     [TestClass]
-    public class UnitTest1
+    public class AnimalCollectionTest
     {
         [TestMethod]
         public void Add_AnimalThatEatsPlants_Succes()

@@ -50,7 +50,7 @@ namespace Circustrein
                 }
             }
             Train train = new Train();
-            train.SortCarnivore(animalCollection.GetAnimals());
+            //train.SortCarnivore(animalCollection.GetAnimals());
             train.SortAnimals(animalCollection.GetAnimals());
             int Aantal = 1;
             Console.WriteLine("You need " + train.AmountOfWagons + " wagons.");

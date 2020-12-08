@@ -17,6 +17,7 @@ namespace Circustrein
         }
         public void AddAnimal(Animal animal)
         {
+            //animals.Add(new Animal { Name = animal.Name, Size = animal.Size, IsCarnivore = animal.IsCarnivore });
             animals.Add(animal);
         }
     }

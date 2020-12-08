@@ -12,6 +12,9 @@ namespace ContainterVervoer
             return containersOnStack;
         }
 
+        public int XPosition { get; set; }
+        public int YPosition { get; set; }
+
         public Stack()
         {
             containersOnStack = new List<Container>();
@@ -28,6 +31,12 @@ namespace ContainterVervoer
                 return false;
             }
         }
+
+        public int GetXPosition()
+        {
+            return 0;
+        }
+
 
         public bool TryAddStackHeavy()
         {
@@ -75,7 +84,7 @@ namespace ContainterVervoer
         }
 
         public void Add(Container container)
-        {
+        { 
             containersOnStack.Add(container);
         }
     }

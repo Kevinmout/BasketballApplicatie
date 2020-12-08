@@ -7,7 +7,7 @@ using System.Text;
 namespace CircusTreinTests
 {
     [TestClass]
-    public class UnitTest2
+    public class AnimalCollectionTest2
     {
         [TestMethod]
         public void Add_AnimalThatEatsMeat_Succes()

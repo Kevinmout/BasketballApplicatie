@@ -7,37 +7,36 @@ using System.Text;
 namespace CircusTreinTests
 {
     [TestClass]
-    public class UnitTest5
+    public class TrainTest
     {
         [TestMethod]
-        public void SortInWagon_2BigPlantAnimal_1Wagon()
+        public void SortInWagon_BigMeatBigPlantAnimal_2Wagons()
         {
             //Arrange
             Animal animalM = new Animal
             {
-                Name = "Giraffe",
-                IsCarnivore = false,
+                Name = "Beer",
+                IsCarnivore = true,
                 Size = 5
             };
 
             Animal animalP = new Animal
             {
-                Name = "Olifant",
+                Name = "Giraffe",
                 IsCarnivore = false,
                 Size = 5
             };
-
-            //Act
             AnimalCollection animalCollection = new AnimalCollection();
             Train train = new Train();
             animalCollection.AddAnimal(animalM);
             animalCollection.AddAnimal(animalP);
-            train.SortCarnivore(animalCollection.GetAnimals());
+            //Act
+
             train.SortAnimals(animalCollection.GetAnimals());
-
-
+            //train.SortCarnivore(animalCollection.GetAnimals());
+            
             //Arrange
-            CollectionAssert.AreEqual(animalCollection.GetAnimals(), new[] { animalM, animalP });
+            Assert.AreEqual(2, train.AmountOfWagons);
         }
     }
 }

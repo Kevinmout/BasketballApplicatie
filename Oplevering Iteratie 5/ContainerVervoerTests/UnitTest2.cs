@@ -1,9 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ContainterVervoer;
 namespace ContainerVervoerTests
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTest2
     {
         [TestMethod]
         public void TestMethod1()
@@ -12,7 +12,7 @@ namespace ContainerVervoerTests
             Container container = new Container
             {
                 Weight = 30,
-                IsRefrigerated = false,
+                IsRefrigerated = true,
                 IsValuable = false
             };
             Container container1 = new Container
@@ -23,20 +23,18 @@ namespace ContainerVervoerTests
             };
             ContainerCollection containerCollection = new ContainerCollection();
             Deck deck = new Deck();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 7; i++)
             {
                 containerCollection.Add(container);
             }
             containerCollection.Add(container1);
-
             //Act
+            
             deck.SortRefrigerated(containerCollection.GetContainers());
-            deck.SortAllHeavy(containerCollection.GetContainers());
             deck.SortAllLessHeavy(containerCollection.GetContainers());
-            deck.SortAllValuable(containerCollection.GetContainers());
-
+            deck.GetStacks();
             //Assert
-            Assert.AreEqual(2, deck.AmountOfStacks);
+            Assert.AreEqual(3, deck.GetStacks());
         }
     }
 }

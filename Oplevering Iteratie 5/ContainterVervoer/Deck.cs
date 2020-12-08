@@ -11,18 +11,32 @@ namespace ContainterVervoer
         {
             return stacks;
         }
+        private int amountOfStacks;
         public int AmountOfStacks
         {
             get { return amountOfStacks; }
             set { amountOfStacks = AmountOfStacks; }
         }
 
-        private int amountOfStacks;
+        public int XPositionD { get; set; }
+        public int YPositionD { get; set; }
+        public int XPosition2 { get; set; }
+        public int YPosition2 { get; set; }
+
 
         public Deck()
         {
+            YPositionD = 1;
+            YPosition2 = 2;
             stacks = new List<Stack>();
         }
+
+
+
+
+
+
+
 
         public void SortRefrigerated(List<Container> containers)
         {
@@ -43,6 +57,14 @@ namespace ContainterVervoer
                     if (containerAdded == false)
                     {
                         Stack stack = new Stack();
+                        XPositionD ++;
+                        if (XPositionD == 4)
+                        {
+                            XPositionD = 1;
+                            YPositionD++;
+                        }
+                        stack.XPosition = XPositionD;
+                        stack.YPosition = YPositionD;
                         stacks.Add(stack);
                         stack.Add(container);
                         amountOfStacks++;
@@ -72,6 +94,14 @@ namespace ContainterVervoer
                     if (containerAdded == false)
                     {
                         Stack stack = new Stack();
+                        XPosition2++;
+                        if (XPosition2 == 4)
+                        {
+                            XPosition2 = 1;
+                            YPosition2++;
+                        }
+                        stack.XPosition = XPosition2;
+                        stack.YPosition = YPosition2;
                         stacks.Add(stack);
                         stack.Add(container);
                         amountOfStacks++;
@@ -105,6 +135,14 @@ namespace ContainterVervoer
                     if (containerAdded == false)
                     {
                         Stack stack = new Stack();
+                        XPositionD++;
+                        if (XPositionD == 4)
+                        {
+                            XPositionD = 1;
+                            YPositionD++;
+                        }
+                        stack.XPosition = XPositionD;
+                        stack.YPosition = YPositionD;
                         stacks.Add(stack);
                         stack.Add(container);
                         amountOfStacks++;
@@ -139,6 +177,14 @@ namespace ContainterVervoer
                     if (containerAdded == false)
                     {
                         Stack stack = new Stack();
+                        XPositionD++;
+                        if (XPositionD == 4)
+                        {
+                            XPositionD = 1;
+                            YPositionD++;
+                        }
+                        stack.XPosition = XPositionD;
+                        stack.YPosition = YPositionD;
                         stacks.Add(stack);
                         stack.Add(container);
                         amountOfStacks++;

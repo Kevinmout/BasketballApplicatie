@@ -7,7 +7,7 @@ using System.Text;
 namespace CircusTreinTests
 {
     [TestClass]
-    public class UnitTest6
+    public class TrainTest4
     {
         [TestMethod]
         public void SortInWagon_10SmallPlantAnimals_1Wagon()
@@ -19,14 +19,15 @@ namespace CircusTreinTests
                 IsCarnivore = false,
                 Size = 1
             };
-            //Act
             AnimalCollection animalCollection = new AnimalCollection();
             Train train = new Train();
             for (int i = 0; i < 10; i++)
             {
                 animalCollection.AddAnimal(animal1);
             }
-            train.SortCarnivore(animalCollection.GetAnimals());
+            //Act
+
+            //train.SortCarnivore(animalCollection.GetAnimals());
             train.SortAnimals(animalCollection.GetAnimals());
 
 
