@@ -6,7 +6,7 @@ namespace ContainterVervoer
 {
     public class Deck
     {
-        private List<Stack> stacks;
+        private readonly List<Stack> stacks;
         public List<Stack> GetStacks()
         {
             return stacks;
@@ -18,209 +18,169 @@ namespace ContainterVervoer
             set { amountOfStacks = AmountOfStacks; }
         }
 
-        public int XPositionD { get; set; }
-        public int YPositionD { get; set; }
-        public int XPosition2 { get; set; }
-        public int YPosition2 { get; set; }
-
 
         public Deck()
         {
-            YPositionD = 1;
-            YPosition2 = 2;
             stacks = new List<Stack>();
         }
 
 
 
-
-
-
-
-
-        public void SortRefrigerated(List<Container> containers)
+        public void SortRow(List<Container> containers)
         {
+            containers.Sort();
             foreach (Container container in containers)
             {
-                if (container.IsRefrigerated == true && container.IsValuable == false)
-                {
-                    bool containerAdded = false;
-                    foreach (Stack existingStack in stacks)
-                    {
-                        if (existingStack.TryAddStackRefrigerated() == true)
-                        {
-                            existingStack.Add(container);
-                            containerAdded = true;
-                            break;
-                        }
-                    }
-                    if (containerAdded == false)
-                    {
-                        Stack stack = new Stack();
-                        XPositionD ++;
-                        if (XPositionD == 4)
-                        {
-                            XPositionD = 1;
-                            YPositionD++;
-                        }
-                        stack.XPosition = XPositionD;
-                        stack.YPosition = YPositionD;
-                        stacks.Add(stack);
-                        stack.Add(container);
-                        amountOfStacks++;
-                    }
-                }
-            }
-        }
 
-
-
-        public void SortAllHeavy(List<Container> containers)
-        {
-            foreach (Container container in containers)
-            {
-                if (container.Weight == 30 && container.IsRefrigerated == false && container.IsValuable == false)
-                {
-                    bool containerAdded = false;
-                    foreach (Stack existingStack in stacks)
-                    {
-                        if (existingStack.TryAddStackHeavy() == true)
-                        {
-                            existingStack.Add(container);
-                            containerAdded = true;
-                            break;
-                        }
-                    }
-                    if (containerAdded == false)
-                    {
-                        Stack stack = new Stack();
-                        XPosition2++;
-                        if (XPosition2 == 4)
-                        {
-                            XPosition2 = 1;
-                            YPosition2++;
-                        }
-                        stack.XPosition = XPosition2;
-                        stack.YPosition = YPosition2;
-                        stacks.Add(stack);
-                        stack.Add(container);
-                        amountOfStacks++;
-                    }
-                }
             }
         }
 
 
 
 
+        //public void SortRefrigerated(List<Container> containers)
+        //{
+        //    foreach (Container container in containers)
+        //    {
+        //        if (container.IsRefrigerated == true)
+        //        {
+        //            bool containerAdded = false;
+        //            int xposition = 0;
+        //            int yposition = 0;
+        //            foreach (Stack existingStack in stacks)
+        //            {
+        //                xposition = existingStack.XPosition;
+        //                yposition = existingStack.YPosition;
+        //                if (existingStack.TryAddRefrigerated(container) == true)
+        //                {
+        //                    existingStack.Add(container);
+        //                    containerAdded = true;
+        //                    break;
+        //                }
+        //            }
+        //            if (containerAdded == false)
+        //            {
+        //                Stack stack = new Stack();
+        //                if (xposition == 0)
+        //                {
+        //                    stack.XPosition = 1;
+        //                    stack.YPosition = 1;
+        //                }
+        //                else if (xposition < 4 && xposition > 0)
+        //                {
+        //                    stack.XPosition = xposition+1;
+        //                    stack.YPosition = yposition;
+        //                }
+        //                stacks.Add(stack);
+        //                stack.Add(container);
+        //                amountOfStacks++;
+        //            }
+        //        }
+        //    }
+        //}
+
+
+        //public void SortAllHeavy(List<Container> containers)
+        //{
+        //    foreach (Container container in containers)
+        //    {
+        //        if (container.IsRefrigerated == false && container.IsValuable == false)
+        //        {
+        //            int xposition = 0;
+        //            int yposition = 0;
+        //            bool containerAdded = false;
+        //            foreach (Stack existingStack in stacks)
+        //            {
+        //                xposition = existingStack.XPosition;
+        //                yposition = existingStack.YPosition;
+        //                if (existingStack.TryAddContainer(container) == true)
+        //                {
+        //                    existingStack.Add(container);
+        //                    containerAdded = true;
+        //                    break;
+        //                }
+        //            }
+        //            if (containerAdded == false)
+        //            {
+        //                Stack stack = new Stack();
+        //                if (xposition < 4 && xposition > 0)
+        //                {
+        //                    stack.XPosition = xposition + 1;
+        //                    stack.YPosition = yposition;
+        //                }
+        //                else
+        //                {
+        //                    stack.XPosition = 1;
+        //                    stack.YPosition = yposition + 1;
+        //                }
+        //                stacks.Add(stack);
+        //                stack.Add(container);
+        //                amountOfStacks++;
+        //            }
+        //        }
+        //    }
+        //}
 
 
 
-        public void SortAllLessHeavy(List<Container> containers)
-        {
-            foreach (Container container in containers)
-            {
-                if (container.Weight < 30 && container.IsRefrigerated == false && container.IsValuable == false)
-                {
-                    bool containerAdded = false;
-                    foreach (Stack existingStack in stacks)
-                    {
-                        if (existingStack.TryAddStackLessHeavy() == true)
-                        {
-                            existingStack.Add(container);
-                            containerAdded = true;
-                            break;
-                        }
-                    }
-                    if (containerAdded == false)
-                    {
-                        Stack stack = new Stack();
-                        XPositionD++;
-                        if (XPositionD == 4)
-                        {
-                            XPositionD = 1;
-                            YPositionD++;
-                        }
-                        stack.XPosition = XPositionD;
-                        stack.YPosition = YPositionD;
-                        stacks.Add(stack);
-                        stack.Add(container);
-                        amountOfStacks++;
-                    }
-                }
-            }
-        }
+        //public void SortAllValuable(List<Container> containers)
+        //{
+        //    foreach (Container container in containers)
+        //    {
+        //        if (container.IsValuable == true)
+        //        {
+        //            int xposition = 0;
+        //            int yposition = 0;
+        //            bool containerAdded = false;
+        //            foreach (Stack existingStack in stacks)
+        //            {
+        //                xposition = existingStack.XPosition;
+        //                yposition = existingStack.YPosition;
+        //                if (existingStack.TryAddValuable(container) == true)
+        //                {
+        //                    existingStack.Add(container);
+        //                    containerAdded = true;
+        //                    break;
+        //                }
+        //            }
+        //            if (containerAdded == false)
+        //            {
+        //                Stack stack = new Stack();
+        //                if (xposition < 4 && xposition > 0)
+        //                {
+        //                    stack.XPosition = xposition + 1;
+        //                    stack.YPosition = yposition;
+        //                }
+        //                else
+        //                {
+        //                    stack.XPosition = 1;
+        //                    stack.YPosition = yposition + 1;
+        //                }
+        //                stacks.Add(stack);
+        //                stack.Add(container);
+        //                amountOfStacks++;
+        //            }
+        //        }
+        //    }
+        //}
+
+
+        //public void SortStacks()
+        //{
+        //    List<Stack> stackRow = new List<Stack>();
+        //    foreach (Stack stack in stacks)
+        //    {
+        //        if(stack.YPosition == 2)
+        //        {
+        //            stackRow.Add(stack);
+        //        }
+        //    }
+            
+        //}
 
 
 
 
-
-
-
-
-        public void SortAllValuable(List<Container> containers)
-        {
-            foreach (Container container in containers)
-            {
-                if (container.IsValuable == true)
-                {
-                    bool containerAdded = false;
-                    foreach (Stack existingStack in stacks)
-                    {
-                        if (existingStack.TryAddStackRefrigerated() == true)
-                        {
-                            existingStack.Add(container);
-                            containerAdded = true;
-                            break;
-                        }
-                    }
-                    if (containerAdded == false)
-                    {
-                        Stack stack = new Stack();
-                        XPositionD++;
-                        if (XPositionD == 4)
-                        {
-                            XPositionD = 1;
-                            YPositionD++;
-                        }
-                        stack.XPosition = XPositionD;
-                        stack.YPosition = YPositionD;
-                        stacks.Add(stack);
-                        stack.Add(container);
-                        amountOfStacks++;
-                    }
-                }
-            }
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
 
     }
 }

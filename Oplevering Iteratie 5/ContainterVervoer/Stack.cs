@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ContainterVervoer
@@ -11,18 +12,42 @@ namespace ContainterVervoer
         {
             return containersOnStack;
         }
-
         public int XPosition { get; set; }
         public int YPosition { get; set; }
-
+        public int Weight { get; set; }
+        
         public Stack()
         {
             containersOnStack = new List<Container>();
         }
 
-        public bool TryAddStackRefrigerated()
+        public bool TryAddRefrigerated(Container newContainer)
         {
-            if (containersOnStack.Count <= 4)
+            var firstContainer = containersOnStack.First();
+            if ((XPosition == 1 || XPosition == 4) && containersOnStack.Count() < 4)
+            {
+                YPosition = 1;
+                return true;
+            }
+            else if ((XPosition == 2 || XPosition == 3) && (Weight - firstContainer.Weight + newContainer.Weight) <= 120)
+            {
+                YPosition = 1;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool TryAddContainer(Container newContainer)
+        {
+            var firstContainer = containersOnStack.First();
+            if ((XPosition == 1 || XPosition == 4) && containersOnStack.Count() < 4)
+            {
+                return true;
+            }
+            else if ((XPosition == 2 || XPosition == 3) && ((Weight - firstContainer.Weight + newContainer.Weight) <= 120))
             {
                 return true;
             }
@@ -32,60 +57,106 @@ namespace ContainterVervoer
             }
         }
 
-        public int GetXPosition()
-        {
-            return 0;
-        }
 
+        
 
-        public bool TryAddStackHeavy()
+        public bool TryAddValuable(Container newContainer)
         {
-            foreach (Container container in containersOnStack)
+            var firstContainer = containersOnStack.First();
+            if ((XPosition == 1 || XPosition == 4 )&& (containersOnStack.Find(x => (x.IsValuable == true)) == null) && ((Weight - firstContainer.Weight + newContainer.Weight) <= 120))
             {
-                if (container.IsRefrigerated == true)
-                {
-                    return false;
-                }
-                else if (containersOnStack.Count > 3)
-                {
-                    return false;
-                }
+                return true;
             }
-            return true;
-        }
-
-        public bool TryAddStackLessHeavy()
-        {
-            foreach (Container container in containersOnStack)
+            else
             {
-                if (container.IsRefrigerated == true)
-                {
-                    return false;
-                }
-                else if (containersOnStack.Count > 4)
-                {
-                    return false;
-                }
+                return false;
             }
-            return true;
-        }
-
-
-        public bool TryAddStackValuable()
-        {
-            foreach (Container container in containersOnStack)
-            {
-                if (containersOnStack.Count == 5 && container.IsValuable == true)
-                {
-                    return false;
-                }
-            }
-            return true;
         }
 
         public void Add(Container container)
         { 
             containersOnStack.Add(container);
+            Weight += container.Weight;
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//public bool TryAddStackHeavy()
+//{
+//    foreach (Container container in containersOnStack)
+//    {
+//        if (container.IsRefrigerated == true)
+//        {
+//            return false;
+//        }
+//        else if (containersOnStack.Count > 3)
+//        {
+//            return false;
+//        }
+//    }
+//    return true;
+//}
+
+//public bool TryAddStackLessHeavy()
+//{
+//    foreach (Container container in containersOnStack)
+//    {
+//        if (container.IsRefrigerated == true)
+//        {
+//            return false;
+//        }
+//        else if (containersOnStack.Count > 4)
+//        {
+//            return false;
+//        }
+//    }
+//    return true;
+//}
+
+
+//public bool TryAddStackValuable()
+//{
+//    if (XPosition == 1 || XPosition == 4)
+//    {
+//        return true;
+//    }
+//    else
+//    {
+//        return false;
+//    }
+
+//}

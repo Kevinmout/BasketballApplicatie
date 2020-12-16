@@ -39,7 +39,7 @@ namespace ContainterVervoer
 
             Deck deck = new Deck();
             deck.SortRefrigerated(containerCollection.GetContainers());
-            deck.SortAllHeavy(containerCollection.GetContainers());
+            //deck.SortAllHeavy(containerCollection.GetContainers());
             
             foreach (Stack stack in deck.GetStacks())
             {
