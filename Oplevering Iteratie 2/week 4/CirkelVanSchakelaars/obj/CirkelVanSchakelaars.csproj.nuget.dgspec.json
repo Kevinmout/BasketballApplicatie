@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\week 4\\CirkelVanSchakelaars\\CirkelVanSchakelaars.csproj": {}
+    "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 2\\week 4\\CirkelVanSchakelaars\\CirkelVanSchakelaars.csproj": {}
   },
   "projects": {
-    "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\week 4\\CirkelVanSchakelaars\\CirkelVanSchakelaars.csproj": {
+    "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 2\\week 4\\CirkelVanSchakelaars\\CirkelVanSchakelaars.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\week 4\\CirkelVanSchakelaars\\CirkelVanSchakelaars.csproj",
+        "projectUniqueName": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 2\\week 4\\CirkelVanSchakelaars\\CirkelVanSchakelaars.csproj",
         "projectName": "CirkelVanSchakelaars",
-        "projectPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\week 4\\CirkelVanSchakelaars\\CirkelVanSchakelaars.csproj",
+        "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 2\\week 4\\CirkelVanSchakelaars\\CirkelVanSchakelaars.csproj",
         "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-        "outputPath": "D:\\090 - School\\FHICT\\semester 2\\Individuele project\\week 4\\CirkelVanSchakelaars\\obj\\",
+        "outputPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 2\\week 4\\CirkelVanSchakelaars\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -52,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

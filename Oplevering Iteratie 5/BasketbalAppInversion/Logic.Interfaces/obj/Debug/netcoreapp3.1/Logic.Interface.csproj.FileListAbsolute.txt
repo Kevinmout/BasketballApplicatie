@@ -1,9 +1,0 @@
-C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Logic.Interfaces\bin\Debug\netcoreapp3.1\Logic.Interface.deps.json
-C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Logic.Interfaces\bin\Debug\netcoreapp3.1\Logic.Interface.dll
-C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Logic.Interfaces\bin\Debug\netcoreapp3.1\Logic.Interface.pdb
-C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Logic.Interfaces\obj\Debug\netcoreapp3.1\Logic.Interface.csprojAssemblyReference.cache
-C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Logic.Interfaces\obj\Debug\netcoreapp3.1\Logic.Interface.AssemblyInfoInputs.cache
-C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Logic.Interfaces\obj\Debug\netcoreapp3.1\Logic.Interface.AssemblyInfo.cs
-C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Logic.Interfaces\obj\Debug\netcoreapp3.1\Logic.Interface.dll
-C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Logic.Interfaces\obj\Debug\netcoreapp3.1\Logic.Interface.pdb
-C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Logic.Interfaces\obj\Debug\netcoreapp3.1\Logic.Interface.csproj.CoreCompileInputs.cache
