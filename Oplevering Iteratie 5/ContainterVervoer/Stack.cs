@@ -13,7 +13,6 @@ namespace ContainterVervoer
             return containersOnStack;
         }
         public int XPosition { get; set; }
-        public int YPosition { get; set; }
         public int Weight { get; set; }
         
         public Stack()
@@ -21,17 +20,44 @@ namespace ContainterVervoer
             containersOnStack = new List<Container>();
         }
 
-        public bool TryAddRefrigerated(Container newContainer)
+
+
+
+
+        public bool SortContainer(Container newContainer)
         {
-            var firstContainer = containersOnStack.First();
-            if ((XPosition == 1 || XPosition == 4) && containersOnStack.Count() < 4)
+            if (newContainer.IsRefrigerated == true)
             {
-                YPosition = 1;
+                return SortRefrigerated(newContainer);
+            }
+            else if (newContainer.IsValuable == true)
+            {
+                return SortValuable(newContainer);
+            }
+            else
+            {
+                return SortNormal(newContainer);
+            }
+        }
+
+
+        public bool SortRefrigerated(Container newContainer)
+        {
+            if (containersOnStack.Count == 0)
+            {
                 return true;
             }
-            else if ((XPosition == 2 || XPosition == 3) && (Weight - firstContainer.Weight + newContainer.Weight) <= 120)
+            else
             {
-                YPosition = 1;
+                return StackContainers(newContainer);
+            }
+
+        }
+        public bool StackContainers(Container newContainer)
+        {
+            var firstContainer = containersOnStack.First();
+            if (newContainer.Weight + (Weight - firstContainer.Weight) <= 120)
+            {
                 return true;
             }
             else
@@ -40,38 +66,28 @@ namespace ContainterVervoer
             }
         }
 
-        public bool TryAddContainer(Container newContainer)
-        {
-            var firstContainer = containersOnStack.First();
-            if ((XPosition == 1 || XPosition == 4) && containersOnStack.Count() < 4)
+        public bool SortValuable(Container newContainer)
+        { 
+            if (containersOnStack.Count == 0 && (XPosition == 1 || XPosition == 4))
             {
                 return true;
             }
-            else if ((XPosition == 2 || XPosition == 3) && ((Weight - firstContainer.Weight + newContainer.Weight) <= 120))
+            else if ((XPosition == 1 || XPosition == 4) && containersOnStack.Last().IsValuable == false)
             {
-                return true;
+                return StackContainers(newContainer);
             }
             else
             {
                 return false;
             }
+            
         }
 
-
-        
-
-        public bool TryAddValuable(Container newContainer)
+        public bool SortNormal(Container newContainer)
         {
-            var firstContainer = containersOnStack.First();
-            if ((XPosition == 1 || XPosition == 4 )&& (containersOnStack.Find(x => (x.IsValuable == true)) == null) && ((Weight - firstContainer.Weight + newContainer.Weight) <= 120))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return true;
         }
+
 
         public void Add(Container container)
         { 

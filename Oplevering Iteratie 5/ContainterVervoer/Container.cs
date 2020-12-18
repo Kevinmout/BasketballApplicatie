@@ -9,5 +9,7 @@ namespace ContainterVervoer
         public int Weight { get; set; }
         public bool IsValuable { get; set; }
         public bool IsRefrigerated { get; set; }
+        public int XPosition { get; set; }
+        public int ZPosition { get; set; }
     }
 }

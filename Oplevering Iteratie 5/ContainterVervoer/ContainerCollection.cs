@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ContainterVervoer
@@ -19,6 +20,10 @@ namespace ContainterVervoer
         public void Add(Container container)
         {
             containers.Add(container);
+        }
+        public void OrderByWeight()
+        {
+            containers = containers.OrderByDescending(w => w.Weight).ToList();
         }
     }
 }

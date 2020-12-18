@@ -9,30 +9,42 @@ namespace ContainerVervoerTests
         public void TestMethod1()
         {
             //Arrange
-            Container container = new Container
+            Container container1 = new Container
             {
                 Weight = 30,
                 IsRefrigerated = true,
                 IsValuable = false
             };
-            Container container1 = new Container
+            
+            Container container5 = new Container
             {
-                Weight = 25,
+                Weight = 30,
                 IsRefrigerated = false,
                 IsValuable = true
             };
-            ContainerCollection containerCollection = new ContainerCollection();
-            Deck deck = new Deck();
-            for (int i = 0; i < 5; i++)
+            Container container6 = new Container
             {
-                containerCollection.Add(container);
-            }
+                Weight = 20,
+                IsRefrigerated = false,
+                IsValuable = true
+            };
+
+            ContainerCollection containerCollection = new ContainerCollection();
             containerCollection.Add(container1);
+            containerCollection.Add(container1);
+            containerCollection.Add(container1);
+            containerCollection.Add(container1);
+            containerCollection.Add(container5);
+            containerCollection.Add(container6);
+            containerCollection.OrderByWeight();
+            //Deck deck = new Deck();
+            Row row = new Row();
+
             //Act
-            deck.SortRefrigerated(containerCollection.GetContainers());
-            deck.SortRefrigerated(containerCollection.GetContainers());
+            row.AddRefrigerated(containerCollection.GetContainers());
+
             //Assert
-            Assert.AreEqual(2, deck.AmountOfStacks);
+            Assert.AreEqual(4, row.GetStacks().Count);
         }
     }
 }
