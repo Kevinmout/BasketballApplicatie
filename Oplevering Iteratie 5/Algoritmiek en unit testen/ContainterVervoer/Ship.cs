@@ -12,6 +12,9 @@ namespace ContainterVervoer
         public int Height { get; set; }
         public int Width { get; set; }
 
-
+        public void PlaceContainersOnShip(List<Container> containers)
+        {
+            deck.Add(containers);
+        }
     }
 }

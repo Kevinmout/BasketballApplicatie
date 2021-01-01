@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Circustrein + unit testen\\Circustrein\\Circustrein.csproj": {}
+    "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Algoritmiek en unit testen\\Circustrein + unit testen\\Circustrein\\Circustrein.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Circustrein + unit testen\\Circustrein\\Circustrein.csproj": {
+    "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Algoritmiek en unit testen\\Circustrein + unit testen\\Circustrein\\Circustrein.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Circustrein + unit testen\\Circustrein\\Circustrein.csproj",
+        "projectUniqueName": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Algoritmiek en unit testen\\Circustrein + unit testen\\Circustrein\\Circustrein.csproj",
         "projectName": "Circustrein",
-        "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Circustrein + unit testen\\Circustrein\\Circustrein.csproj",
+        "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Algoritmiek en unit testen\\Circustrein + unit testen\\Circustrein\\Circustrein.csproj",
         "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Circustrein + unit testen\\Circustrein\\obj\\",
+        "outputPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Algoritmiek en unit testen\\Circustrein + unit testen\\Circustrein\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",

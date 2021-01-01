@@ -85,7 +85,14 @@ namespace ContainterVervoer
 
         public bool SortNormal(Container newContainer)
         {
-            return true;
+            if (containersOnStack.Count > 0)
+            {
+                return StackContainers(newContainer);
+            }
+            else
+            {
+                return true;
+            }
         }
 
 

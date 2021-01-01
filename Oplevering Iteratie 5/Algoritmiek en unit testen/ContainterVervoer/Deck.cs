@@ -17,15 +17,14 @@ namespace ContainterVervoer
             rows = new List<Row>();
         }
 
-        public void Add()
+        public void Add(List<Container> containers)
         {
-            Row row = new Row();
-            rows.Add(row);
-        }
-
-        public void SortStacks()
-        {
-
+            while (containers.Count != 0)
+            {
+                Row row = new Row();
+                rows.Add(row);
+                row.AddRefrigerated(containers);
+            }
         }
     }
 }

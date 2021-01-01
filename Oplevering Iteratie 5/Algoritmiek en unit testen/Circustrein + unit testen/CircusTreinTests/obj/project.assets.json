@@ -5737,11 +5737,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Circustrein + unit testen\\CircusTreinTests\\CircusTreinTests.csproj",
+      "projectUniqueName": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Algoritmiek en unit testen\\Circustrein + unit testen\\CircusTreinTests\\CircusTreinTests.csproj",
       "projectName": "CircusTreinTests",
-      "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Circustrein + unit testen\\CircusTreinTests\\CircusTreinTests.csproj",
+      "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Algoritmiek en unit testen\\Circustrein + unit testen\\CircusTreinTests\\CircusTreinTests.csproj",
       "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Circustrein + unit testen\\CircusTreinTests\\obj\\",
+      "outputPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Algoritmiek en unit testen\\Circustrein + unit testen\\CircusTreinTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5758,8 +5758,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Circustrein + unit testen\\Circustrein\\Circustrein.csproj": {
-              "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Circustrein + unit testen\\Circustrein\\Circustrein.csproj"
+            "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Algoritmiek en unit testen\\Circustrein + unit testen\\Circustrein\\Circustrein.csproj": {
+              "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\BasketballApplicatie\\Oplevering Iteratie 5\\Algoritmiek en unit testen\\Circustrein + unit testen\\Circustrein\\Circustrein.csproj"
             }
           }
         }

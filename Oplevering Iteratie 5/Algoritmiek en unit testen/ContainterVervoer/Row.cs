@@ -32,6 +32,10 @@ namespace ContainterVervoer
         }
 
 
+        /// <summary>
+        /// Pick the stack with the lowest amount of containers
+        /// </summary>
+        /// <returns>stack</returns>
         public Stack ChooseStack()
         {
             int lowest = int.MaxValue;
@@ -47,65 +51,101 @@ namespace ContainterVervoer
             return stack;
         }
 
-        public void AddToExistingStack(Container container)
+
+
+
+        /// <summary>
+        /// Add container to a existing stack
+        /// </summary>
+        /// <param name="container"></param>
+        public void AddToExistingStack(Container container, List<Container> containers)
         {
             if (ChooseStack().SortContainer(container) == true)
             {
                 ChooseStack().Add(container);
+                containers.Remove(container);
             }
         }
 
 
-
+        /// <summary>
+        /// Add refrigerated containers
+        /// </summary>
+        /// <param name="containers"></param>
         public void AddRefrigerated(List<Container> containers)
         {
-            foreach (Container container in containers)
+            foreach (Container container in containers.ToList())
             {
                 if (container.IsRefrigerated == true)
                 {
-                    AddToExistingStack(container);
+                    AddToExistingStack(container,containers);
+
                 }
             }
             AddNormal(containers);
         }
 
+
+        /// <summary>
+        /// Add containers to a stack that isn't valuable nor refrigerated
+        /// </summary>
+        /// <param name="containers"></param>
         public void AddNormal(List<Container> containers)
         {
-            foreach (Container container in containers)
+            foreach (Container container in containers.ToList())
             {
                 if (container.IsRefrigerated == false && container.IsValuable == false)
                 {
-                    AddToExistingStack(container);
+                    AddToExistingStack(container,containers);
                 }
             }
             AddValuable(containers);
         }
+
+
+
+        /// <summary>
+        /// Add valuable container to a stack
+        /// </summary>
+        /// <param name="containers"></param>
         public void AddValuable(List<Container> containers)
         {
             //SortWeightStacks();
-            foreach (Container container in containers)
+            foreach (Container container in containers.ToList())
             {
                 if (container.IsValuable == true)
                 {
-                    AddAtTheTop(container);
+                    AddAtTheTop(container,containers);
                 }
             }
             SortWeightStacks();
         }
 
-        public void AddAtTheTop(Container container)
+
+
+        /// <summary>
+        /// Add valuable container on top of other containers
+        /// </summary>
+        /// <param name="container"></param>
+        public void AddAtTheTop(Container container, List<Container> containers)
         {
             foreach (Stack ExistingStack in stacksInRow)
             {
                 if (ExistingStack.SortContainer(container) == true)
                 {
                     ExistingStack.Add(container);
+                    containers.Remove(container);
                 }
             }
         }
 
 
 
+
+
+        /// <summary>
+        /// Sort the stacks, that the weight is good.
+        /// </summary>
         public void SortWeightStacks()
         {
             var firstStack = stacksInRow.ElementAt(0).Weight;
