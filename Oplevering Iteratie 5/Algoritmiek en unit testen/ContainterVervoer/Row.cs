@@ -12,24 +12,34 @@ namespace ContainterVervoer
         {
             return stacksInRow;
         }
-        public int Number { get; set; }
+        public int RowIndex { get; set; }
 
-        public Row()
+        public Row(int rowIndex)
         {
+            RowIndex = rowIndex;
             stacksInRow = new List<Stack>();
-            Stack stack1 = new Stack();
-            Stack stack2 = new Stack();
-            Stack stack3 = new Stack();
-            Stack stack4 = new Stack();
-            stack1.XPosition = 1;
-            stack2.XPosition = 2;
-            stack3.XPosition = 3;
-            stack4.XPosition = 4;
-            stacksInRow.Add(stack1);
-            stacksInRow.Add(stack2);
-            stacksInRow.Add(stack3);
-            stacksInRow.Add(stack4);
+            for (int i = 0; i < rowIndex; i++)
+            {
+                Stack stack = new Stack();
+                stack.XPosition = i + 1;
+                stacksInRow.Add(stack);
+            }
+            //Stack stack1 = new Stack();
+            //Stack stack2 = new Stack();
+            //Stack stack3 = new Stack();
+            //Stack stack4 = new Stack();
+            //stack1.XPosition = 1;
+            //stack2.XPosition = 2;
+            //stack3.XPosition = 3;
+            //stack4.XPosition = 4;
+            //stacksInRow.Add(stack1);
+            //stacksInRow.Add(stack2);
+            //stacksInRow.Add(stack3);
+            //stacksInRow.Add(stack4);
         }
+
+
+
 
 
         /// <summary>
@@ -148,11 +158,21 @@ namespace ContainterVervoer
         /// </summary>
         public void SortWeightStacks()
         {
+            //List<int> vars = new List<int>();
+            //for (int i = 1; i < RowIndex - 1; i++)
+            //{
+            //    var stack = stacksInRow.ElementAt(i).Weight;
+            //    vars.Add(stack);
+            //}
+
+
+
+
             var firstStack = stacksInRow.ElementAt(0).Weight;
             var secondStack = stacksInRow.ElementAt(1).Weight;
             var thirdStack = stacksInRow.ElementAt(2).Weight;
             var fourthStack = stacksInRow.ElementAt(3).Weight;
-            if ((firstStack+secondStack) * 1.2 >= (thirdStack + fourthStack) || (firstStack + secondStack) * 0.8 >= (thirdStack + fourthStack))
+            if ((firstStack + secondStack) * 1.2 >= (thirdStack + fourthStack) || (firstStack + secondStack) * 0.8 >= (thirdStack + fourthStack))
             {
                 stacksInRow.ElementAt(0).XPosition = 1;
                 stacksInRow.ElementAt(1).XPosition = 2;
@@ -166,7 +186,7 @@ namespace ContainterVervoer
                 stacksInRow.ElementAt(2).XPosition = 2;
                 stacksInRow.ElementAt(3).XPosition = 4;
             }
-            
+
         }
 
 

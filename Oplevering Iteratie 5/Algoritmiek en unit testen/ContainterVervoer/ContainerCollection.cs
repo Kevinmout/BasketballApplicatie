@@ -19,6 +19,7 @@ namespace ContainterVervoer
 
         public void Add(Container container)
         {
+            if (container.Weight >= 4 && container.Weight <= 30)
             containers.Add(container);
         }
         public void OrderByWeight()

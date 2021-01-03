@@ -3,7 +3,7 @@ using ContainterVervoer;
 namespace ContainerVervoerTests
 {
     [TestClass]
-    public class UnitTest1
+    public class ContainerWeightTest
     {
         [TestMethod]
         public void TestMethod1()
@@ -11,26 +11,21 @@ namespace ContainerVervoerTests
             //Arrange
             Container container1 = new Container
             {
-                Weight = 30,
+                Weight = 35,
                 IsRefrigerated = false,
                 IsValuable = false
             };
-            
 
             ContainerCollection containerCollection = new ContainerCollection();
-            for (int i = 0; i < 21; i++)
-            {
-                containerCollection.Add(container1);
-            }
-
+            containerCollection.Add(container1);
             containerCollection.OrderByWeight();
-            Deck deck = new Deck();
+            Ship ship = new Ship();
+
 
             //Act
-            deck.Add(containerCollection.GetContainers(), 4);
-
+            ship.PlaceContainersOnShip(containerCollection.GetContainers(), 1);
             //Assert
-            Assert.AreEqual(2, deck.GetRows().Count);
+            Assert.AreEqual(0, containerCollection.GetContainers().Count);
         }
     }
 }
