@@ -32,7 +32,7 @@ namespace DAL
                             Id = Convert.ToInt32(reader["Id"].ToString()),
                             LastName = Convert.ToString(reader["LastName"].ToString()),
                             FirstName = Convert.ToString(reader["FirstName"].ToString()),
-                            ActiveTeam = Convert.ToString(reader["Active Team"].ToString()),
+                            ActiveTeam = Convert.ToString(reader["ActiveTeam"].ToString()),
                             Games = Convert.ToInt32(reader["Games"].ToString()),
                             Points = Convert.ToDouble(reader["Points"].ToString()),
                             Rebounds = Convert.ToDouble(reader["Rebounds"].ToString()),

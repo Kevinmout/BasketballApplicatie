@@ -3,45 +3,42 @@
 @{
     ViewData["Title"] = "Players";
 }
-<div class="text-center">
-    <h1>Players</h1>
 
-    <table class="table table-hover table-dark">
-        <thead>
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">Active Team</th>
-                <th scope="col">Games played</th>
-                <th scope="col">Points</th>
-                <th scope="col">Rebounds</th>
-                <th scope="col">Assists</th>
-                <th scope="col">Blocks</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var player in Model.Players)
-            {
-                <tr>
-                    <td>@player.Id</td>
-                    <td>@player.FirstName</td>
-                    <td>@player.LastName</td>
-                    <td>@player.ActiveTeam</td>
-                    <td>@player.Games</td>
-                    <td>@player.Points</td>
-                    <td>@player.Rebounds</td>
-                    <td>@player.Assists</td>
-                    <td>@player.Blocks</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-    <input type="search" list="data1" id="searchid" placeholder="Enter Player..." />
-    <datalist id="data1">
-        @foreach (var item in Model.Players)
+
+<div class="text-center">
+    <h1>CRUD without Entity Framework</h1>
+    <a asp-page="CRUD/Create">Create New</a>
+    <hr />
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Active Team</th>
+            <th>Games played</th>
+            <th>Points</th>
+            <th>Rebounds</th>
+            <th>Assists</th>
+            <th>Blocks</th>
+        </tr>
+        @foreach (var player in Model.Getplayer)
         {
-            <option>@item.LastName</option>
+            <tr>
+                <td>@player.Id</td>
+                <td>@player.FirstName</td>
+                <td>@player.LastName</td>
+                <td>@player.ActiveTeam</td>
+                <td>@player.Games</td>
+                <td>@player.Points</td>
+                <td>@player.Rebounds</td>
+                <td>@player.Assists</td>
+                <td>@player.Blocks</td>
+                <td>
+                    <a asp-page="CRUD/Edit" asp-route-Id="@player.Id">Edit</a>
+                    <a asp-page="CRUD/Read" asp-route-Id="@player.Id">Read</a>
+                    <a asp-page="CRUD/Delete" asp-route-Id="@player.Id">Delete</a>
+                </td>
+            </tr>
         }
-    </datalist>
+    </table>
 </div>

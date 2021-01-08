@@ -16,7 +16,7 @@ namespace DAL
             MySqlConnection mcon = new MySqlConnection(connString);
 
 
-            string cmdText = "INSERT INTO team(TeamName,PlayerName)Values('" + teamName + "','" + playerName + "')";
+            string cmdText = "INSERT INTO team Values('" + teamName + "','" + playerName + "')";
             MySqlCommand cmd = new MySqlCommand(cmdText, mcon);
             mcon.Open();
             cmd.ExecuteNonQuery();
