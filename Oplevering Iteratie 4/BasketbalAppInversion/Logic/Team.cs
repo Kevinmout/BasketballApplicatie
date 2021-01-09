@@ -9,22 +9,13 @@ namespace Logic
 {
     public class Team
     {
-        public string PlayerName { get; set; }
-        public string PlayerNameFromForm { get; set; }
-        public string TeamName { get; set; }
-        public Team(string playerName, string teamName)
+        public int IdTeam { get; set; }
+        public string Name { get; set; }
+        public string Owner { get; set; }
+        List<Player> players;
+        public List<Player> GetPlayers()
         {
-            PlayerNameFromForm = playerName;
-            TeamName = teamName;
-        }
-        public void GetTeam()
-        {
-            //ITeamDal dal = PlayerFactory.GetTeamDal();
-            //PlayerName = dal.PlayerName;
-        }
-        public void PostTeam()
-        {
-            ITeamDal dal = PlayerFactory.GetTeamDal(PlayerNameFromForm, TeamName);
+            return players;
         }
     }
 }

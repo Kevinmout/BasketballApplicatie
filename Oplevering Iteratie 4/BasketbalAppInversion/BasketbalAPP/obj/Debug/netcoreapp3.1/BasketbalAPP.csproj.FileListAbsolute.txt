@@ -66,7 +66,9 @@ C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\Baske
 C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\BasketbalAPP\obj\Debug\netcoreapp3.1\Razor\Pages\Login.cshtml.g.cs
 C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\BasketbalAPP\obj\Debug\netcoreapp3.1\Razor\Pages\Players.cshtml.g.cs
 C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\BasketbalAPP\obj\Debug\netcoreapp3.1\scopedcss\bundle\BasketbalAPP.styles.css
-C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\BasketbalAPP\obj\Debug\netcoreapp3.1\Razor\Pages\CRUD\Delete.cshtml.g.cs
-C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\BasketbalAPP\obj\Debug\netcoreapp3.1\Razor\Pages\CRUD\Edit.cshtml.g.cs
-C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\BasketbalAPP\obj\Debug\netcoreapp3.1\Razor\Pages\CRUD\Create.cshtml.g.cs
-C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\BasketbalAPP\obj\Debug\netcoreapp3.1\Razor\Pages\CRUD\Read.cshtml.g.cs
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\BasketbalAPP\obj\Debug\netcoreapp3.1\Razor\Pages\CRUDplayers\Create.cshtml.g.cs
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\BasketbalAPP\obj\Debug\netcoreapp3.1\Razor\Pages\CRUDplayers\Delete.cshtml.g.cs
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\BasketbalAPP\obj\Debug\netcoreapp3.1\Razor\Pages\CRUDplayers\Read.cshtml.g.cs
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\BasketbalAPP\obj\Debug\netcoreapp3.1\Razor\Pages\CRUDplayers\Update.cshtml.g.cs
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\BasketbalAPP\obj\Debug\netcoreapp3.1\Razor\Pages\CRUDteam\Create.cshtml.g.cs
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\BasketbalAPP\obj\Debug\netcoreapp3.1\Razor\Pages\CRUDteam\Read.cshtml.g.cs

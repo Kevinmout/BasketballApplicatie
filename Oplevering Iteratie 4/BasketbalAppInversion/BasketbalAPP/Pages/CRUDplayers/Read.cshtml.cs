@@ -15,23 +15,12 @@ namespace BasketbalAPP.Pages
         [BindProperty]
         public Player DisplayPlayer { get; set; }
 
-
-
-        //public static List<Player> DisplayPlayers()
-        //{
-        //    List<Player> Listobj = new List<Player>();
-        //    PlayerCollection playerCollection = new PlayerCollection();
-        //    playerCollection.Read();
-        //    Listobj = playerCollection.GetPlayers();
-        //    return Listobj;
-        //}
-
-
-        public void OnGet(Player player)
+        public void OnGet(int id)
         {
             PlayerCollection playerCollection = new PlayerCollection();
-            DisplayPlayer = playerCollection.ReadPlayer(player);
+            DisplayPlayer = playerCollection.ReadPlayer(id);
         }
+
     }
 }
 

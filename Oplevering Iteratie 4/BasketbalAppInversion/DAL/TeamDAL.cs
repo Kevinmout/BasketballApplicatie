@@ -1,4 +1,6 @@
-﻿using Logic.Interface.interfaces;
+﻿using Logic.Interface.Dto_s;
+using Logic.Interface.DTOs;
+using Logic.Interface.interfaces;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -8,19 +10,63 @@ namespace DAL
 {
     public class TeamDAL : ITeamDal
     {
-        public string PlayerName { get; set; }
+        public string Connection { get; set; }
+        public TeamDAL()
+        {
+            Connection = "server=Localhost;user id=root;password =root;database=basketbal;allowuservariables=True;persistsecurityinfo=True";
+        }
+
         public TeamDAL(string playerName, string teamName)
         {
-            string connString = "server=Localhost;user id=root;password =root;database=basketbal;allowuservariables=True;persistsecurityinfo=True";
-
-            MySqlConnection mcon = new MySqlConnection(connString);
-
-
+            MySqlConnection mcon = new MySqlConnection(Connection);
             string cmdText = "INSERT INTO team Values('" + teamName + "','" + playerName + "')";
             MySqlCommand cmd = new MySqlCommand(cmdText, mcon);
             mcon.Open();
             cmd.ExecuteNonQuery();
             mcon.Close();
+        }
+
+
+        public List<TeamDto> GetData()
+        {
+            List<TeamDto> data = new List<TeamDto>();
+            string query = "SELECT * FROM team";
+            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
+            using var cmd = new MySqlCommand(query, sqlconnection);
+            sqlconnection.Open();
+            using (var reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    data.Add(new TeamDto
+                    {
+                        IdTeam = Convert.ToInt32(reader["idTeam"].ToString()),
+                        Name = Convert.ToString(reader["Name"].ToString()),
+                        Owner = Convert.ToString(reader["Owner"].ToString())
+                    });
+                }
+            }
+            sqlconnection.Close();
+            return data;
+        }
+
+        public PlayerDto GetById(int id)
+        {
+            PlayerDto data = new PlayerDto();
+            string query = "select speler.LastName, speler.FirstName from speler_team JOIN speler ON speler.idPlayer = speler_team.idPlayer JOIN team ON team.idTeam = speler_team.idTeam where='" + id + "'";
+            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
+            using var cmd = new MySqlCommand(query, sqlconnection);
+            sqlconnection.Open();
+            using var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                {
+                    data.LastName = Convert.ToString(reader["LastName"].ToString());
+                    data.FirstName = Convert.ToString(reader["FirstName"].ToString());
+                };
+            }
+            sqlconnection.Close();
+            return data;
         }
     }
 }

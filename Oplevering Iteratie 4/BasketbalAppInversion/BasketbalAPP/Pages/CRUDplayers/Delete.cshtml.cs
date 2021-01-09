@@ -6,19 +6,26 @@ using APPBasketbal.Models;
 using Logic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using MySql.Data.MySqlClient;
 
 namespace BasketbalAPP.Pages.CRUD
 {
-    public class CreateModel : PageModel
+    public class DeleteModel : PageModel
     {
-        public void OnGet()
+        [BindProperty]
+        public Player DisplayPlayer { get; set; }
+        public void OnGet(int id)
         {
+            PlayerCollection playerCollection = new PlayerCollection();
+            DisplayPlayer = playerCollection.ReadPlayer(id);
         }
+
         public IActionResult OnPostAsync(Player player)
         {
             PlayerCollection playerCollection = new PlayerCollection();
-            playerCollection.AddPlayer(player);
+            playerCollection.DeletePlayer(player);
             return RedirectToPage("/Players");
+
         }
     }
 }

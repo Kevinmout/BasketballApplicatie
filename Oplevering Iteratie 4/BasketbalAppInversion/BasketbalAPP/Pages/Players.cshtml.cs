@@ -12,18 +12,17 @@ namespace BasketbalAPP.Pages
 {
     public class PlayersModel : PageModel
     {
-        public IEnumerable<Player> Getplayer { get; set; }
+        public IEnumerable<Player> GetPlayers { get; set; }
         public void OnGet()
         {
-            Getplayer = DisplayPlayers();
+            GetPlayers = DisplayPlayers();
         }
 
         public static List<Player> DisplayPlayers()
         {
-            List<Player> Listobj = new List<Player>();
             PlayerCollection playerCollection = new PlayerCollection();
             playerCollection.GetAllPlayers();
-            Listobj = playerCollection.GetPlayers();
+            List<Player> Listobj = playerCollection.GetPlayers();
             return Listobj;
         }
     }

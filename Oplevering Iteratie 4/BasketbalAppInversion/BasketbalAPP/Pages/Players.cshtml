@@ -7,7 +7,7 @@
 
 <div class="text-center">
     <h1>CRUD without Entity Framework</h1>
-    <a asp-page="CRUD/Create">Create New</a>
+    <a asp-page="CRUDplayers/Create">Create New</a>
     <hr />
     <table class="table">
         <tr>
@@ -21,10 +21,10 @@
             <th>Assists</th>
             <th>Blocks</th>
         </tr>
-        @foreach (var player in Model.Getplayer)
+        @foreach (var player in Model.GetPlayers)
         {
             <tr>
-                <td>@player.Id</td>
+                <td>@player.IdPlayer</td>
                 <td>@player.FirstName</td>
                 <td>@player.LastName</td>
                 <td>@player.ActiveTeam</td>
@@ -34,9 +34,9 @@
                 <td>@player.Assists</td>
                 <td>@player.Blocks</td>
                 <td>
-                    <a asp-page="CRUD/Edit" asp-route-Id="@player.Id">Edit</a>
-                    <a asp-page="CRUD/Read" asp-route-Id="@player.Id">Read</a>
-                    <a asp-page="CRUD/Delete" asp-route-Id="@player.Id">Delete</a>
+                    <a asp-page="CRUDplayers/Update" asp-route-Id="@player.IdPlayer">Edit</a>
+                    <a asp-page="CRUDplayers/Read" asp-route-Id="@player.IdPlayer">Read</a>
+                    <a asp-page="CRUDplayers/Delete" asp-route-Id="@player.IdPlayer">Delete</a>
                 </td>
             </tr>
         }

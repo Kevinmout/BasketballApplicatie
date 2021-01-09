@@ -11,27 +11,18 @@ namespace BasketbalAPP.Pages
 {
     public class TeamModel : PageModel
     {
-        public string PlayerName { get; set; }
-        public string PlayerNamePost { get; set; }
-        public string TeamNamePost { get; set; }
-        private List<Player> players;
-        public List<Player> GetPlayers()
-        {
-            return players;
-        }
+        public IEnumerable<Team> GetTeams { get; set; }
         public void OnGet()
         {
-            PlayerCollection playerCollection = new PlayerCollection();
-            playerCollection.GetAllPlayers();
-            players = playerCollection.GetPlayers();
+            GetTeams = DisplayTeams();
         }
 
-        public void OnPost()
+        public static List<Team> DisplayTeams()
         {
-            PlayerNamePost = Request.Form["PlayerName"];
-            TeamNamePost = Request.Form["TeamName"];
-            Team team = new Team(PlayerNamePost, TeamNamePost);
-            team.PostTeam();
+            TeamCollection teamCollection = new TeamCollection();
+            teamCollection.GetAllTeams();
+            List<Team> Listobj = teamCollection.GetTeams();
+            return Listobj;
         }
     }
 }

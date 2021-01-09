@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Logic.Interface.Dto_s;
+using Logic.Interface.DTOs;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +8,7 @@ namespace Logic.Interface.interfaces
 {
     public interface ITeamDal
     {
-        public string PlayerName { get; set; }
+        List<TeamDto> GetData();
+        PlayerDto GetById(int id);
     }
 }

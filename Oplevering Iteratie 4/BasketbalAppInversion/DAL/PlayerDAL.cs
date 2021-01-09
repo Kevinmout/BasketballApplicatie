@@ -28,7 +28,7 @@ namespace DAL
                 {
                     data.Add(new PlayerDto
                     {
-                        Id = Convert.ToInt32(reader["Id"].ToString()),
+                        IdPlayer = Convert.ToInt32(reader["idPlayer"].ToString()),
                         LastName = Convert.ToString(reader["LastName"].ToString()),
                         FirstName = Convert.ToString(reader["FirstName"].ToString()),
                         ActiveTeam = Convert.ToString(reader["ActiveTeam"].ToString()),
@@ -48,7 +48,7 @@ namespace DAL
         public void Delete(int id)
         {
             using MySqlConnection sqlconnection = new MySqlConnection(Connection);
-            string Updatequery = "Delete From speler where Id=" + id;
+            string Updatequery = "Delete From speler where idPlayer=" + id;
             using MySqlCommand sqlCommand = new MySqlCommand(Updatequery, sqlconnection);
             sqlconnection.Open();
             sqlCommand.ExecuteNonQuery();
@@ -69,7 +69,7 @@ namespace DAL
         public PlayerDto GetById(int id)
         {
             PlayerDto player = new PlayerDto();
-            string query = "select * from speler where Id ='" + id + "'";
+            string query = "select * from speler where idPlayer ='" + id + "'";
             using MySqlConnection sqlconnection = new MySqlConnection(Connection);
             using var cmd = new MySqlCommand(query, sqlconnection);
             sqlconnection.Open();
@@ -77,7 +77,7 @@ namespace DAL
             while (reader.Read())
             {
                 {
-                    player.Id = Convert.ToInt32(reader["Id"].ToString());
+                    player.IdPlayer = Convert.ToInt32(reader["idPlayer"].ToString());
                     player.LastName = Convert.ToString(reader["LastName"].ToString());
                     player.FirstName = Convert.ToString(reader["FirstName"].ToString());
                     player.ActiveTeam = Convert.ToString(reader["ActiveTeam"].ToString());
@@ -90,6 +90,16 @@ namespace DAL
             }
             sqlconnection.Close();
             return player;
+        }
+
+        public void Edit(PlayerDto player)
+        {
+            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
+            string Updatequery = "Update speler set ActiveTeam='" + player.ActiveTeam.ToString() + "',Games='" + player.Games + "' where idPlayer=" + player.IdPlayer;
+            using MySqlCommand sqlCommand = new MySqlCommand(Updatequery, sqlconnection);
+            sqlconnection.Open();
+            sqlCommand.ExecuteNonQuery();
+            sqlconnection.Close();
         }
     }
 }

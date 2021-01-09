@@ -6,6 +6,8 @@ namespace Logic.Interface.Dto_s
 {
     public class TeamDto
     {
-        public string PlayerName { get; set; }
+        public int IdTeam { get; set; }
+        public string Name { get; set; }
+        public string Owner { get; set; }
     }
 }

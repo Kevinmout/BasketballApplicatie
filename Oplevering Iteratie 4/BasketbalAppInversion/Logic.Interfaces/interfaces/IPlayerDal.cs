@@ -10,5 +10,6 @@ namespace Logic
         List<PlayerDto> GetData();
         void Create(PlayerDto player);
         void Delete(int id);
+        void Edit(PlayerDto player);
     }
 }

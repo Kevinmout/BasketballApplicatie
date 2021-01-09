@@ -29,7 +29,7 @@ namespace Logic
             {
                 players.Add(new Player()
                 {
-                    Id = a.Id,
+                    IdPlayer = a.IdPlayer,
                     LastName = a.LastName,
                     FirstName = a.FirstName,
                     ActiveTeam = a.ActiveTeam,
@@ -43,13 +43,13 @@ namespace Logic
         }
 
 
-        public Player ReadPlayer(Player player)
+        public Player ReadPlayer(int id)
         {
             IPlayerDal dal = PlayerFactory.GetPlayerDal();
-            PlayerDto playerDTO = dal.GetById(player.Id);
+            PlayerDto playerDTO = dal.GetById(id);
             return new Player()
             {
-                Id = playerDTO.Id,
+                IdPlayer = playerDTO.IdPlayer,
                 LastName = playerDTO.LastName,
                 FirstName = playerDTO.FirstName,
                 ActiveTeam = playerDTO.ActiveTeam,
@@ -62,21 +62,35 @@ namespace Logic
         }
 
 
+        public void UpdatePlayer(Player player, int id)
+        {
+            players.Add(player);
+            IPlayerDal dal = PlayerFactory.GetPlayerDal();
+            dal.Edit(new PlayerDto
+            {
+                IdPlayer = id,
+                ActiveTeam = player.ActiveTeam,
+                Games = player.Games,
+            });
+            
+        }
+
+
         public void DeletePlayer(Player player)
         {
             players.Remove(player);
             IPlayerDal dal = PlayerFactory.GetPlayerDal();
-            dal.Delete(player.Id);
+            dal.Delete(player.IdPlayer);
         }
 
 
 
-        public void AddPlayer(Player player)
+        public void CreatePlayer(Player player)
         {
             players.Add(player);
             IPlayerDal dal = PlayerFactory.GetPlayerDal();
 
-            dal.Create(new Interface.DTOs.PlayerDto
+            dal.Create(new PlayerDto
             {
                 LastName = player.LastName,
                 FirstName = player.FirstName,
