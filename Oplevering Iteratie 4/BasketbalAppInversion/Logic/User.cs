@@ -9,7 +9,6 @@ namespace Logic
         private string userName;
         private string passWord;
         private List<Team> teams;
-        private List<BestTeam> bestTeam;
         public string UserName 
         {
              get {return userName; }
@@ -26,25 +25,16 @@ namespace Logic
             return teams;
         }
 
-        public List<BestTeam> GetBestTeam()
-        {
-            return bestTeam;
-        }
+
 
         public User()
         {
             teams = new List<Team>();
-            bestTeam = new List<BestTeam>();
         }
 
         public void AddTeam(Team team)
         {
             this.teams.Add(team);
-        }
-
-        public void GiveBestTeam(BestTeam bestTeam)
-        {
-            this.bestTeam.Add(bestTeam);
         }
     }
 }

@@ -22,7 +22,7 @@ namespace BasketbalAPP.Pages
         public void OnGet()
         {
             PlayerCollection playerCollection = new PlayerCollection();
-            playerCollection.getAllPlayers();
+            playerCollection.GetAllPlayers();
             players = playerCollection.GetPlayers();
         }
 

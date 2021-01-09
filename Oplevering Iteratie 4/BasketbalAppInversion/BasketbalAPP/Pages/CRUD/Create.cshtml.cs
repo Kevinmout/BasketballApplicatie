@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using APPBasketbal.Models;
+using Logic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using MySql.Data.MySqlClient;
 
 namespace BasketbalAPP.Pages.CRUD
 {
@@ -14,19 +14,10 @@ namespace BasketbalAPP.Pages.CRUD
         public void OnGet()
         {
         }
-        public IActionResult OnPostAsync(Player playerinsert)
+        public IActionResult OnPostAsync(Player player)
         {
-            string connection = "server=Localhost;user id=root;password =root;database=basketbal;allowuservariables=True;persistsecurityinfo=True";
-            using (MySqlConnection mySqlConnection = new MySqlConnection(connection))
-            {
-                string Insertdata = "Insert into speler Values(NULL, '" + playerinsert.LastName + "','" + playerinsert.FirstName + "','" + playerinsert.ActiveTeam + "','" + playerinsert.Games + "','" + playerinsert.Points + "','" + playerinsert.Rebounds + "','" + playerinsert.Assists + "','" + playerinsert.Blocks + "')";
-                using (MySqlCommand sqlCommand = new MySqlCommand(Insertdata, mySqlConnection))
-                {
-                    mySqlConnection.Open();
-                    sqlCommand.ExecuteNonQuery();
-                    mySqlConnection.Close();
-                }
-            }
+            PlayerCollection playerCollection = new PlayerCollection();
+            playerCollection.AddPlayer(player);
             return RedirectToPage("/Players");
         }
     }

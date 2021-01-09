@@ -14,10 +14,12 @@ namespace ContainterVervoer
         }
         public int XPosition { get; set; }
         public int Weight { get; set; }
+        public bool IsValuable { get; set; }
         
         public Stack()
         {
             containersOnStack = new List<Container>();
+            IsValuable = false;
         }
 
 
@@ -70,6 +72,7 @@ namespace ContainterVervoer
         { 
             if (containersOnStack.Count == 0 && (XPosition == 1 || XPosition == 4))
             {
+                IsValuable = true;
                 return true;
             }
             else if ((XPosition == 1 || XPosition == 4) && containersOnStack.Last().IsValuable == false)

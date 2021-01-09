@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using APPBasketbal.Models;
+using Logic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
@@ -42,19 +43,10 @@ namespace BasketbalAPP.Pages.CRUD
             }
         }
 
-        public IActionResult OnPostAsync(int id)
+        public IActionResult OnPostAsync(Player player)
         {
-            string connection = "server=Localhost;user id=root;password =root;database=basketbal;allowuservariables=True;persistsecurityinfo=True";
-            using (MySqlConnection sqlconnection = new MySqlConnection(connection))
-            {
-                string Updatequery = "Delete From speler where Id=" + id;
-                using (MySqlCommand sqlCommand = new MySqlCommand(Updatequery, sqlconnection))
-                {
-                    sqlconnection.Open();
-                    sqlCommand.ExecuteNonQuery();
-                    sqlconnection.Close();
-                }
-            }
+            PlayerCollection playerCollection = new PlayerCollection();
+            playerCollection.DeletePlayer(player);
             return RedirectToPage("/Players");
 
         }

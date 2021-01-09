@@ -6,6 +6,9 @@ namespace Logic
 {
     public interface IPlayerDal
     {
-        PlayerListDto GetPlayerList();
+        PlayerDto GetById(int id);
+        List<PlayerDto> GetData();
+        void Create(PlayerDto player);
+        void Delete(int id);
     }
 }

@@ -19,10 +19,5 @@ namespace APPBasketbal.Models
         public double Rebounds { get; set; }
         public double Assists { get; set; }
         public double Blocks { get; set; }
-
-        public void UpdatePlayers()
-        {
-
-        }
     }
 }

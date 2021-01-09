@@ -12,7 +12,7 @@ namespace Factory
     {
         public static IPlayerDal GetPlayerDal()
         {
-            return new PlayersDAL();
+            return new PlayerDAL();
         }
 
         public static ITeamDal GetTeamDal(string playerNameFromForm, string teamNameFromForm)

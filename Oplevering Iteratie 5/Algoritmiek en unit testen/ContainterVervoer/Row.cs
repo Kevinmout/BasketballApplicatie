@@ -120,7 +120,6 @@ namespace ContainterVervoer
         /// <param name="containers"></param>
         public void AddValuable(List<Container> containers)
         {
-            //SortWeightStacks();
             foreach (Container container in containers.ToList())
             {
                 if (container.IsValuable == true)
@@ -151,42 +150,79 @@ namespace ContainterVervoer
 
 
 
-
-
         /// <summary>
         /// Sort the stacks, that the weight is good.
         /// </summary>
-        public void SortWeightStacks()
+        public List<Stack> SortWeightStacks()
         {
-            //List<int> vars = new List<int>();
-            //for (int i = 1; i < RowIndex - 1; i++)
-            //{
-            //    var stack = stacksInRow.ElementAt(i).Weight;
-            //    vars.Add(stack);
-            //}
-
-
-
-
-            var firstStack = stacksInRow.ElementAt(0).Weight;
-            var secondStack = stacksInRow.ElementAt(1).Weight;
-            var thirdStack = stacksInRow.ElementAt(2).Weight;
-            var fourthStack = stacksInRow.ElementAt(3).Weight;
-            if ((firstStack + secondStack) * 1.2 >= (thirdStack + fourthStack) || (firstStack + secondStack) * 0.8 >= (thirdStack + fourthStack))
+            List<Stack> a = new List<Stack>();
+            List<Stack> b = new List<Stack>();
+            double length = Convert.ToDouble(stacksInRow.Count);
+            for (int i = 0; i < Math.Ceiling(length / 2); i++)
             {
-                stacksInRow.ElementAt(0).XPosition = 1;
-                stacksInRow.ElementAt(1).XPosition = 2;
-                stacksInRow.ElementAt(2).XPosition = 3;
-                stacksInRow.ElementAt(3).XPosition = 4;
-            }
-            else if ((firstStack + thirdStack) * 1.2 >= (secondStack + fourthStack) || (firstStack + thirdStack) * 0.8 >= (secondStack + fourthStack))
-            {
-                stacksInRow.ElementAt(0).XPosition = 1;
-                stacksInRow.ElementAt(1).XPosition = 3;
-                stacksInRow.ElementAt(2).XPosition = 2;
-                stacksInRow.ElementAt(3).XPosition = 4;
+                a.Add(stacksInRow.ElementAt(i));
             }
 
+            int remainding = Convert.ToInt32(Math.Ceiling(length / 2));
+            for (int i = remainding; i < length; i++)
+            {
+                b.Add(stacksInRow.ElementAt(i));
+            }
+
+
+            if (a.Sum(item => item.Weight) > b.Sum(item => item.Weight))
+            {
+                a = a.OrderBy(w => w.Weight).ToList();
+                b = b.OrderBy(w => w.Weight).ToList();
+                List<Stack> temp = new List<Stack>();
+
+                for (int item = 0; item < a.Count; item++)
+                {
+                    temp.Add(a.ElementAt(item));
+                }
+                int i = 0;
+                while (((b.Sum(item => item.Weight)) <= (temp.Sum(item => item.Weight))) && (i <= a.Count))
+                {
+                    b.Add(a[i]);
+                    temp.Remove(a.ElementAt(i));
+                    i += 1;
+                }
+
+                a = temp;
+            }
+
+
+
+
+
+            if (b.Sum(item => item.Weight) > a.Sum(item => item.Weight))
+            {
+                a = a.OrderBy(w => w.Weight).ToList();
+                b = b.OrderBy(w => w.Weight).ToList();
+                List<Stack> temp = new List<Stack>();
+                for (int item = 0; item < b.Count; item++)
+                {
+                    temp.Add(b.ElementAt(item));
+                }
+                int i = 0;
+                while ((a.Sum(item => item.Weight) <= temp.Sum(item => item.Weight)) && (i <= b.Count))
+                {
+                    a.Add(b[i]);
+                    temp.Remove(b.ElementAt(i));
+                    i += 1;
+                }
+                b = temp;
+            }
+            stacksInRow.Clear();
+            foreach (Stack stack in a)
+            {
+                stacksInRow.Add(stack);
+            }
+            foreach (Stack stack in b)
+            {
+                stacksInRow.Add(stack);
+            }
+            return stacksInRow;
         }
 
 

@@ -22,7 +22,7 @@ namespace BasketbalAPP.Pages
         {
             List<Player> Listobj = new List<Player>();
             PlayerCollection playerCollection = new PlayerCollection();
-            playerCollection.getAllPlayers();
+            playerCollection.GetAllPlayers();
             Listobj = playerCollection.GetPlayers();
             return Listobj;
         }
