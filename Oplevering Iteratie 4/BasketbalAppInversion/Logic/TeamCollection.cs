@@ -10,6 +10,11 @@ namespace Logic
 {
     public class TeamCollection
     {
+        List<Player> players;
+        public List<Player> GetPlayers()
+        {
+            return players;
+        }
         private List<Team> teams;
         public List<Team> GetTeams()
         {
@@ -19,6 +24,7 @@ namespace Logic
         public TeamCollection()
         {
             teams = new List<Team>();
+            players = new List<Player>();
         }
         public void GetAllTeams()
         {
@@ -34,16 +40,18 @@ namespace Logic
             }
         }
 
-        public Player GetPlayer(int id)
+        public void GetPlayers(int id)
         {
             ITeamDal dal = PlayerFactory.GetTeamDal();
-
-            PlayerDto playerDto = dal.GetById(id);
-            return new Player()
+            Team team = new Team();
+            foreach (var a in dal.GetById(id))
             {
-                LastName = playerDto.LastName,
-                FirstName = playerDto.FirstName
-            };
+                players.Add(new Player()
+                {
+                    LastName = a.LastName,
+                    FirstName = a.FirstName
+                });
+            }
 
         }
     }

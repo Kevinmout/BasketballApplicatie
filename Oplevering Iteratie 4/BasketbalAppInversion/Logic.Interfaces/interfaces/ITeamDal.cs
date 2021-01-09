@@ -9,6 +9,6 @@ namespace Logic.Interface.interfaces
     public interface ITeamDal
     {
         List<TeamDto> GetData();
-        PlayerDto GetById(int id);
+        List<PlayerDto> GetById(int id);
     }
 }

@@ -50,20 +50,21 @@ namespace DAL
             return data;
         }
 
-        public PlayerDto GetById(int id)
+        public List<PlayerDto> GetById(int id)
         {
-            PlayerDto data = new PlayerDto();
-            string query = "select speler.LastName, speler.FirstName from speler_team JOIN speler ON speler.idPlayer = speler_team.idPlayer JOIN team ON team.idTeam = speler_team.idTeam where='" + id + "'";
+            List<PlayerDto> data = new List<PlayerDto>();
+            string query = "select speler.LastName, speler.FirstName from speler_team INNER JOIN speler ON speler.idPlayer = speler_team.idPlayer INNER JOIN team ON team.idTeam = speler_team.idTeam where speler_team.idTeam='" + id + "'";
             using MySqlConnection sqlconnection = new MySqlConnection(Connection);
             using var cmd = new MySqlCommand(query, sqlconnection);
             sqlconnection.Open();
             using var reader = cmd.ExecuteReader();
             while (reader.Read())
             {
+                data.Add(new PlayerDto
                 {
-                    data.LastName = Convert.ToString(reader["LastName"].ToString());
-                    data.FirstName = Convert.ToString(reader["FirstName"].ToString());
-                };
+                    LastName = Convert.ToString(reader["LastName"].ToString()),
+                    FirstName = Convert.ToString(reader["FirstName"].ToString())
+                });
             }
             sqlconnection.Close();
             return data;

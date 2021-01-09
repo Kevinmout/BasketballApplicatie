@@ -12,10 +12,6 @@ namespace Logic
         public int IdTeam { get; set; }
         public string Name { get; set; }
         public string Owner { get; set; }
-        List<Player> players;
-        public List<Player> GetPlayers()
-        {
-            return players;
-        }
+
     }
 }

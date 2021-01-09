@@ -12,13 +12,13 @@ namespace BasketbalAPP.Pages.CRUDteam
     public class ReadModel : PageModel
     {
         [BindProperty]
-        public Player DisplayPlayerinTeam { get; set; }
-        public Team Team { get; set; }
+        public IEnumerable<Player> DisplayPlayerinTeam { get; set; }
 
         public void OnGet(int id)
         {
             TeamCollection teamCollection = new TeamCollection();
-            DisplayPlayerinTeam = teamCollection.GetPlayer(id);
+            teamCollection.GetPlayers(id);
+            DisplayPlayerinTeam = teamCollection.GetPlayers();
         }
     }
 }

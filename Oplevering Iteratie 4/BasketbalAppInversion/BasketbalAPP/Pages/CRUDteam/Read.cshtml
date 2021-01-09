@@ -6,19 +6,26 @@
 
 <h1>Details Page</h1>
 
-<table class="table">
+<div class="text-center">
+    <h1>CRUD without Entity Framework</h1>
+    <a asp-page="CRUDplayers/Create">Add New</a>
+    <hr />
+    <table class="table">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        @foreach (var player in Model.DisplayPlayerinTeam)
+        {
     <tr>
+        <td>@player.FirstName</td>
+        <td>@player.LastName</td>
+        @*<td>
+            <a asp-page="CRUDteam/Update" asp-route-Id="@player.IdPlayer">Edit</a>
+            <a asp-page="CRUDteam/Read" asp-route-Id="@player.IdPlayer">Read</a>
+            <a asp-page="CRUDteam/Delete" asp-route-Id="@player.IdPlayer">Delete</a>
+        </td>*@
     </tr>
-    <tr>
-        <td>First Name : @Html.DisplayFor(model => model.DisplayPlayerinTeam.FirstName)</td>
-    </tr>
-    <tr>
-        <td>First Name : @Html.DisplayFor(model => model.Team.Name)</td>
-    </tr>
-    <tr>
-        <td>First Name : @Html.DisplayFor(model => model.DisplayPlayerinTeam.FirstName)</td>
-    </tr>
-    <tr>
-        <td>Last Name : @Html.DisplayFor(model => model.DisplayPlayerinTeam.LastName)</td>
-    </tr>
-</table>
+        }
+    </table>
+</div>
