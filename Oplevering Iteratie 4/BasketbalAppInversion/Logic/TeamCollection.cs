@@ -55,6 +55,8 @@ namespace Logic
 
         }
 
+
+        //CRUD
         public void CreateTeam(Team team)
         {
             teams.Add(team);
@@ -78,7 +80,6 @@ namespace Logic
             };
         }
 
-
         public void UpdateTeam(Team team, int id)
         {
             ITeamDal dal = PlayerFactory.GetTeamDal();
@@ -89,7 +90,6 @@ namespace Logic
             });
         }
 
-
         public void DeleteTeam(Team team)
         {
             teams.Remove(team);
@@ -97,5 +97,19 @@ namespace Logic
             dal.Delete(team.IdTeam);
         }
 
+
+
+        public void AddPlayerToTeam(Team team, Player player)
+        {
+            players.Add(player);
+            ITeamDal dal = PlayerFactory.GetTeamDal();
+            dal.AddPlayer(new TeamDto
+            {
+                IdTeam = team.IdTeam
+            },new PlayerDto
+            {
+                IdPlayer = player.IdPlayer
+            });
+        }
     }
 }

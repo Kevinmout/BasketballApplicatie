@@ -43,6 +43,49 @@ namespace Logic
         }
 
 
+        public List<Player> GetPlayersToAdd(int id)
+        {
+            IPlayerDal dal = PlayerFactory.GetPlayerDal();
+            foreach (var a in dal.GetDataNotInTeam(id))
+            {
+                players.Add(new Player()
+                {
+                    IdPlayer = a.IdPlayer,
+                    LastName = a.LastName,
+                    FirstName = a.FirstName,
+                    ActiveTeam = a.ActiveTeam,
+                    Games = a.Games,
+                    Points = a.Points,
+                    Rebounds = a.Rebounds,
+                    Assists = a.Assists,
+                    Blocks = a.Blocks,
+                });
+            }
+            return players;
+        }
+
+
+
+        //CRUD
+        public void CreatePlayer(Player player)
+        {
+            players.Add(player);
+            IPlayerDal dal = PlayerFactory.GetPlayerDal();
+
+            dal.Create(new PlayerDto
+            {
+                LastName = player.LastName,
+                FirstName = player.FirstName,
+                ActiveTeam = player.ActiveTeam,
+                Games = player.Games,
+                Points = player.Points,
+                Rebounds = player.Rebounds,
+                Assists = player.Assists,
+                Blocks = player.Blocks,
+            });
+        }
+
+
         public Player ReadPlayer(int id)
         {
             IPlayerDal dal = PlayerFactory.GetPlayerDal();
@@ -85,22 +128,6 @@ namespace Logic
 
 
 
-        public void CreatePlayer(Player player)
-        {
-            players.Add(player);
-            IPlayerDal dal = PlayerFactory.GetPlayerDal();
 
-            dal.Create(new PlayerDto
-            {
-                LastName = player.LastName,
-                FirstName = player.FirstName,
-                ActiveTeam = player.ActiveTeam,
-                Games = player.Games,
-                Points = player.Points,
-                Rebounds = player.Rebounds,
-                Assists = player.Assists,
-                Blocks = player.Blocks,
-            });
-        }
     }
 }

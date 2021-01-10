@@ -74,3 +74,4 @@ C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\Baske
 C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\BasketbalAPP\obj\Debug\netcoreapp3.1\Razor\Pages\CRUDteam\Read.cshtml.g.cs
 C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\BasketbalAPP\obj\Debug\netcoreapp3.1\Razor\Pages\CRUDteam\Delete.cshtml.g.cs
 C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\BasketbalAPP\obj\Debug\netcoreapp3.1\Razor\Pages\CRUDteam\Update.cshtml.g.cs
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\BasketbalAPP\obj\Debug\netcoreapp3.1\Razor\Pages\CRUDinTeam\PlayerToAdd.cshtml.g.cs

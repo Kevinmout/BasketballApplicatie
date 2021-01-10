@@ -45,17 +45,7 @@ namespace DAL
         }
 
 
-        public void Delete(int id)
-        {
-            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
-            string Updatequery = "Delete From speler where idPlayer=" + id;
-            using MySqlCommand sqlCommand = new MySqlCommand(Updatequery, sqlconnection);
-            sqlconnection.Open();
-            sqlCommand.ExecuteNonQuery();
-            sqlconnection.Close();
-        }
-
-
+        //CRUD
         public void Create(PlayerDto player)
         {
             using MySqlConnection mySqlConnection = new MySqlConnection(Connection);
@@ -100,6 +90,45 @@ namespace DAL
             sqlconnection.Open();
             sqlCommand.ExecuteNonQuery();
             sqlconnection.Close();
+        }
+
+        public void Delete(int id)
+        {
+            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
+            string Updatequery = "Delete From speler where idPlayer=" + id;
+            using MySqlCommand sqlCommand = new MySqlCommand(Updatequery, sqlconnection);
+            sqlconnection.Open();
+            sqlCommand.ExecuteNonQuery();
+            sqlconnection.Close();
+        }
+
+
+
+
+
+
+
+
+        public List<PlayerDto> GetDataNotInTeam(int id)
+        {
+            List<PlayerDto> data = new List<PlayerDto>();
+            string query = "select speler.* from speler where speler.LastName not in (select speler.LastName from speler_team INNER JOIN speler ON speler.idPlayer = speler_team.idPlayer INNER JOIN team ON team.idTeam = speler_team.idTeam where speler_team.idTeam='" + id + "')";
+            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
+            using var cmd = new MySqlCommand(query, sqlconnection);
+            sqlconnection.Open();
+            using (var reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    data.Add(new PlayerDto
+                    {
+                        LastName = Convert.ToString(reader["LastName"].ToString()),
+                        FirstName = Convert.ToString(reader["FirstName"].ToString())
+                    });
+                }
+            }
+            sqlconnection.Close();
+            return data;
         }
     }
 }

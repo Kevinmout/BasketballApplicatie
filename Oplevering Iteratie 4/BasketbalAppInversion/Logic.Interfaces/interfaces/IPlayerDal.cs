@@ -6,10 +6,15 @@ namespace Logic
 {
     public interface IPlayerDal
     {
-        PlayerDto GetById(int id);
+        
         List<PlayerDto> GetData();
+        List<PlayerDto> GetDataNotInTeam(int id);
+
+        //CRUD
         void Create(PlayerDto player);
+        PlayerDto GetById(int id);
         void Delete(int id);
         void Edit(PlayerDto player);
+
     }
 }

@@ -16,17 +16,6 @@ namespace DAL
             Connection = "server=Localhost;user id=root;password =root;database=basketbal;allowuservariables=True;persistsecurityinfo=True";
         }
 
-        public TeamDAL(string playerName, string teamName)
-        {
-            MySqlConnection mcon = new MySqlConnection(Connection);
-            string cmdText = "INSERT INTO team Values('" + teamName + "','" + playerName + "')";
-            MySqlCommand cmd = new MySqlCommand(cmdText, mcon);
-            mcon.Open();
-            cmd.ExecuteNonQuery();
-            mcon.Close();
-        }
-
-
         public List<TeamDto> GetData()
         {
             List<TeamDto> data = new List<TeamDto>();
@@ -110,8 +99,6 @@ namespace DAL
             sqlconnection.Close();
         }
 
-
-
         public void Edit(TeamDto teamDto)
         {
             using MySqlConnection sqlconnection = new MySqlConnection(Connection);
@@ -121,5 +108,22 @@ namespace DAL
             sqlCommand.ExecuteNonQuery();
             sqlconnection.Close();
         }
+
+        public void AddPlayer(TeamDto team, PlayerDto player)
+        {
+            using MySqlConnection mySqlConnection = new MySqlConnection(Connection);
+            string Insertdata = "Insert into speler_team Values(NULL, '" + team.IdTeam + "','" + player.IdPlayer + "')";
+            using MySqlCommand sqlCommand = new MySqlCommand(Insertdata, mySqlConnection);
+            mySqlConnection.Open();
+            sqlCommand.ExecuteNonQuery();
+            mySqlConnection.Close();
+        }
+
+
+
+
+
+
+
     }
 }

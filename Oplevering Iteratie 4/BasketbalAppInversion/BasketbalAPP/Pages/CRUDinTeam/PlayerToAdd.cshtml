@@ -1,0 +1,29 @@
+﻿@page
+@model BasketbalAPP.Pages.CRUDinTeam.PlayerToAddModel
+@using Logic
+@{
+}
+
+<div class="text-center">
+    <h1>CRUD without Entity Framework</h1>
+    <hr />
+    <table class="table">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        @foreach (var player in Model.DisplayPlayerinTeam)
+        {
+            <tr>
+                <td>@player.FirstName</td>
+                <td>@player.LastName</td>
+                <td>
+                    <form method="post">
+                        <input type="submit" value="Add" />
+                        <a asp-page="/Team">Back to List</a>
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

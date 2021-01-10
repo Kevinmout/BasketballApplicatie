@@ -14,5 +14,6 @@ namespace Logic.Interface.interfaces
         void Create(TeamDto teamDto);
         void Delete(int id);
         void Edit(TeamDto teamDto);
+        void AddPlayer(TeamDto team, PlayerDto player);
     }
 }
