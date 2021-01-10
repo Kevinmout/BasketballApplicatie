@@ -69,5 +69,57 @@ namespace DAL
             sqlconnection.Close();
             return data;
         }
+
+        public void Create(TeamDto teamDto)
+        {
+            using MySqlConnection mySqlConnection = new MySqlConnection(Connection);
+            string Insertdata = "Insert into team Values(NULL, '" + teamDto.Name + "','" + teamDto.Owner + "')";
+            using MySqlCommand sqlCommand = new MySqlCommand(Insertdata, mySqlConnection);
+            mySqlConnection.Open();
+            sqlCommand.ExecuteNonQuery();
+            mySqlConnection.Close();
+        }
+
+        public TeamDto GetTeamById(int id)
+        {
+            TeamDto team = new TeamDto();
+            string query = "select * from team where idTeam ='" + id + "'";
+            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
+            using var cmd = new MySqlCommand(query, sqlconnection);
+            sqlconnection.Open();
+            using var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                {
+                    team.IdTeam = Convert.ToInt32(reader["idTeam"].ToString());
+                    team.Name = Convert.ToString(reader["Name"].ToString());
+                    team.Owner = Convert.ToString(reader["Owner"].ToString());
+                }
+            }
+            sqlconnection.Close();
+            return team;
+        }
+
+        public void Delete(int id)
+        {
+            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
+            string Updatequery = "Delete From team where idTeam=" + id;
+            using MySqlCommand sqlCommand = new MySqlCommand(Updatequery, sqlconnection);
+            sqlconnection.Open();
+            sqlCommand.ExecuteNonQuery();
+            sqlconnection.Close();
+        }
+
+
+
+        public void Edit(TeamDto teamDto)
+        {
+            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
+            string Updatequery = "Update team set Name='" + teamDto.Name + "' where idTeam=" + teamDto.IdTeam;
+            using MySqlCommand sqlCommand = new MySqlCommand(Updatequery, sqlconnection);
+            sqlconnection.Open();
+            sqlCommand.ExecuteNonQuery();
+            sqlconnection.Close();
+        }
     }
 }

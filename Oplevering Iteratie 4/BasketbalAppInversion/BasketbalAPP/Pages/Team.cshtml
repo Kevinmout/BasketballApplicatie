@@ -6,7 +6,7 @@
 
 <div class="text-center">
     <h1>CRUD without Entity Framework</h1>
-    <a asp-page="CRUD/Create">Create New</a>
+    <a asp-page="CRUDteam/Create">Create New</a>
     <hr />
     <table class="table">
         <tr>
@@ -16,16 +16,16 @@
         </tr>
         @foreach (var team in Model.GetTeams)
         {
-            <tr>
-                <td>@team.IdTeam</td>
-                <td>@team.Owner</td>
-                <td>@team.Name</td>
-                <td>
-                    @*<a asp-page="CRUDteam/Update" asp-route-Id="@team.Id">Edit</a>*@
-                    <a asp-page="CRUDteam/Read" asp-route-Id="@team.IdTeam">Read</a>
-                    @*<a asp-page="CRUDteam/Delete" asp-route-Id="@team.Id">Delete</a>*@
-                </td>
-            </tr>
+    <tr>
+        <td>@team.IdTeam</td>
+        <td>@team.Name</td>
+        <td>@team.Owner</td>
+        <td>
+            <a asp-page="CRUDteam/Update" asp-route-Id="@team.IdTeam">Edit</a>
+            <a asp-page="CRUDteam/Read" asp-route-Id="@team.IdTeam">Read</a>
+            <a asp-page="CRUDteam/Delete" asp-route-Id="@team.IdTeam">Delete</a>
+        </td>
+    </tr>
         }
     </table>
 </div>

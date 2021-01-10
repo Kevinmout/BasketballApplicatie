@@ -20,12 +20,12 @@ namespace BasketbalAPP.Pages.CRUD
             DisplayPlayer = playerCollection.ReadPlayer(id);
         }
 
-        public IActionResult OnPostAsync(Player player)
+        public IActionResult OnPostAsync(int id)
         {
             PlayerCollection playerCollection = new PlayerCollection();
-            playerCollection.DeletePlayer(player);
+            DisplayPlayer = playerCollection.ReadPlayer(id);
+            playerCollection.DeletePlayer(DisplayPlayer);
             return RedirectToPage("/Players");
-
         }
     }
 }

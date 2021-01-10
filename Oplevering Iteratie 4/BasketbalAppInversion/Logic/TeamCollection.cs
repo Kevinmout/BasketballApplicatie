@@ -1,6 +1,7 @@
 ﻿using APPBasketbal.Models;
 using Factory;
 using Logic.Interface.DTOs;
+using Logic.Interface.Dto_s;
 using Logic.Interface.interfaces;
 using System;
 using System.Collections.Generic;
@@ -43,7 +44,6 @@ namespace Logic
         public void GetPlayers(int id)
         {
             ITeamDal dal = PlayerFactory.GetTeamDal();
-            Team team = new Team();
             foreach (var a in dal.GetById(id))
             {
                 players.Add(new Player()
@@ -54,5 +54,48 @@ namespace Logic
             }
 
         }
+
+        public void CreateTeam(Team team)
+        {
+            teams.Add(team);
+            ITeamDal dal = PlayerFactory.GetTeamDal();
+            dal.Create(new TeamDto
+            {
+                Name = team.Name,
+                Owner = team.Owner
+            });
+        }
+
+        public Team ReadTeam(int id)
+        {
+            ITeamDal dal = PlayerFactory.GetTeamDal();
+            TeamDto teamDto = dal.GetTeamById(id);
+            return new Team()
+            {
+                IdTeam =teamDto.IdTeam,
+                Name = teamDto.Name,
+                Owner = teamDto.Owner
+            };
+        }
+
+
+        public void UpdateTeam(Team team, int id)
+        {
+            ITeamDal dal = PlayerFactory.GetTeamDal();
+            dal.Edit(new TeamDto
+            {
+                IdTeam = id,
+                Name = team.Name
+            });
+        }
+
+
+        public void DeleteTeam(Team team)
+        {
+            teams.Remove(team);
+            ITeamDal dal = PlayerFactory.GetTeamDal();
+            dal.Delete(team.IdTeam);
+        }
+
     }
 }

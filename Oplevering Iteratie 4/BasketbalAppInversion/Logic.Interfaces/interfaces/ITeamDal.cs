@@ -10,5 +10,9 @@ namespace Logic.Interface.interfaces
     {
         List<TeamDto> GetData();
         List<PlayerDto> GetById(int id);
+        TeamDto GetTeamById(int id);
+        void Create(TeamDto teamDto);
+        void Delete(int id);
+        void Edit(TeamDto teamDto);
     }
 }

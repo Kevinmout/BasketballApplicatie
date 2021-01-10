@@ -1,0 +1,23 @@
+﻿@page "{id:int}"
+@model BasketbalAPP.Pages.CRUDteam.UpdateModel
+@using Logic
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Page</h1>
+<form method="post">
+    <table class="table">
+        <tr>
+            <td>Team Id : @Html.DisplayFor(model => model.DisplayTeam.IdTeam)</td>
+        </tr>
+        <tr>
+            <td>Team Name : <input type="text" asp-for="DisplayTeam.Name" /></td>
+        </tr>
+        <tr>
+            <td>Name Owner : @Html.DisplayFor(model => model.DisplayTeam.Owner)</td>
+        </tr>
+    </table>
+    <input type="submit" value="Edit" />
+    <a asp-page="/Team">Back to List</a>
+</form>
