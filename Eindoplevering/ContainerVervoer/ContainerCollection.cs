@@ -43,6 +43,7 @@ namespace ContainerVervoer
             {
                 Weight = 60
             };
+
             containers.Add(container1);
             containers.Add(container2);
             containers.Add(container3);

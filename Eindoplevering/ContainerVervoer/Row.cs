@@ -1,16 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ContainerVervoer
 {
     public class Row
     {
-        List<Layer> layers;
-        public List<Layer> GetLayers()
+        public int Width { get; set; }
+        public int XPosition { get; set; }
+        private readonly List<Stack> stacks;
+        public List<Stack> GetStacks()
         {
-            return layers;
+            return stacks;
         }
+        public Row()
+        {
+
+        }
+
+
 
     }
 }

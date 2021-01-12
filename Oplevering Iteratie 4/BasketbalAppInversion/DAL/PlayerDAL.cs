@@ -10,6 +10,7 @@ namespace DAL
 {
     public class PlayerDAL : IPlayerDal
     {
+
         public string Connection { get; set; }
         public PlayerDAL()
         {
@@ -97,7 +98,7 @@ namespace DAL
             using MySqlConnection sqlconnection = new MySqlConnection(Connection);
             string Updatequery = "Update speler set ActiveTeam = @activeteam, Games = @games where idPlayer = @idplayer";
             using MySqlCommand cmd = new MySqlCommand(Updatequery, sqlconnection);
-            cmd.Parameters.AddWithValue("@activeteam",player.ActiveTeam);
+            cmd.Parameters.AddWithValue("@activeteam", player.ActiveTeam);
             cmd.Parameters.AddWithValue("@games", player.Games);
             cmd.Parameters.Add("@idplayer", MySqlDbType.Int32);
             cmd.Parameters["@idplayer"].Value = player.IdPlayer;
@@ -106,18 +107,32 @@ namespace DAL
             sqlconnection.Close();
         }
 
+
+
+
+
+
+
+
         public void Delete(int id)
         {
+
             using MySqlConnection sqlconnection = new MySqlConnection(Connection);
-            string Updatequery = "Delete From speler where idPlayer = @idplayer";
+            string Updatequery = "Delet From speler where idPlayer = @idplayer";
             using MySqlCommand cmd = new MySqlCommand(Updatequery, sqlconnection);
             cmd.Parameters.Add("@idplayer", MySqlDbType.Int32);
             cmd.Parameters["@idplayer"].Value = id;
-            sqlconnection.Open();
-            cmd.ExecuteNonQuery();
-            sqlconnection.Close();
+            try
+            {
+                sqlconnection.Open();
+                cmd.ExecuteNonQuery();
+                sqlconnection.Close();
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(e);
+            }
         }
-
 
 
 

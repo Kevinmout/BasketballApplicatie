@@ -6,9 +6,9 @@ namespace ContainerVervoer
 {
     public class Ship
     {
-        public int Weight { get; set; }
-        public int Width { get; set; }
-        public int Height { get; set; }
-
+        public void AddRow()
+        {
+            Row row = new Row();
+        }
     }
 }

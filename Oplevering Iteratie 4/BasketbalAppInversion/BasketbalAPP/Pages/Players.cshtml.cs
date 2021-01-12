@@ -6,6 +6,7 @@ using APPBasketbal.Models;
 using Logic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
 
 namespace BasketbalAPP.Pages
@@ -13,6 +14,7 @@ namespace BasketbalAPP.Pages
     public class PlayersModel : PageModel
     {
         public IEnumerable<Player> GetPlayers { get; set; }
+
         public void OnGet()
         {
             GetPlayers = DisplayPlayers();
