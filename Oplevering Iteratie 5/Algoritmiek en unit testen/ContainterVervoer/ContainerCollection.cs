@@ -12,6 +12,8 @@ namespace ContainterVervoer
         {
             return containers;
         }
+
+
         public ContainerCollection()
         {
             containers = new List<Container>();
@@ -26,5 +28,8 @@ namespace ContainterVervoer
         {
             containers = containers.OrderByDescending(w => w.Weight).ToList();
         }
+
+
+
     }
 }

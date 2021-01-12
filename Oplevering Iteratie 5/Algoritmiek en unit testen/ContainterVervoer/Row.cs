@@ -24,18 +24,6 @@ namespace ContainterVervoer
                 stack.XPosition = i + 1;
                 stacksInRow.Add(stack);
             }
-            //Stack stack1 = new Stack();
-            //Stack stack2 = new Stack();
-            //Stack stack3 = new Stack();
-            //Stack stack4 = new Stack();
-            //stack1.XPosition = 1;
-            //stack2.XPosition = 2;
-            //stack3.XPosition = 3;
-            //stack4.XPosition = 4;
-            //stacksInRow.Add(stack1);
-            //stacksInRow.Add(stack2);
-            //stacksInRow.Add(stack3);
-            //stacksInRow.Add(stack4);
         }
 
 

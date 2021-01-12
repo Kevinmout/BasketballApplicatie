@@ -16,14 +16,16 @@ namespace Logic
             return players;
         }
 
+        private readonly IPlayerDal dal;
+
         public PlayerCollection()
         {
+            dal = PlayerFactory.GetPlayerDal();
             players = new List<Player>();
         }
 
         public void GetAllPlayers()
         {
-            IPlayerDal dal = PlayerFactory.GetPlayerDal();
 
             foreach (var a in dal.GetData())
             {
@@ -45,7 +47,6 @@ namespace Logic
 
         public List<Player> GetPlayersToAdd(int id)
         {
-            IPlayerDal dal = PlayerFactory.GetPlayerDal();
             foreach (var a in dal.GetDataNotInTeam(id))
             {
                 players.Add(new Player()
@@ -70,7 +71,6 @@ namespace Logic
         public void CreatePlayer(Player player)
         {
             players.Add(player);
-            IPlayerDal dal = PlayerFactory.GetPlayerDal();
 
             dal.Create(new PlayerDto
             {
@@ -88,7 +88,6 @@ namespace Logic
 
         public Player ReadPlayer(int id)
         {
-            IPlayerDal dal = PlayerFactory.GetPlayerDal();
             PlayerDto playerDTO = dal.GetById(id);
             return new Player()
             {
@@ -108,7 +107,6 @@ namespace Logic
         public void UpdatePlayer(Player player, int id)
         {
             players.Add(player);
-            IPlayerDal dal = PlayerFactory.GetPlayerDal();
             dal.Edit(new PlayerDto
             {
                 IdPlayer = id,
@@ -122,7 +120,6 @@ namespace Logic
         public void DeletePlayer(Player player)
         {
             players.Remove(player);
-            IPlayerDal dal = PlayerFactory.GetPlayerDal();
             dal.Delete(player.IdPlayer);
         }
 

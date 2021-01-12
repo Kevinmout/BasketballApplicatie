@@ -1,0 +1,13 @@
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Eindoplevering\ContainerVervoer\bin\Debug\netcoreapp3.1\ContainerVervoer.exe
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Eindoplevering\ContainerVervoer\bin\Debug\netcoreapp3.1\ContainerVervoer.deps.json
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Eindoplevering\ContainerVervoer\bin\Debug\netcoreapp3.1\ContainerVervoer.runtimeconfig.json
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Eindoplevering\ContainerVervoer\bin\Debug\netcoreapp3.1\ContainerVervoer.runtimeconfig.dev.json
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Eindoplevering\ContainerVervoer\bin\Debug\netcoreapp3.1\ContainerVervoer.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Eindoplevering\ContainerVervoer\bin\Debug\netcoreapp3.1\ContainerVervoer.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Eindoplevering\ContainerVervoer\obj\Debug\netcoreapp3.1\ContainerVervoer.csprojAssemblyReference.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Eindoplevering\ContainerVervoer\obj\Debug\netcoreapp3.1\ContainerVervoer.AssemblyInfoInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Eindoplevering\ContainerVervoer\obj\Debug\netcoreapp3.1\ContainerVervoer.AssemblyInfo.cs
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Eindoplevering\ContainerVervoer\obj\Debug\netcoreapp3.1\ContainerVervoer.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Eindoplevering\ContainerVervoer\obj\Debug\netcoreapp3.1\ContainerVervoer.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Eindoplevering\ContainerVervoer\obj\Debug\netcoreapp3.1\ContainerVervoer.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Eindoplevering\ContainerVervoer\obj\Debug\netcoreapp3.1\ContainerVervoer.genruntimeconfig.cache
