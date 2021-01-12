@@ -49,8 +49,16 @@ namespace DAL
         public void Create(PlayerDto player)
         {
             using MySqlConnection mySqlConnection = new MySqlConnection(Connection);
-            string Insertdata = "Insert into speler Values(NULL, '" + player.LastName + "','" + player.FirstName + "','" + player.ActiveTeam + "','" + player.Games + "','" + player.Points + "','" + player.Rebounds + "','" + player.Assists + "','" + player.Blocks + "')";
+            string Insertdata = "Insert into speler Values(NULL, @lastname, @firstname, @activeteam, @games, @points, @rebounds, @assists,@blocks)";
             using MySqlCommand sqlCommand = new MySqlCommand(Insertdata, mySqlConnection);
+            sqlCommand.Parameters.AddWithValue("@lastname", player.LastName);
+            sqlCommand.Parameters.AddWithValue("@firstname", player.FirstName);
+            sqlCommand.Parameters.AddWithValue("@activeteam", player.ActiveTeam);
+            sqlCommand.Parameters.AddWithValue("@games", player.Games);
+            sqlCommand.Parameters.AddWithValue("@points", player.Points);
+            sqlCommand.Parameters.AddWithValue("@rebounds", player.Rebounds);
+            sqlCommand.Parameters.AddWithValue("@assists", player.Assists);
+            sqlCommand.Parameters.AddWithValue("@blocks", player.Blocks);
             mySqlConnection.Open();
             sqlCommand.ExecuteNonQuery();
             mySqlConnection.Close();
@@ -59,9 +67,11 @@ namespace DAL
         public PlayerDto GetById(int id)
         {
             PlayerDto player = new PlayerDto();
-            string query = "select * from speler where idPlayer ='" + id + "'";
+            string query = "select * from speler where idPlayer = @idplayer";
             using MySqlConnection sqlconnection = new MySqlConnection(Connection);
             using var cmd = new MySqlCommand(query, sqlconnection);
+            cmd.Parameters.Add("@idplayer", MySqlDbType.Int32);
+            cmd.Parameters["@idplayer"].Value = id;
             sqlconnection.Open();
             using var reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -85,20 +95,26 @@ namespace DAL
         public void Edit(PlayerDto player)
         {
             using MySqlConnection sqlconnection = new MySqlConnection(Connection);
-            string Updatequery = "Update speler set ActiveTeam='" + player.ActiveTeam.ToString() + "',Games='" + player.Games + "' where idPlayer=" + player.IdPlayer;
-            using MySqlCommand sqlCommand = new MySqlCommand(Updatequery, sqlconnection);
+            string Updatequery = "Update speler set ActiveTeam = @activeteam, Games = @games where idPlayer = @idplayer";
+            using MySqlCommand cmd = new MySqlCommand(Updatequery, sqlconnection);
+            cmd.Parameters.AddWithValue("@activeteam",player.ActiveTeam);
+            cmd.Parameters.AddWithValue("@games", player.Games);
+            cmd.Parameters.Add("@idplayer", MySqlDbType.Int32);
+            cmd.Parameters["@idplayer"].Value = player.IdPlayer;
             sqlconnection.Open();
-            sqlCommand.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
             sqlconnection.Close();
         }
 
         public void Delete(int id)
         {
             using MySqlConnection sqlconnection = new MySqlConnection(Connection);
-            string Updatequery = "Delete From speler where idPlayer=" + id;
-            using MySqlCommand sqlCommand = new MySqlCommand(Updatequery, sqlconnection);
+            string Updatequery = "Delete From speler where idPlayer = @idplayer";
+            using MySqlCommand cmd = new MySqlCommand(Updatequery, sqlconnection);
+            cmd.Parameters.Add("@idplayer", MySqlDbType.Int32);
+            cmd.Parameters["@idplayer"].Value = id;
             sqlconnection.Open();
-            sqlCommand.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
             sqlconnection.Close();
         }
 
@@ -112,9 +128,11 @@ namespace DAL
         public List<PlayerDto> GetDataNotInTeam(int id)
         {
             List<PlayerDto> data = new List<PlayerDto>();
-            string query = "select speler.* from speler where speler.LastName not in (select speler.LastName from speler_team INNER JOIN speler ON speler.idPlayer = speler_team.idPlayer INNER JOIN team ON team.idTeam = speler_team.idTeam where speler_team.idTeam='" + id + "')";
+            string query = "select speler.* from speler where speler.LastName not in (select speler.LastName from speler_team INNER JOIN speler ON speler.idPlayer = speler_team.idPlayer INNER JOIN team ON team.idTeam = speler_team.idTeam where speler_team.idTeam = @idteam)";
             using MySqlConnection sqlconnection = new MySqlConnection(Connection);
             using var cmd = new MySqlCommand(query, sqlconnection);
+            cmd.Parameters.Add("@idteam", MySqlDbType.Int32);
+            cmd.Parameters["@idteam"].Value = id;
             sqlconnection.Open();
             using (var reader = cmd.ExecuteReader())
             {

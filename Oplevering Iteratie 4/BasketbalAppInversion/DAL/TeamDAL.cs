@@ -42,9 +42,11 @@ namespace DAL
         public List<PlayerDto> GetById(int id)
         {
             List<PlayerDto> data = new List<PlayerDto>();
-            string query = "select speler.LastName, speler.FirstName from speler_team INNER JOIN speler ON speler.idPlayer = speler_team.idPlayer INNER JOIN team ON team.idTeam = speler_team.idTeam where speler_team.idTeam='" + id + "'";
+            string query = "select speler.LastName, speler.FirstName from speler_team INNER JOIN speler ON speler.idPlayer = speler_team.idPlayer INNER JOIN team ON team.idTeam = speler_team.idTeam where speler_team.idTeam= @idteam";
             using MySqlConnection sqlconnection = new MySqlConnection(Connection);
             using var cmd = new MySqlCommand(query, sqlconnection);
+            cmd.Parameters.Add("@idteam", MySqlDbType.Int32);
+            cmd.Parameters["@idteam"].Value = id;
             sqlconnection.Open();
             using var reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -62,19 +64,23 @@ namespace DAL
         public void Create(TeamDto teamDto)
         {
             using MySqlConnection mySqlConnection = new MySqlConnection(Connection);
-            string Insertdata = "Insert into team Values(NULL, '" + teamDto.Name + "','" + teamDto.Owner + "')";
-            using MySqlCommand sqlCommand = new MySqlCommand(Insertdata, mySqlConnection);
+            string Insertdata = "Insert into team Values(NULL, @name, @owner)";
+            using MySqlCommand cmd = new MySqlCommand(Insertdata, mySqlConnection);
+            cmd.Parameters.AddWithValue("@name", teamDto.Name);
+            cmd.Parameters.AddWithValue("@owner", teamDto.Owner);
             mySqlConnection.Open();
-            sqlCommand.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
             mySqlConnection.Close();
         }
 
         public TeamDto GetTeamById(int id)
         {
             TeamDto team = new TeamDto();
-            string query = "select * from team where idTeam ='" + id + "'";
+            string query = "select * from team where idTeam = @idteam";
             using MySqlConnection sqlconnection = new MySqlConnection(Connection);
             using var cmd = new MySqlCommand(query, sqlconnection);
+            cmd.Parameters.Add("@idteam", MySqlDbType.Int32);
+            cmd.Parameters["@idteam"].Value = id;
             sqlconnection.Open();
             using var reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -92,30 +98,37 @@ namespace DAL
         public void Delete(int id)
         {
             using MySqlConnection sqlconnection = new MySqlConnection(Connection);
-            string Updatequery = "Delete From team where idTeam=" + id;
-            using MySqlCommand sqlCommand = new MySqlCommand(Updatequery, sqlconnection);
+            string Updatequery = "Delete From team where idTeam = @idteam";
+            using MySqlCommand cmd = new MySqlCommand(Updatequery, sqlconnection);
+            cmd.Parameters.Add("@idteam", MySqlDbType.Int32);
+            cmd.Parameters["@idteam"].Value = id;
             sqlconnection.Open();
-            sqlCommand.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
             sqlconnection.Close();
         }
 
         public void Edit(TeamDto teamDto)
         {
             using MySqlConnection sqlconnection = new MySqlConnection(Connection);
-            string Updatequery = "Update team set Name='" + teamDto.Name + "' where idTeam=" + teamDto.IdTeam;
-            using MySqlCommand sqlCommand = new MySqlCommand(Updatequery, sqlconnection);
+            string Updatequery = "Update team set Name = @name where idTeam = @idteam";
+            using MySqlCommand cmd = new MySqlCommand(Updatequery, sqlconnection);
+            cmd.Parameters.AddWithValue("@name", teamDto.Name);
+            cmd.Parameters.Add("@idteam", MySqlDbType.Int32);
+            cmd.Parameters["@idteam"].Value = teamDto.IdTeam;
             sqlconnection.Open();
-            sqlCommand.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
             sqlconnection.Close();
         }
 
         public void AddPlayer(TeamDto team, PlayerDto player)
         {
             using MySqlConnection mySqlConnection = new MySqlConnection(Connection);
-            string Insertdata = "Insert into speler_team Values(NULL, '" + team.IdTeam + "','" + player.IdPlayer + "')";
-            using MySqlCommand sqlCommand = new MySqlCommand(Insertdata, mySqlConnection);
+            string Insertdata = "Insert into speler_team Values(NULL, @teamid, @playerid)";
+            using MySqlCommand cmd = new MySqlCommand(Insertdata, mySqlConnection);
+            cmd.Parameters.AddWithValue("@teamid" , team.IdTeam);
+            cmd.Parameters.AddWithValue("@playerid", player.IdPlayer);
             mySqlConnection.Open();
-            sqlCommand.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
             mySqlConnection.Close();
         }
 
