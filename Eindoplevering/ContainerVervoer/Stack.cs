@@ -14,78 +14,63 @@ namespace ContainerVervoer
         }
         public int Width { get; set; }
         public int Height { get; set; }
+        private int unevenRowWidth;
+        Container maxContainer;
+        private List<Container> leftSide { get; set; }
+        private List<Container> rightSide { get; set; }
 
-        public List<Container> LeftSide { get; set; }
-        public List<Container> RightSide { get; set; }
 
-
-        public Stack()
+        public Stack(int unevenRowWidth)
         {
+            maxContainer = new Container();
+            this.unevenRowWidth = unevenRowWidth;
             containersOnStack = new List<Container>();
-            LeftSide = new List<Container>();
-            RightSide = new List<Container>();
-            Width = 6;
+            leftSide = new List<Container>();
+            rightSide = new List<Container>();
+            Width = 4;
             Height = 4;
-            Container container1 = new Container()
-            {
-                Weight = 10
-            };
-            Container container2 = new Container()
-            {
-                Weight = 20
-            };
-            Container container3 = new Container()
-            {
-                Weight = 30
-            };
-            Container container4 = new Container()
-            {
-                Weight = 40
-            };
-            Container container5 = new Container()
-            {
-                Weight = 50
-            };
-            Container container6 = new Container()
-            {
-                Weight = 60
-            };
-
-            containersOnStack.Add(container5);
-            containersOnStack.Add(container4);
-            containersOnStack.Add(container2);
-            containersOnStack.Add(container6);
-            containersOnStack.Add(container3);
-            containersOnStack.Add(container1);
         }
 
-
-
-
-
-
-
-        public void FillTemp(int[] sortingArray)
+        public void FillTemp(int[] sortingArray, List<Container> containers)
         {
-            ContainerCollection c = new ContainerCollection();
-            c.Add();
-            c.GetContainers();
-            for (int i = 0; i < Width / 2; i++)
+            if (unevenRowWidth == 1)
             {
-                LeftSide.Add(c.GetContainers().ElementAt(sortingArray[i] - 1));
-                RightSide.Add(c.GetContainers().ElementAt(sortingArray[Width - 1 - i] - 1));
-            }
-            LeftSide = LeftSide.OrderBy(x => x.Weight).ToList();
-            RightSide = RightSide.OrderBy(x => x.Weight).ToList();
 
-            
+                //var item = containers.Max(x => x.Weight);
+                ////int indexOfMax = containers.ToList().IndexOf(containers.Where(w=>w.Weight).Max());
+                //maxContainer = containers.ElementAt(indexOfMax);
+                //containers.RemoveAt(indexOfMax);
+                maxContainer = containers.ElementAt(0);
+                containers.RemoveAt(0);
+            }
+            for (int i = 0; i < (Width - unevenRowWidth) / 2; i++)
+            {
+                leftSide.Add(containers.ElementAt(sortingArray[i] - 1));
+                rightSide.Add(containers.ElementAt(sortingArray[Width - unevenRowWidth - 1 - i] - 1));
+            }
         }
+
+        public void Sort(bool even)
+        {
+            if (even == true)
+            {
+                leftSide = leftSide.OrderBy(x => x.Weight).ToList();
+                rightSide = rightSide.OrderBy(x => x.Weight).ToList();
+            }
+            else
+            {
+                leftSide = leftSide.OrderByDescending(x => x.Weight).ToList();
+                rightSide = rightSide.OrderByDescending(x => x.Weight).ToList();
+            }
+        }
+
+
 
 
         public bool CompareWeights()
         {
-            double sumLeft = LeftSide.Sum(x => x.Weight);
-            double sumRight = RightSide.Sum(x => x.Weight);
+            double sumLeft = leftSide.Sum(x => x.Weight);
+            double sumRight = rightSide.Sum(x => x.Weight);
             bool holds;
             if (sumLeft > sumRight)
             {
@@ -167,11 +152,15 @@ namespace ContainerVervoer
 
         public void AddContainersToTempStack()
         {
-            foreach (var item in LeftSide)
+            foreach (var item in leftSide)
             {
                 containersOnStack.Add(item);
             }
-            foreach (var item in RightSide)
+            if(unevenRowWidth == 1)
+            {
+                containersOnStack.Add(maxContainer);
+            }
+            foreach (var item in rightSide)
             {
                 containersOnStack.Add(item);
             }

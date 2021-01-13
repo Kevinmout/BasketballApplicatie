@@ -9,7 +9,26 @@ namespace ContainerVervoer
             Ship ship = new Ship();
             ContainerCollection container = new ContainerCollection();
             container.Add();
-            ship.AddRow(container.GetContainers());
+            ship.CheckWidthEvenOrUneven(container.GetContainers());
+
+
+            //functions in ship
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             foreach (var item in ship.GetRows())
             {
                 foreach (var item1 in item.GetStacks())

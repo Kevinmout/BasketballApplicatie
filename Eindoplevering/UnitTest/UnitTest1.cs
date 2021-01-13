@@ -9,10 +9,7 @@ namespace UnitTest
         [TestMethod]
         public void TestMethod1()
         {
-            ContainerCollection container = new ContainerCollection();
-            container.Add();
-            SortingManagement sortingManagement = new SortingManagement();
-            Assert.AreEqual("a","a");
+
         }
     }
 }
