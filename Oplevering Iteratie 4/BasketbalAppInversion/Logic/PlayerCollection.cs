@@ -40,25 +40,6 @@ namespace Logic
         }
 
 
-        public List<Player> GetPlayersToAdd(int id)
-        {
-            foreach (var a in dal.GetDataNotInTeam(id))
-            {
-                players.Add(new Player()
-                {
-                    IdPlayer = a.IdPlayer,
-                    LastName = a.LastName,
-                    FirstName = a.FirstName,
-                    ActiveTeam = a.ActiveTeam
-                });
-            }
-            return players;
-        }
-
-
-
-
-
         public PlayerInfo ReadInfo(int id)
         {
             PlayerDto info = dal.GetById(id);

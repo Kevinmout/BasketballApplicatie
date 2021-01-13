@@ -12,10 +12,11 @@ namespace DAL
     {
 
         public string Connection { get; set; }
-        public PlayerDAL()
-        {
-            Connection = "server=Localhost;user id=root;password =root;database=basketbal;allowuservariables=True;persistsecurityinfo=True";
-        }
+
+
+
+
+
         public List<PlayerDto> GetData()
         {
             List<PlayerDto> data = new List<PlayerDto>();
@@ -155,28 +156,6 @@ namespace DAL
 
 
 
-        public List<PlayerDto> GetDataNotInTeam(int id)
-        {
-            List<PlayerDto> data = new List<PlayerDto>();
-            string query = "select speler.* from speler where speler.LastName not in (select speler.LastName from speler_team INNER JOIN speler ON speler.idPlayer = speler_team.idPlayer INNER JOIN team ON team.idTeam = speler_team.idTeam where speler_team.idTeam = @idteam)";
-            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
-            using var cmd = new MySqlCommand(query, sqlconnection);
-            cmd.Parameters.Add("@idteam", MySqlDbType.Int32);
-            cmd.Parameters["@idteam"].Value = id;
-            sqlconnection.Open();
-            using (var reader = cmd.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    data.Add(new PlayerDto
-                    {
-                        LastName = Convert.ToString(reader["LastName"].ToString()),
-                        FirstName = Convert.ToString(reader["FirstName"].ToString())
-                    });
-                }
-            }
-            sqlconnection.Close();
-            return data;
-        }
+
     }
 }

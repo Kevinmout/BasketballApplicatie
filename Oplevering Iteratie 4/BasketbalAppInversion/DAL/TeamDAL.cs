@@ -120,22 +120,6 @@ namespace DAL
             sqlconnection.Close();
         }
 
-        public void AddPlayer(TeamDto team, PlayerDto player)
-        {
-            using MySqlConnection mySqlConnection = new MySqlConnection(Connection);
-            string Insertdata = "Insert into speler_team Values(NULL, @teamid, @playerid)";
-            using MySqlCommand cmd = new MySqlCommand(Insertdata, mySqlConnection);
-            cmd.Parameters.AddWithValue("@teamid" , team.IdTeam);
-            cmd.Parameters.AddWithValue("@playerid", player.IdPlayer);
-            mySqlConnection.Open();
-            cmd.ExecuteNonQuery();
-            mySqlConnection.Close();
-        }
-
-
-
-
-
 
 
     }

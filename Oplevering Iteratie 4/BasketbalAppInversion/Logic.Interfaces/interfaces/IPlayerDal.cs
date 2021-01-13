@@ -8,7 +8,6 @@ namespace Logic
     {
         
         List<PlayerDto> GetData();
-        List<PlayerDto> GetDataNotInTeam(int id);
 
 
 
