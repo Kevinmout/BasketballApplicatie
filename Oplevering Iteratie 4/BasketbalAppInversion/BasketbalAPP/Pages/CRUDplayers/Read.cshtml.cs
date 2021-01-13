@@ -13,12 +13,12 @@ namespace BasketbalAPP.Pages
     public class DetailsModel : PageModel
     {
         [BindProperty]
-        public Player DisplayPlayer { get; set; }
+        public PlayerInfo DisplayPlayer { get; set; }
 
         public void OnGet(int id)
         {
             PlayerCollection playerCollection = new PlayerCollection();
-            DisplayPlayer = playerCollection.ReadPlayer(id);
+            DisplayPlayer = playerCollection.ReadInfo(id);
         }
 
     }

@@ -19,21 +19,6 @@
         <tr>
             <td>Active Team : <input type="text" asp-for="DisplayPlayer.ActiveTeam" /></td>
         </tr>
-        <tr>
-            <td>Games : <input type="text" asp-for="DisplayPlayer.Games" /></td>
-        </tr>
-        <tr>
-            <td>Points : @Html.DisplayFor(model => model.DisplayPlayer.Points)</td>
-        </tr>
-        <tr>
-            <td>Rebounds : @Html.DisplayFor(model => model.DisplayPlayer.Rebounds)</td>
-        </tr>
-        <tr>
-            <td>Assists : @Html.DisplayFor(model => model.DisplayPlayer.Assists)</td>
-        </tr>
-        <tr>
-            <td>Blocks : @Html.DisplayFor(model => model.DisplayPlayer.Blocks)</td>
-        </tr>
     </table>
     <input type="submit" value="Edit" />
     <a asp-page="/Players">Back to List</a>

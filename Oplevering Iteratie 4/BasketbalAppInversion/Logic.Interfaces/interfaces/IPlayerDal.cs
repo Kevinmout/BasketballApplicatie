@@ -10,8 +10,12 @@ namespace Logic
         List<PlayerDto> GetData();
         List<PlayerDto> GetDataNotInTeam(int id);
 
+
+
+
         //CRUD
         void Create(PlayerDto player);
+        void CreateInfo(PlayerDto player);
         PlayerDto GetById(int id);
         void Delete(int id);
         void Edit(PlayerDto player);

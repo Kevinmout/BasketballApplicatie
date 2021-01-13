@@ -34,12 +34,7 @@ namespace Logic
                     IdPlayer = a.IdPlayer,
                     LastName = a.LastName,
                     FirstName = a.FirstName,
-                    ActiveTeam = a.ActiveTeam,
-                    Games = a.Games,
-                    Points = a.Points,
-                    Rebounds = a.Rebounds,
-                    Assists = a.Assists,
-                    Blocks = a.Blocks,
+                    ActiveTeam = a.ActiveTeam
                 });
             }
         }
@@ -54,12 +49,7 @@ namespace Logic
                     IdPlayer = a.IdPlayer,
                     LastName = a.LastName,
                     FirstName = a.FirstName,
-                    ActiveTeam = a.ActiveTeam,
-                    Games = a.Games,
-                    Points = a.Points,
-                    Rebounds = a.Rebounds,
-                    Assists = a.Assists,
-                    Blocks = a.Blocks,
+                    ActiveTeam = a.ActiveTeam
                 });
             }
             return players;
@@ -67,7 +57,30 @@ namespace Logic
 
 
 
+
+
+        public PlayerInfo ReadInfo(int id)
+        {
+            PlayerDto info = dal.GetById(id);
+            return new PlayerInfo()
+            {
+                IdPlayer = info.IdPlayer,
+                Points = info.Points,
+                Rebounds = info.Rebounds,
+                Assists = info.Assists,
+                Blocks = info.Blocks,
+                Nationality = info.Nationality
+            };
+        }
+
+
+
+
+
+
         //CRUD
+
+        //Create
         public void CreatePlayer(Player player)
         {
             players.Add(player);
@@ -76,16 +89,19 @@ namespace Logic
             {
                 LastName = player.LastName,
                 FirstName = player.FirstName,
-                ActiveTeam = player.ActiveTeam,
-                Games = player.Games,
+                ActiveTeam = player.ActiveTeam
+            });
+            dal.CreateInfo(new PlayerDto
+            {
                 Points = player.Points,
-                Rebounds = player.Rebounds,
                 Assists = player.Assists,
+                Rebounds = player.Rebounds,
                 Blocks = player.Blocks,
+                Nationality = player.Nationality
             });
         }
 
-
+        //Read
         public Player ReadPlayer(int id)
         {
             PlayerDto playerDTO = dal.GetById(id);
@@ -94,29 +110,23 @@ namespace Logic
                 IdPlayer = playerDTO.IdPlayer,
                 LastName = playerDTO.LastName,
                 FirstName = playerDTO.FirstName,
-                ActiveTeam = playerDTO.ActiveTeam,
-                Games = playerDTO.Games,
-                Points = playerDTO.Points,
-                Rebounds = playerDTO.Rebounds,
-                Assists = playerDTO.Assists,
-                Blocks = playerDTO.Blocks
+                ActiveTeam = playerDTO.ActiveTeam
             };
         }
 
-
+        //Update
         public void UpdatePlayer(Player player, int id)
         {
             players.Add(player);
             dal.Edit(new PlayerDto
             {
                 IdPlayer = id,
-                ActiveTeam = player.ActiveTeam,
-                Games = player.Games,
+                ActiveTeam = player.ActiveTeam
             });
             
         }
 
-
+        //Delete
         public void DeletePlayer(Player player)
         {
             players.Remove(player);

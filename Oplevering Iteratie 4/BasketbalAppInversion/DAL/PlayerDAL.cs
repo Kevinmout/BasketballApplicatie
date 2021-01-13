@@ -33,11 +33,6 @@ namespace DAL
                         LastName = Convert.ToString(reader["LastName"].ToString()),
                         FirstName = Convert.ToString(reader["FirstName"].ToString()),
                         ActiveTeam = Convert.ToString(reader["ActiveTeam"].ToString()),
-                        Games = Convert.ToInt32(reader["Games"].ToString()),
-                        Points = Convert.ToDouble(reader["Points"].ToString()),
-                        Rebounds = Convert.ToDouble(reader["Rebounds"].ToString()),
-                        Assists = Convert.ToDouble(reader["Assists"].ToString()),
-                        Blocks = Convert.ToDouble(reader["Blocks"].ToString())
                     });
                 }
             }
@@ -50,25 +45,43 @@ namespace DAL
         public void Create(PlayerDto player)
         {
             using MySqlConnection mySqlConnection = new MySqlConnection(Connection);
-            string Insertdata = "Insert into speler Values(NULL, @lastname, @firstname, @activeteam, @games, @points, @rebounds, @assists,@blocks)";
+            string Insertdata = "Insert into speler Values(NULL, @lastname, @firstname, @activeteam)";
             using MySqlCommand sqlCommand = new MySqlCommand(Insertdata, mySqlConnection);
             sqlCommand.Parameters.AddWithValue("@lastname", player.LastName);
             sqlCommand.Parameters.AddWithValue("@firstname", player.FirstName);
             sqlCommand.Parameters.AddWithValue("@activeteam", player.ActiveTeam);
-            sqlCommand.Parameters.AddWithValue("@games", player.Games);
-            sqlCommand.Parameters.AddWithValue("@points", player.Points);
-            sqlCommand.Parameters.AddWithValue("@rebounds", player.Rebounds);
-            sqlCommand.Parameters.AddWithValue("@assists", player.Assists);
-            sqlCommand.Parameters.AddWithValue("@blocks", player.Blocks);
             mySqlConnection.Open();
             sqlCommand.ExecuteNonQuery();
             mySqlConnection.Close();
         }
 
+
+
+        public void CreateInfo(PlayerDto player)
+        {
+            using MySqlConnection mySqlConnection = new MySqlConnection(Connection);
+            string Insertdata = "Insert into speler_info Values((select max(last_insert_id()) as id from speler), @points, @rebounds, @assists, @blocks, @nationality)";
+            using MySqlCommand sqlCommand = new MySqlCommand(Insertdata, mySqlConnection);
+            sqlCommand.Parameters.AddWithValue("@points", player.Points);
+            sqlCommand.Parameters.AddWithValue("@rebounds", player.Rebounds);
+            sqlCommand.Parameters.AddWithValue("@assists", player.Assists);
+            sqlCommand.Parameters.AddWithValue("@blocks", player.Blocks);
+            sqlCommand.Parameters.AddWithValue("@nationality", player.Nationality);
+            mySqlConnection.Open();
+            sqlCommand.ExecuteNonQuery();
+            mySqlConnection.Close();
+        }
+
+
+
+
+
+
+
         public PlayerDto GetById(int id)
         {
             PlayerDto player = new PlayerDto();
-            string query = "select * from speler where idPlayer = @idplayer";
+            string query = "select speler_info.*, speler.LastName,speler.FirstName, speler.ActiveTeam From speler join speler_info where speler.idPlayer = @idplayer and speler_info.idPlayer = @idplayer";
             using MySqlConnection sqlconnection = new MySqlConnection(Connection);
             using var cmd = new MySqlCommand(query, sqlconnection);
             cmd.Parameters.Add("@idplayer", MySqlDbType.Int32);
@@ -82,24 +95,26 @@ namespace DAL
                     player.LastName = Convert.ToString(reader["LastName"].ToString());
                     player.FirstName = Convert.ToString(reader["FirstName"].ToString());
                     player.ActiveTeam = Convert.ToString(reader["ActiveTeam"].ToString());
-                    player.Games = Convert.ToInt32(reader["Games"].ToString());
-                    player.Points = Convert.ToDouble(reader["Points"].ToString());
-                    player.Rebounds = Convert.ToDouble(reader["Rebounds"].ToString());
-                    player.Assists = Convert.ToDouble(reader["Assists"].ToString());
-                    player.Blocks = Convert.ToDouble(reader["Blocks"].ToString());
+                    player.Points = Convert.ToInt32(reader["Points"].ToString());
+                    player.Assists = Convert.ToInt32(reader["Assists"].ToString());
+                    player.Rebounds = Convert.ToInt32(reader["Rebounds"].ToString());
+                    player.Blocks = Convert.ToInt32(reader["Blocks"].ToString());
+                    player.Nationality = Convert.ToString(reader["Nationality"].ToString());
                 }
             }
             sqlconnection.Close();
             return player;
         }
 
+
+
+
         public void Edit(PlayerDto player)
         {
             using MySqlConnection sqlconnection = new MySqlConnection(Connection);
-            string Updatequery = "Update speler set ActiveTeam = @activeteam, Games = @games where idPlayer = @idplayer";
+            string Updatequery = "Update speler set ActiveTeam = @activeteam where idPlayer = @idplayer";
             using MySqlCommand cmd = new MySqlCommand(Updatequery, sqlconnection);
             cmd.Parameters.AddWithValue("@activeteam", player.ActiveTeam);
-            cmd.Parameters.AddWithValue("@games", player.Games);
             cmd.Parameters.Add("@idplayer", MySqlDbType.Int32);
             cmd.Parameters["@idplayer"].Value = player.IdPlayer;
             sqlconnection.Open();
@@ -118,7 +133,7 @@ namespace DAL
         {
 
             using MySqlConnection sqlconnection = new MySqlConnection(Connection);
-            string Updatequery = "Delet From speler where idPlayer = @idplayer";
+            string Updatequery = "Delete speler, speler_info From speler join speler_info where speler.idPlayer = @idplayer and speler_info.idPlayer = @idplayer";
             using MySqlCommand cmd = new MySqlCommand(Updatequery, sqlconnection);
             cmd.Parameters.Add("@idplayer", MySqlDbType.Int32);
             cmd.Parameters["@idplayer"].Value = id;
