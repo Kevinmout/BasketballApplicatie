@@ -21,7 +21,7 @@ namespace ContainerVervoer
         public Ship()
         {
             rows = new List<Row>();
-            Width = 4;
+            Width = 5;
             Height = 4;
         }
 
@@ -47,13 +47,11 @@ namespace ContainerVervoer
             if(containers.Count % Width == 0)
             {
                 containers = containers.OrderByDescending(w => w.Weight).ToList();
-                AddRow(containers);
             }
             else
             {
                 FillWithDummyContainers(containers);
                 containers = containers.OrderByDescending(w => w.Weight).ToList();
-                AddRow(containers);
             }
         }
 
@@ -70,35 +68,57 @@ namespace ContainerVervoer
 
 
 
-
-
-
-
         public void AddRow(List<Container> containers)
         {
             Row row = new Row(containers, UnevenRowWidth);
             rows.Add(row);
-            row.AvailableSpace();
-            //row.EvenOrUnevenHeight();
-            //PlaceContainersOnShip(row,containers);
+            SortRow(row);
         }
 
 
 
-        public void PlaceContainersOnShip(Row row, List<Container> containersLeft)
+
+
+
+        //public void FillStackNewRow()
+        //{
+        //    Row row = new Row(containers, UnevenRowWidth);
+        //    row.
+        //}
+
+
+
+        public void SortRow(Row row)
         {
-            if (row.NextRow == true)
+            var stack = row.AddStack();
+            row.AvailableSpace();
+            row.EvenOrUnevenHeight(); // chooses between IndexLevellerEven and IndexLevellerUneven
+            var stackBuild = row.BuildStack(stack); // call method BuildStack to build stack. FillTempLists to create leftContainers and rightContainers than we call method Sort to sort the containers
+            if (row.CheckContainersLeft() == true)
             {
-                // make new row
-                // add stack
-                //CheckContainersLeft(containers);
-
-            }
-            else
-            {
-                // Go further with existing stack and row
+                SortRow(row);
             }
         }
+
+
+
+
+
+
+        //public void PlaceContainersOnShip(Row row, List<Container> containersLeft)
+        //{
+        //    if (row.NextRow == true)
+        //    {
+        //        // make new row
+        //        // add stack
+        //        //CheckContainersLeft(containers);
+
+        //    }
+        //    else
+        //    {
+        //        // Go further with existing stack and row
+        //    }
+        //}
 
 
     }

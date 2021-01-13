@@ -27,7 +27,7 @@ namespace ContainerVervoer
             containersOnStack = new List<Container>();
             leftSide = new List<Container>();
             rightSide = new List<Container>();
-            Width = 4;
+            Width = 5;
             Height = 4;
         }
 
@@ -35,24 +35,31 @@ namespace ContainerVervoer
         {
             if (unevenRowWidth == 1)
             {
-
-                //var item = containers.Max(x => x.Weight);
-                ////int indexOfMax = containers.ToList().IndexOf(containers.Where(w=>w.Weight).Max());
-                //maxContainer = containers.ElementAt(indexOfMax);
-                //containers.RemoveAt(indexOfMax);
-                maxContainer = containers.ElementAt(0);
-                containers.RemoveAt(0);
+                List<Container> max = containers;
+                maxContainer = max.OrderByDescending(w => w.Weight).First();
+                containers.Remove(maxContainer);
             }
             for (int i = 0; i < (Width - unevenRowWidth) / 2; i++)
             {
                 leftSide.Add(containers.ElementAt(sortingArray[i] - 1));
                 rightSide.Add(containers.ElementAt(sortingArray[Width - unevenRowWidth - 1 - i] - 1));
             }
+            DeleteContainers(containers);
         }
 
-        public void Sort(bool even)
+        public void DeleteContainers(List<Container> containers)
         {
-            if (even == true)
+            for (int i = 0; i < (Width - unevenRowWidth); i++)
+            {
+                containers.RemoveAt(0);
+            }
+        }
+
+
+
+        public void Sort()
+        {
+            if ((containersOnStack.Count / Width) % 2 == 0)
             {
                 leftSide = leftSide.OrderBy(x => x.Weight).ToList();
                 rightSide = rightSide.OrderBy(x => x.Weight).ToList();
@@ -106,6 +113,21 @@ namespace ContainerVervoer
 
 
 
+        public void AddContainersToTempStack()
+        {
+            foreach (var item in leftSide)
+            {
+                containersOnStack.Add(item);
+            }
+            if (unevenRowWidth == 1)
+            {
+                containersOnStack.Add(maxContainer);
+            }
+            foreach (var item in rightSide)
+            {
+                containersOnStack.Add(item);
+            }
+        }
 
 
 
@@ -122,10 +144,8 @@ namespace ContainerVervoer
             return (Height >= (containersOnStack.Count / Width + 1));
         }
 
-
         public bool Check120Tons()
         {
-            AddContainersToTempStack();
             int weightColumn = 0;
             bool stackOnTop = true;
             int i = 0;
@@ -143,28 +163,13 @@ namespace ContainerVervoer
             return stackOnTop;
         }
 
-
         public bool CheckColumnWeight(int weight)
         {
             return (weight <= 120);
         }
 
 
-        public void AddContainersToTempStack()
-        {
-            foreach (var item in leftSide)
-            {
-                containersOnStack.Add(item);
-            }
-            if(unevenRowWidth == 1)
-            {
-                containersOnStack.Add(maxContainer);
-            }
-            foreach (var item in rightSide)
-            {
-                containersOnStack.Add(item);
-            }
-        }
+
 
 
 

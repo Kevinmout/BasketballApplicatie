@@ -27,107 +27,108 @@ namespace ContainerVervoer
             this.allContainers = allContainers;
             NextRow = false;
             stacks = new List<Stack>();
-            Width = 4;
+            Width = 5;
             Height = 4;
             SortingArray = new int[Width];
             this.unevenRowWidth = unevenRowWidth;
         }
 
 
+
+
+
+
+
+        //First Step
         public void AvailableSpace() //done
         {
             for (int i = 0; i < Width; i++)
             {
                 SortingArray[i] = i + 1;
             }
-            EvenOrUnevenHeight();
         }
 
 
-
-
-
+        //Second Step
         public void EvenOrUnevenHeight() //layer height
         {
-            Stack stack = new Stack(unevenRowWidth);
             if (allContainers.Count / Width % 2 == 0)
             {
-                IndexLevellerEven(stack);
+                IndexLevellerEven();
             }
             else
             {
-                IndexLevellerUneven(stack);
+                IndexLevellerUneven();
             }
         }
 
-        public void IndexLevellerEven(Stack stack) // index on even heights
+        public void IndexLevellerEven() // index on even heights
         {
             for (int i = 0; i < Width - unevenRowWidth; i += 2)
             {
                 SortingArray[i] = i + 1;
                 SortingArray[i + 1] = Width - i - unevenRowWidth;
             }
-            bool even = true;
-            CheckCombination(stack, even);
         }
 
-        public void IndexLevellerUneven(Stack stack) // index on uneven heights
+        public void IndexLevellerUneven() // index on uneven heights
         {
             for (int i = 0; i < Width - unevenRowWidth; i += 2)
             {
                 SortingArray[i] = i + 2;
                 SortingArray[i + 1] = Width - i - 1 - unevenRowWidth;
             }
-            bool even = false;
-            CheckCombination(stack, even);
         }
 
 
-        public void CheckCombination(Stack stack, bool even)
+
+        //Third Step
+        public Stack AddStack()
+        {
+            Stack stack = new Stack(unevenRowWidth);
+            return stack;
+        }
+
+
+
+
+
+
+
+
+
+        //Fifth Step
+        public void FillTempLists(Stack stack)
         {
             stack.FillTemp(SortingArray, allContainers);
-            stack.Sort(even);
-            if (stack.CompareWeights() == true)
-            {
-                CheckToStackOnCurrentStack(stack);
-            }
-            else
-            {
-                ErrorHandler("No combination");
-            }
+            stack.Sort();
+        }
+
+        //Sixth Step
+        public bool CheckWeightBalance(Stack stack)
+        {
+            return stack.CompareWeights();
+        }
+
+        //Seventh Step
+        public void MergeTempLists(Stack stack)
+        {
+            stack.AddContainersToTempStack();
+        }
+
+        //Eighth Step
+        public bool TryAddStackToExistingStack(Stack stack)
+        {
+            return stack.TryAddContainersOnStack();
         }
 
 
-        public void CheckToStackOnCurrentStack(Stack stack)
+
+
+        //Nineth Step
+        public bool CheckContainersLeft()
         {
-            allContainers.RemoveRange(0, Width - unevenRowWidth);
-            if (stack.TryAddContainersOnStack() == true)
-            {
-                stacks.Add(stack);
-                NextRow = false;
-            }
-            else
-            {
-                //ErrorHandler("Next Row");
-                NextRow = true;
-
-            }
-
-            AssignAvailableSpaces();
-        }
-
-
-        public void AssignAvailableSpaces()
-        {
-            if (allContainers.Count != 0)
-            {
-                AvailableSpace();
-            }
-            else
-            {
-                ErrorHandler("End");
-            }
-
+            return allContainers.Count != 0;
         }
 
 
@@ -138,6 +139,32 @@ namespace ContainerVervoer
         public void ErrorHandler(string error)
         {
             Console.WriteLine(error);
+        }
+
+
+
+
+        //Fourth Step
+        public Stack BuildStack(Stack stack)
+        {
+            FillTempLists(stack);
+            if (CheckWeightBalance(stack) == false)
+            {
+                ErrorHandler("No Combination Possible");
+            }
+            MergeTempLists(stack);
+            if (TryAddStackToExistingStack(stack) == false)
+            {
+                ErrorHandler("Stack too high or too heavy.");
+                // Add to next Row
+                
+            }
+            else
+            {
+                // Add to this Row
+                stacks.Add(stack);
+            }
+            return stack;
         }
     }
 }

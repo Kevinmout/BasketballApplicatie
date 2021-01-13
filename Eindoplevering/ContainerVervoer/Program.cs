@@ -13,7 +13,9 @@ namespace ContainerVervoer
 
 
             //functions in ship
-
+            ship.CheckWidthEvenOrUneven(container.GetContainers());
+            ship.CheckDivisibleByWidth(container.GetContainers());
+            ship.AddRow(container.GetContainers());
 
 
 

@@ -51,14 +51,14 @@ namespace ContainerVervoer
             {
                 Weight = 8
             };
-            //Container container9 = new Container()
-            //{
-            //    Weight = 9
-            //};
-            //Container container10 = new Container()
-            //{
-            //    Weight = 10
-            //};
+            Container container9 = new Container()
+            {
+                Weight = 9
+            };
+            Container container10 = new Container()
+            {
+                Weight = 10
+            };
             //Container container11 = new Container()
             //{
             //    Weight = 11
@@ -75,8 +75,8 @@ namespace ContainerVervoer
             containers.Add(container6);
             containers.Add(container7);
             containers.Add(container8);
-            //containers.Add(container9);
-            //containers.Add(container10);
+            containers.Add(container9);
+            containers.Add(container10);
             //containers.Add(container11);
             //containers.Add(container12);
         }
