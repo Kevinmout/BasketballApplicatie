@@ -1,26 +1,31 @@
 ﻿using Logic.Interface.Dto_s;
 using Logic.Interface.DTOs;
 using Logic.Interface.interfaces;
+using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace DAL
 {
     public class TeamDAL : ITeamDal
     {
-        public string Connection { get; set; }
-        public TeamDAL()
+        private static string GetConnectionString()
         {
-            Connection = "server=Localhost;user id=root;password =root;database=basketbal;allowuservariables=True;persistsecurityinfo=True";
+            var builder = new
+            ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json",
+            optional: true, reloadOnChange: true);
+
+            return builder.Build().GetSection("ConnectionStrings").GetSection("BasketbalDb").Value;
         }
 
         public List<TeamDto> GetData()
         {
             List<TeamDto> data = new List<TeamDto>();
             string query = "SELECT * FROM team";
-            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
+            using MySqlConnection sqlconnection = new MySqlConnection(GetConnectionString());
             using var cmd = new MySqlCommand(query, sqlconnection);
             sqlconnection.Open();
             using (var reader = cmd.ExecuteReader())
@@ -43,7 +48,7 @@ namespace DAL
         {
             List<PlayerDto> data = new List<PlayerDto>();
             string query = "select speler.LastName, speler.FirstName from speler_team INNER JOIN speler ON speler.idPlayer = speler_team.idPlayer INNER JOIN team ON team.idTeam = speler_team.idTeam where speler_team.idTeam= @idteam";
-            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
+            using MySqlConnection sqlconnection = new MySqlConnection(GetConnectionString());
             using var cmd = new MySqlCommand(query, sqlconnection);
             cmd.Parameters.Add("@idteam", MySqlDbType.Int32);
             cmd.Parameters["@idteam"].Value = id;
@@ -63,7 +68,7 @@ namespace DAL
 
         public void Create(TeamDto teamDto)
         {
-            using MySqlConnection mySqlConnection = new MySqlConnection(Connection);
+            using MySqlConnection mySqlConnection = new MySqlConnection(GetConnectionString());
             string Insertdata = "Insert into team Values(NULL, @name, @owner)";
             using MySqlCommand cmd = new MySqlCommand(Insertdata, mySqlConnection);
             cmd.Parameters.AddWithValue("@name", teamDto.Name);
@@ -77,7 +82,7 @@ namespace DAL
         {
             TeamDto team = new TeamDto();
             string query = "select * from team where idTeam = @idteam";
-            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
+            using MySqlConnection sqlconnection = new MySqlConnection(GetConnectionString());
             using var cmd = new MySqlCommand(query, sqlconnection);
             cmd.Parameters.Add("@idteam", MySqlDbType.Int32);
             cmd.Parameters["@idteam"].Value = id;
@@ -97,7 +102,7 @@ namespace DAL
 
         public void Delete(int id)
         {
-            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
+            using MySqlConnection sqlconnection = new MySqlConnection(GetConnectionString());
             string Updatequery = "Delete From team where idTeam = @idteam";
             using MySqlCommand cmd = new MySqlCommand(Updatequery, sqlconnection);
             cmd.Parameters.Add("@idteam", MySqlDbType.Int32);
@@ -109,7 +114,7 @@ namespace DAL
 
         public void Edit(TeamDto teamDto)
         {
-            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
+            using MySqlConnection sqlconnection = new MySqlConnection(GetConnectionString());
             string Updatequery = "Update team set Name = @name where idTeam = @idteam";
             using MySqlCommand cmd = new MySqlCommand(Updatequery, sqlconnection);
             cmd.Parameters.AddWithValue("@name", teamDto.Name);

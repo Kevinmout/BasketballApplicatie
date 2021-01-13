@@ -9,36 +9,43 @@ namespace ContainerVervoerTests
         public void TestMethod1()
         {
             //Arrange
-            Container container1 = new Container
+            ContainerCollection containerCollection = new ContainerCollection();
+            Container container1 = new Container()
             {
-                Weight = 30,
-                IsRefrigerated = false,
-                IsValuable = false
+                Weight = 10
             };
-            Container container2 = new Container
+            Container container2 = new Container()
             {
-                Weight = 10,
-                IsRefrigerated = false,
-                IsValuable = false
+                Weight = 20
+            };
+            Container container3 = new Container()
+            {
+                Weight = 30
+            };
+            Container container4 = new Container()
+            {
+                Weight = 40
+            };
+            Container container5 = new Container()
+            {
+                Weight = 50
+            };
+            Container container6 = new Container()
+            {
+                Weight = 60
             };
 
-            ContainerCollection containerCollection = new ContainerCollection();
-            for (int i = 0; i < 21; i++)
-            {
-                containerCollection.Add(container1);
-            }
-            for (int i = 0; i < 20; i++)
-            {
-                containerCollection.Add(container2);
-            }
-            containerCollection.OrderByWeight();
-            
-            Deck deck = new Deck();
+            containerCollection.Add(container1);
+            containerCollection.Add(container2);
+            containerCollection.Add(container3);
+            containerCollection.Add(container4);
+            containerCollection.Add(container5);
+            containerCollection.Add(container6);
             //Act
-            deck.Add(containerCollection.GetContainers(), 5);
+            
 
             //Assert
-            Assert.AreEqual(2, deck.GetRows());
+            //Assert.AreEqual();
         }
     }
 }

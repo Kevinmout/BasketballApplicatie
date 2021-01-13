@@ -1,9 +1,11 @@
 ﻿using Logic;
 using Logic.Interface.Dto_s;
 using Logic.Interface.DTOs;
+using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace DAL
@@ -11,9 +13,15 @@ namespace DAL
     public class PlayerDAL : IPlayerDal
     {
 
-        public string Connection { get; set; }
 
+        private static string GetConnectionString()
+        {
+            var builder = new
+            ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json",
+            optional: true, reloadOnChange: true);
 
+            return builder.Build().GetSection("ConnectionStrings").GetSection("BasketbalDb").Value;
+        }
 
 
 
@@ -21,7 +29,7 @@ namespace DAL
         {
             List<PlayerDto> data = new List<PlayerDto>();
             string query = "SELECT * FROM speler";
-            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
+            using MySqlConnection sqlconnection = new MySqlConnection(GetConnectionString());
             using var cmd = new MySqlCommand(query, sqlconnection);
             sqlconnection.Open();
             using (var reader = cmd.ExecuteReader())
@@ -45,7 +53,7 @@ namespace DAL
         //CRUD
         public void Create(PlayerDto player)
         {
-            using MySqlConnection mySqlConnection = new MySqlConnection(Connection);
+            using MySqlConnection mySqlConnection = new MySqlConnection(GetConnectionString());
             string Insertdata = "Insert into speler Values(NULL, @lastname, @firstname, @activeteam)";
             using MySqlCommand sqlCommand = new MySqlCommand(Insertdata, mySqlConnection);
             sqlCommand.Parameters.AddWithValue("@lastname", player.LastName);
@@ -60,7 +68,7 @@ namespace DAL
 
         public void CreateInfo(PlayerDto player)
         {
-            using MySqlConnection mySqlConnection = new MySqlConnection(Connection);
+            using MySqlConnection mySqlConnection = new MySqlConnection(GetConnectionString());
             string Insertdata = "Insert into speler_info Values((select max(last_insert_id()) as id from speler), @points, @rebounds, @assists, @blocks, @nationality)";
             using MySqlCommand sqlCommand = new MySqlCommand(Insertdata, mySqlConnection);
             sqlCommand.Parameters.AddWithValue("@points", player.Points);
@@ -83,7 +91,7 @@ namespace DAL
         {
             PlayerDto player = new PlayerDto();
             string query = "select speler_info.*, speler.LastName,speler.FirstName, speler.ActiveTeam From speler join speler_info where speler.idPlayer = @idplayer and speler_info.idPlayer = @idplayer";
-            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
+            using MySqlConnection sqlconnection = new MySqlConnection(GetConnectionString());
             using var cmd = new MySqlCommand(query, sqlconnection);
             cmd.Parameters.Add("@idplayer", MySqlDbType.Int32);
             cmd.Parameters["@idplayer"].Value = id;
@@ -112,7 +120,7 @@ namespace DAL
 
         public void Edit(PlayerDto player)
         {
-            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
+            using MySqlConnection sqlconnection = new MySqlConnection(GetConnectionString());
             string Updatequery = "Update speler set ActiveTeam = @activeteam where idPlayer = @idplayer";
             using MySqlCommand cmd = new MySqlCommand(Updatequery, sqlconnection);
             cmd.Parameters.AddWithValue("@activeteam", player.ActiveTeam);
@@ -133,7 +141,7 @@ namespace DAL
         public void Delete(int id)
         {
 
-            using MySqlConnection sqlconnection = new MySqlConnection(Connection);
+            using MySqlConnection sqlconnection = new MySqlConnection(GetConnectionString());
             string Updatequery = "Delete speler, speler_info From speler join speler_info where speler.idPlayer = @idplayer and speler_info.idPlayer = @idplayer";
             using MySqlCommand cmd = new MySqlCommand(Updatequery, sqlconnection);
             cmd.Parameters.Add("@idplayer", MySqlDbType.Int32);

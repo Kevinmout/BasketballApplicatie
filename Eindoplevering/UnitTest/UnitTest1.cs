@@ -9,8 +9,9 @@ namespace UnitTest
         [TestMethod]
         public void TestMethod1()
         {
+            ContainerCollection container = new ContainerCollection();
+            container.Add();
             SortingManagement sortingManagement = new SortingManagement();
-            //sortingManagement.LessThan120Tons();
             Assert.AreEqual("a","a");
         }
     }

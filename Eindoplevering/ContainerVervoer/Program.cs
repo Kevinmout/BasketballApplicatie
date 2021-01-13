@@ -6,12 +6,21 @@ namespace ContainerVervoer
     {
         static void Main(string[] args)
         {
-            //SortingManagement s = new SortingManagement();
-            //s.AvailableSpace();
-            //foreach (var item in s.SortingArray)
-            //{
-            //    Console.WriteLine(item);
-            //}
+            Ship ship = new Ship();
+            ContainerCollection container = new ContainerCollection();
+            container.Add();
+            ship.AddRow(container.GetContainers());
+            foreach (var item in ship.GetRows())
+            {
+                foreach (var item1 in item.GetStacks())
+                {
+                    foreach (var item2 in item1.GetContainers())
+                    {
+                        Console.WriteLine(item2.Weight);
+                    }
+                }
+            }
+            
         }
     }
 }
