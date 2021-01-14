@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ContainerVervoer
@@ -35,9 +36,16 @@ namespace ContainerVervoer
             this.height = height;
         }
         
+
+
+
+
+
+
         
         public void AddCc()
         {
+
             for (int i = 0; i < ((height - 1) * width) ; i++)
             {
                 Container container1 = new Container()
@@ -45,9 +53,11 @@ namespace ContainerVervoer
                     Weight = 14,
                     IsRefrigerated = true
                 };
-                cc.Add(container1);
+                if (container1.Weight >=4 && container1.Weight <= 30)
+                {
+                    cc.Add(container1);
+                }
             }
-
         }
 
         public void AddCv()
@@ -59,49 +69,20 @@ namespace ContainerVervoer
                     Weight = 17,
                     IsValuable = true
                 };
-                cv.Add(container1);
+                if (container1.Weight >= 4 && container1.Weight <= 30)
+                {
+                    cv.Add(container1);
+                }
             }
         }
 
 
-        public void AddCn()
+        public void AddCn(Container container)
         {
-            Container container1 = new Container()
+            if (container.Weight >= 4 && container.Weight <= 30)
             {
-                Weight = 16
-            };
-            //Container container2 = new Container()
-            //{
-            //    Weight = 16
-            //};
-            cn.Add(container1);
-            cn.Add(container1);
-            cn.Add(container1);
-            cn.Add(container1);
-
-            cn.Add(container1);
-            cn.Add(container1);
-            cn.Add(container1);
-            cn.Add(container1);
-
-            cn.Add(container1);
-            cn.Add(container1);
-            cn.Add(container1);
-            cn.Add(container1);
-
-            cn.Add(container1);
-            cn.Add(container1);
-            cn.Add(container1);
-            cn.Add(container1);
-            //cn.Add(container1);
-            //cn.Add(container1);
-            //cn.Add(container1);
-
-            //cn.Add(container2);
-            //cn.Add(container2);
-            //cn.Add(container2);
-            //cn.Add(container2);
-
+                cn.Add(container);
+            }
         }
     }
 }

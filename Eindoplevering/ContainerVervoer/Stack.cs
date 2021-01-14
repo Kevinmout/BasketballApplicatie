@@ -115,17 +115,6 @@ namespace ContainerVervoer
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
         //Merge the containers lists to one list, Maybe you AddRange
         public void AddContainersToTempStack()
         {
@@ -165,13 +154,6 @@ namespace ContainerVervoer
 
         }
 
-
-        ////Check if height doesn't exceed
-        //public bool CheckHeight()
-        //{
-        //    return (height >= (containersOnStack.Count / width + 1));
-        //}
-
         //Pick the column weight
         public bool Check120Tons()
         {
@@ -197,14 +179,5 @@ namespace ContainerVervoer
         {
             return (weight <= 120);
         }
-
-
-
-        public void ErrorHandler(string error)
-        {
-            Console.WriteLine(error);
-        }
-
-
     }
 }

@@ -128,14 +128,7 @@ namespace ContainerVervoer
                 stack.AddContainersToTempStack();
                 if (stack.TryAddContainersOnStack() == false)
                 {
-                    ErrorHandler("Stack too heavy.");
-                    
-                    foreach(Container container in stack.GetContainers().ToList()) //Place containers too heavy back
-                    {
-                        allContainers.Add(container);
-                        stack.GetContainers().Remove(container);
-                    }
-                    allContainers = allContainers.OrderByDescending(x => x.Weight).ToList();
+                    PutStackOnNextRow(stack);
                     break;
                 }
                 if (dummy == false)
@@ -147,23 +140,74 @@ namespace ContainerVervoer
                     break;
                 }
             }
-            bValuable = true;
+            SwapStacks();
+            return Possible;
+        }
+
+
+        public void PutStackOnNextRow(Stack stack)
+        {
+            ErrorHandler("Stack too heavy.");
+
+            foreach (Container container in stack.GetContainers().ToList()) //Place containers too heavy back
+            {
+                allContainers.Add(container);
+                stack.GetContainers().Remove(container);
+            }
+            allContainers = allContainers.OrderByDescending(x => x.Weight).ToList();
+            
+        }
+
+
+
+
+
+
+
+        public void SwapStacks()
+        {
             if (bValuable == true)
             {
                 List<Stack> tempStacks = new List<Stack>();
                 tempStacks.Add(stacks.First());
-                for (int i = 2; i<stacks.Count; i++)
+                for (int i = 2; i < stacks.Count; i++)
                 {
                     tempStacks.Add(stacks.ElementAt(i));
                 }
                 tempStacks.Add(stacks.ElementAt(1));
                 stacks = tempStacks;
             }
-            return Possible;
         }
 
 
-        //Nineth Step
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //Fifth Step
         public bool CheckContainersLeft()
         {
             return allContainers.Count != 0;

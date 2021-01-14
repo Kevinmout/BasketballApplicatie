@@ -18,14 +18,30 @@ namespace ContainerVervoer
             return rows;
         }
 
-        public Ship()
+        public Ship(int width, int height, int weight)
         {
             rows = new List<Row>();
-            Width = 4;
-            Height = 4;
+            Width = width;
+            Height = height;
+            Weight = weight;
         }
 
 
+        public bool CheckLoadWeight(List<Container> cn, List<Container> cv, List<Container> cc)
+        {
+            double totalWeightCv = cv.Sum(item => item.Weight);
+            double totalWeightCn = cn.Sum(item => item.Weight);
+            double totalWeightCc = cc.Sum(item => item.Weight);
+            double totalWeightC = totalWeightCv + totalWeightCc + totalWeightCn;
+            if (totalWeightC >= 0.5 * Weight)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         public void CheckWidthEvenOrUneven() //done
         {
@@ -101,7 +117,6 @@ namespace ContainerVervoer
             bValuable = true;
             Row row = new Row(listForLastRow,unevenRowWidth,Width,Height, bValuable);
             rows.Add(row);
-            SortRow(row, listForLastRow);
             row.AvailableSpace();
             row.EvenOrUnevenHeight();
             row.AddStacks();
@@ -116,7 +131,6 @@ namespace ContainerVervoer
             {
                 Row row = new Row(containers, unevenRowWidth, Width, Height, bValuable);
                 rows.Add(row);
-                SortRow(row, containers);
                 row.AvailableSpace();
                 row.EvenOrUnevenHeight();
                 row.AddStacks();
@@ -131,45 +145,6 @@ namespace ContainerVervoer
             }
         }
 
-
-
-        public void SortRow(Row row, List<Container> containers)
-        {
-            //row.AvailableSpace();
-            //row.EvenOrUnevenHeight(); // chooses between IndexLevellerEven and IndexLevellerUneven
-            ////row.AddStack(); //Add stack
-            //var stackBuild = row.BuildStack(); // call method BuildStack to build stack. FillTempLists to create leftContainers and rightContainers than we call method Sort to sort the containers
-            //if (stackBuild != null)
-            //{
-            //    //remember stack and add to new row
-            //    FillStackNewRow(stackBuild, containers);
-
-            //}
-            //if (row.CheckContainersLeft() == true)
-            //{
-            //    SortRow(row, containers);
-            //}
-        }
-
-
-
-
-
-
-        //public void PlaceContainersOnShip(Row row, List<Container> containersLeft)
-        //{
-        //    if (row.NextRow == true)
-        //    {
-        //        // make new row
-        //        // add stack
-        //        //CheckContainersLeft(containers);
-
-        //    }
-        //    else
-        //    {
-        //        // Go further with existing stack and row
-        //    }
-        //}
 
 
     }
