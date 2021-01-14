@@ -10,7 +10,7 @@ namespace ContainerVervoer
         private readonly int width;
         private readonly int height;
         private readonly int unevenRowWidth;
-
+        private bool bValuable;
         private int[] sortingArray;
 
         private List<Container> containersInRow;
@@ -34,7 +34,7 @@ namespace ContainerVervoer
 
 
         //constructor
-        public Row(List<Container> allContainers, int unevenRowWidth, int width, int height)
+        public Row(List<Container> allContainers, int unevenRowWidth, int width, int height, bool bValuable)
         {
             this.width = width;
             this.height = height;
@@ -44,6 +44,7 @@ namespace ContainerVervoer
             stacks = new List<Stack>();
             this.allContainers = allContainers;
             containersInRow = new List<Container>();
+            this.bValuable = bValuable;
         }
 
 
@@ -146,6 +147,18 @@ namespace ContainerVervoer
                     break;
                 }
             }
+            bValuable = true;
+            if (bValuable == true)
+            {
+                List<Stack> tempStacks = new List<Stack>();
+                tempStacks.Add(stacks.First());
+                for (int i = 2; i<stacks.Count; i++)
+                {
+                    tempStacks.Add(stacks.ElementAt(i));
+                }
+                tempStacks.Add(stacks.ElementAt(1));
+                stacks = tempStacks;
+            }
             return Possible;
         }
 
@@ -162,6 +175,18 @@ namespace ContainerVervoer
         {
             Console.WriteLine(error);
         }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         ////Fourth Step

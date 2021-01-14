@@ -7,13 +7,17 @@ namespace ContainerVervoer
         static void Main(string[] args)
         {
             Ship ship = new Ship();
-            ContainerCollection container = new ContainerCollection();
-            container.Add();
-            //ship.ListForLastRow(ship.CheckDivisibleByWidth(container.GetContainers()));
-            //ship.AddLastRow((ship.CheckDivisibleByWidth(container.GetContainers())));
-            ship.AddRow(ship.CheckDivisibleByWidth(container.GetContainers()));
+            ContainerCollection container = new ContainerCollection(ship.Width, ship.Height);
+            container.AddCn();
+            container.AddCc();
+            container.AddCv();
+            ship.CheckWidthEvenOrUneven();
+            //ship.AddLastRow(ship.ListForFirstRow(container.GetCc(), container.GetCv()));
+            ship.AddFirstLastRow(ship.ListForLastRow(container.GetCn(),container.GetCv()));
+
+            //ship.AddRow(ship.CheckDivisibleByWidth(container.GetContainers()));
             ////functions in ship
-            //ship.CheckWidthEvenOrUneven();
+            
             //
 
 

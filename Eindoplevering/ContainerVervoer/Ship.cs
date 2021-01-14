@@ -7,6 +7,7 @@ namespace ContainerVervoer
 {
     public class Ship
     {
+        private bool bValuable;
         public int Weight { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
@@ -66,43 +67,54 @@ namespace ContainerVervoer
         }
 
 
+        public List<Container> ListForFirstRow(List<Container> cc, List<Container> cv)
+        {
+            List<Container> containersForFirstRow = new List<Container>();
+            cv = cv.GetRange(0, Width).ToList();
+            containersForFirstRow.AddRange(cc);
+            containersForFirstRow.AddRange(cv);
+            return containersForFirstRow;
+        }
 
 
 
-
-        public List<Container> ListForLastRow(List<Container> containers)
+        public List<Container> ListForLastRow(List<Container> cn, List<Container> cv)
         {
             // make list of containers to fill the last row
             List<Container> containersForLastRow = new List<Container>();
-            List<Container> containerMax = new List<Container>();
-            List<Container> containerValuable = new List<Container>();
-            List<Container> otherContainersNormal = new List<Container>();
-            containerMax = containers.GetRange(0, Width).Where(x => x.IsValuable == false).ToList();
-            containerValuable = containers.GetRange(0,Width).Where(x => x.IsValuable == true).ToList();
-            //int lastIndex = containers.Where(x => x.IsValuable == false).ToList().Count;
-            //otherContainersNormal = containers.GetRange(Width + 1, lastIndex).Where(x => x.IsValuable == false).ToList();
-            //containersForLastRow.AddRange(containerMax);
-            containersForLastRow.AddRange(containerValuable);
-            containersForLastRow.AddRange(otherContainersNormal);
+            List<Container> cnFirst = new List<Container>();
+            List<Container> cnEnd = new List<Container>();
+            cnFirst = cn.GetRange(0, Width ).ToList();
+            cv = cv.GetRange(0, Width).ToList();
+            if (cn.Count > Width)
+            {
+                cnEnd = cn.GetRange(Width, cn.Count - Width).ToList();
+            }
+            containersForLastRow.AddRange(cnFirst);
+            containersForLastRow.AddRange(cv);
+            containersForLastRow.AddRange(cnEnd);
             return containersForLastRow;
         }
 
-        public void AddLastRow(List<Container> listForLastRow)
+        public void AddFirstLastRow(List<Container> listForLastRow)
         {
-            Row row = new Row(listForLastRow,unevenRowWidth,Width,Height);
+            bValuable = true;
+            Row row = new Row(listForLastRow,unevenRowWidth,Width,Height, bValuable);
             rows.Add(row);
             SortRow(row, listForLastRow);
             row.AvailableSpace();
             row.EvenOrUnevenHeight();
             row.AddStacks();
+            row.FillStacks();
         }
 
         public void AddRow(List<Container> containers)
         {
+            bValuable = false;
             containers = containers.OrderByDescending(w => w.Weight).ToList();
             while (containers.Count != 0)
             {
-                Row row = new Row(containers, unevenRowWidth, Width, Height);
+                Row row = new Row(containers, unevenRowWidth, Width, Height, bValuable);
                 rows.Add(row);
                 SortRow(row, containers);
                 row.AvailableSpace();

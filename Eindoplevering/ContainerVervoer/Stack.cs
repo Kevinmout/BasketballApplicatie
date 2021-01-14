@@ -35,6 +35,9 @@ namespace ContainerVervoer
             this.width = width;
         }
 
+        public Stack()
+        {
+        }
 
         public void UpdateContainersOnStack(List<Container> containersAlreadyOnstack)
         {
