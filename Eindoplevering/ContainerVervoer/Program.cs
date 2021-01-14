@@ -9,13 +9,12 @@ namespace ContainerVervoer
             Ship ship = new Ship();
             ContainerCollection container = new ContainerCollection();
             container.Add();
-            ship.CheckWidthEvenOrUneven(container.GetContainers());
-
-
-            //functions in ship
-            ship.CheckWidthEvenOrUneven(container.GetContainers());
-            ship.CheckDivisibleByWidth(container.GetContainers());
-            ship.AddRow(container.GetContainers());
+            //ship.ListForLastRow(ship.CheckDivisibleByWidth(container.GetContainers()));
+            //ship.AddLastRow((ship.CheckDivisibleByWidth(container.GetContainers())));
+            ship.AddRow(ship.CheckDivisibleByWidth(container.GetContainers()));
+            ////functions in ship
+            //ship.CheckWidthEvenOrUneven();
+            //
 
 
 
@@ -33,15 +32,17 @@ namespace ContainerVervoer
 
             foreach (var item in ship.GetRows())
             {
+                Console.WriteLine("Row:");
                 foreach (var item1 in item.GetStacks())
                 {
+                    Console.WriteLine("------");
                     foreach (var item2 in item1.GetContainers())
                     {
                         Console.WriteLine(item2.Weight);
                     }
                 }
             }
-            
+
         }
     }
 }

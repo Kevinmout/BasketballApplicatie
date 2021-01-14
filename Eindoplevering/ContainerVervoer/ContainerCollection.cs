@@ -21,52 +21,37 @@ namespace ContainerVervoer
         {
             Container container1 = new Container()
             {
-                Weight = 1
+                Weight = 11
             };
             Container container2 = new Container()
             {
-                Weight = 2
+                Weight = 12
             };
             Container container3 = new Container()
             {
-                Weight = 3
+                Weight = 13
             };
             Container container4 = new Container()
             {
-                Weight = 4
+                Weight = 14
             };
             Container container5 = new Container()
             {
-                Weight = 5
+                Weight = 15
             };
             Container container6 = new Container()
             {
-                Weight = 6
+                Weight = 16
             };
             Container container7 = new Container()
             {
-                Weight = 7
+                Weight = 17
             };
             Container container8 = new Container()
             {
-                Weight = 8
+                Weight = 18
             };
-            Container container9 = new Container()
-            {
-                Weight = 9
-            };
-            Container container10 = new Container()
-            {
-                Weight = 10
-            };
-            //Container container11 = new Container()
-            //{
-            //    Weight = 11
-            //};
-            //Container container12 = new Container()
-            //{
-            //    Weight = 12
-            //};
+
             containers.Add(container1);
             containers.Add(container2);
             containers.Add(container3);
@@ -75,10 +60,31 @@ namespace ContainerVervoer
             containers.Add(container6);
             containers.Add(container7);
             containers.Add(container8);
-            containers.Add(container9);
-            containers.Add(container10);
-            //containers.Add(container11);
-            //containers.Add(container12);
+            containers.Add(container1);
+            containers.Add(container2);
+            containers.Add(container3);
+            containers.Add(container4);
+            containers.Add(container5);
+            containers.Add(container6);
+            containers.Add(container7);
+            containers.Add(container8);
+            containers.Add(container1);
+            containers.Add(container2);
+            containers.Add(container3);
+            containers.Add(container4);
+            containers.Add(container5);
+            containers.Add(container6);
+            containers.Add(container7);
+            containers.Add(container8);
+            containers.Add(container1);
+            containers.Add(container2);
+            containers.Add(container3);
+            containers.Add(container4);
+            containers.Add(container5);
+            containers.Add(container6);
+            containers.Add(container7);
+            containers.Add(container8);
+
         }
     }
 }

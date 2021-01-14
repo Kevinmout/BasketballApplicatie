@@ -7,259 +7,105 @@ namespace ContainterVervoer
 {
     public class Stack
     {
-        public int Width { get; set; }
-        public Stack(int width)
+        private List<Container> containersOnStack;
+        public List<Container> GetContainers()
         {
-            Width = width;
+            return containersOnStack;
+        }
+        public int XPosition { get; set; }
+        public int Weight { get; set; }
+        public bool IsValuable { get; set; }
+
+        public Stack()
+        {
+            containersOnStack = new List<Container>();
+            IsValuable = false;
         }
 
 
 
-        public void FillTemp(int[] sortingArray, List<Container> existingStack)
+
+
+        public bool SortContainer(Container newContainer)
         {
-            ContainerCollection c = new ContainerCollection();
-            c.GetContainers();
-            for (int i = 0; i < Width / 2; i++)
+            if (newContainer.IsRefrigerated == true)
             {
-                LeftContainers.Add(c.GetContainers().ElementAt(SortingArray[i] - 1));
-                RightContainers.Add(c.GetContainers().ElementAt(SortingArray[Width - 1 - i] - 1));
+                return SortRefrigerated(newContainer);
             }
-            LeftContainers = LeftContainers.OrderBy(x => x.Weight).ToList();
-            RightContainers = RightContainers.OrderBy(x => x.Weight).ToList();
-            CompareWeights();
-        }
-
-
-        public void CompareWeights()
-        {
-            double sumLeft = LeftContainers.Sum(x => x.Weight);
-            double sumRight = RightContainers.Sum(x => x.Weight);
-            bool holds;
-            if (sumLeft > sumRight)
+            else if (newContainer.IsValuable == true)
             {
-                holds = CheckSixtyPercent(sumLeft, sumRight);
+                return SortValuable(newContainer);
             }
             else
             {
-                holds = CheckSixtyPercent(sumRight, sumLeft);
+                return SortNormal(newContainer);
             }
-            CheckWeights(holds);
         }
 
 
-        public bool CheckSixtyPercent(double heaviestLoad, double lightestLoad)
+        public bool SortRefrigerated(Container newContainer)
         {
-            return ((heaviestLoad / (heaviestLoad + lightestLoad)) * 100 <= 60);
-        }
-
-
-        public void CheckWeights(bool holds)
-        {
-            if (holds == true)
+            if (containersOnStack.Count == 0)
             {
-                GetRow();
+                return true;
             }
             else
             {
-                ErrorHandler("Does not hold");
+                return StackContainers(newContainer);
+            }
+
+        }
+        public bool StackContainers(Container newContainer)
+        {
+            var firstContainer = containersOnStack.First();
+            if (newContainer.Weight + (Weight - firstContainer.Weight) <= 120)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool SortValuable(Container newContainer)
+        {
+            if (containersOnStack.Count == 0 && (XPosition == 1 || XPosition == 4))
+            {
+                IsValuable = true;
+                return true;
+            }
+            else if ((XPosition == 1 || XPosition == 4) && containersOnStack.Last().IsValuable == false)
+            {
+                return StackContainers(newContainer);
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        public bool SortNormal(Container newContainer)
+        {
+            if (containersOnStack.Count > 0)
+            {
+                return StackContainers(newContainer);
+            }
+            else
+            {
+                return true;
             }
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //private List<Container> containersOnStack;
-        //public List<Container> GetContainers()
-        //{
-        //    return containersOnStack;
-        //}
-        //public int XPosition { get; set; }
-        //public int Weight { get; set; }
-        //public bool IsValuable { get; set; }
-
-        //public Stack()
-        //{
-        //    containersOnStack = new List<Container>();
-        //    IsValuable = false;
-        //}
-
-
-
-
-
-        //public bool SortContainer(Container newContainer)
-        //{
-        //    if (newContainer.IsRefrigerated == true)
-        //    {
-        //        return SortRefrigerated(newContainer);
-        //    }
-        //    else if (newContainer.IsValuable == true)
-        //    {
-        //        return SortValuable(newContainer);
-        //    }
-        //    else
-        //    {
-        //        return SortNormal(newContainer);
-        //    }
-        //}
-
-
-        //public bool SortRefrigerated(Container newContainer)
-        //{
-        //    if (containersOnStack.Count == 0)
-        //    {
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return StackContainers(newContainer);
-        //    }
-
-        //}
-        //public bool StackContainers(Container newContainer)
-        //{
-        //    var firstContainer = containersOnStack.First();
-        //    if (newContainer.Weight + (Weight - firstContainer.Weight) <= 120)
-        //    {
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
-
-        //public bool SortValuable(Container newContainer)
-        //{ 
-        //    if (containersOnStack.Count == 0 && (XPosition == 1 || XPosition == 4))
-        //    {
-        //        IsValuable = true;
-        //        return true;
-        //    }
-        //    else if ((XPosition == 1 || XPosition == 4) && containersOnStack.Last().IsValuable == false)
-        //    {
-        //        return StackContainers(newContainer);
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-
-        //}
-
-        //public bool SortNormal(Container newContainer)
-        //{
-        //    if (containersOnStack.Count > 0)
-        //    {
-        //        return StackContainers(newContainer);
-        //    }
-        //    else
-        //    {
-        //        return true;
-        //    }
-        //}
-
-
-        //public void Add(Container container)
-        //{ 
-        //    containersOnStack.Add(container);
-        //    Weight += container.Weight;
-        //}
+        public void Add(Container container)
+        {
+            containersOnStack.Add(container);
+            Weight += container.Weight;
+        }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
