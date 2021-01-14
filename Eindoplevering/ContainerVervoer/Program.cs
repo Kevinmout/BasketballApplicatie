@@ -36,6 +36,14 @@ namespace ContainerVervoer
             containerCollection.AddCn(container);
             containerCollection.AddCn(container);
             containerCollection.AddCn(container);
+            containerCollection.AddCn(container);
+            containerCollection.AddCn(container);
+            containerCollection.AddCn(container);
+            containerCollection.AddCn(container);
+            containerCollection.AddCn(container);
+            containerCollection.AddCn(container);
+            containerCollection.AddCn(container);
+            containerCollection.AddCn(container);
             containerCollection.AddCc();
             containerCollection.AddCv();
 
@@ -45,13 +53,13 @@ namespace ContainerVervoer
             //check if the width is even or uneven
             ship.CheckWidthEvenOrUneven();
             //Add the cooled containers in first row
-            ship.AddFirstLastRow(ship.ListForFirstRow(containerCollection.GetCc(), containerCollection.GetCv()));
+            ship.AddFirstLastRow(ship.ListForFirstRow(containerCollection.GetCc(), containerCollection.GetCv()),false);
 
             ship.CheckDivisibleByWidth(containerCollection.GetCn());
             ship.AddRow(containerCollection.GetCn());
 
             //Add the last row.
-            ship.AddFirstLastRow(ship.ListForLastRow(containerCollection.GetCn(),containerCollection.GetCv()));
+            ship.AddFirstLastRow(ship.ListForLastRow(containerCollection.GetCn(),containerCollection.GetCv()), true);
 
 
 

@@ -112,9 +112,11 @@ namespace ContainerVervoer
             return containersForLastRow;
         }
 
-        public void AddFirstLastRow(List<Container> listForLastRow)
+
+
+        public void AddFirstLastRow(List<Container> listForLastRow, bool bCool)
         {
-            bValuable = true;
+            bValuable = bCool;
             Row row = new Row(listForLastRow,unevenRowWidth,Width,Height, bValuable);
             rows.Add(row);
             row.AvailableSpace();
