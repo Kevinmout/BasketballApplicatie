@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 using APPBasketbal.Models;
@@ -15,17 +16,26 @@ namespace BasketbalAPP.Pages
     {
         public IEnumerable<Player> GetPlayers { get; set; }
 
-        public void OnGet()
-        {
-            GetPlayers = DisplayPlayers();
-        }
-
-        public static List<Player> DisplayPlayers()
+        public IActionResult OnGet()
         {
             PlayerCollection playerCollection = new PlayerCollection();
-            playerCollection.GetAllPlayers();
-            List<Player> Listobj = playerCollection.GetPlayers();
-            return Listobj;
+            try
+            {
+                playerCollection.GetAllPlayers();
+            }
+            catch (MySqlException e)
+            {
+                var code = e.ErrorCode;
+                if (code == -2147467259)
+                {
+                    return RedirectToPage("/DatabaseConnectionError");
+                }
+            }
+            finally
+            {
+                GetPlayers = playerCollection.GetPlayers();
+            }
+            return Page();
         }
     }
 }

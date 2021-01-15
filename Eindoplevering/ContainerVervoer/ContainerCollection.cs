@@ -35,44 +35,29 @@ namespace ContainerVervoer
             this.width = width;
             this.height = height;
         }
-        
 
 
 
 
 
 
-        
-        public void AddCc()
+
+
+        public void AddCc(Container container)
         {
-
-            for (int i = 0; i < ((height - 1) * width) ; i++)
+            if (container.Weight >= 4 && container.Weight <= 30)
             {
-                Container container1 = new Container()
-                {
-                    Weight = 14,
-                    IsRefrigerated = true
-                };
-                if (container1.Weight >=4 && container1.Weight <= 30)
-                {
-                    cc.Add(container1);
-                }
+                cc.Add(container);
             }
+
+
         }
 
-        public void AddCv()
+        public void AddCv(Container container)
         {
-            for (int i = 0; i < 2*width; i++)
+            if (container.Weight >= 4 && container.Weight <= 30)
             {
-                Container container1 = new Container()
-                {
-                    Weight = 17,
-                    IsValuable = true
-                };
-                if (container1.Weight >= 4 && container1.Weight <= 30)
-                {
-                    cv.Add(container1);
-                }
+                cv.Add(container);
             }
         }
 
@@ -84,5 +69,12 @@ namespace ContainerVervoer
                 cn.Add(container);
             }
         }
+
+
+        public void ErrorHandler()
+        {
+
+        }
     }
+
 }

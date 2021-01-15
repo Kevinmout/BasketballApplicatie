@@ -6,6 +6,7 @@ using APPBasketbal.Models;
 using Logic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using MySql.Data.MySqlClient;
 
 namespace BasketbalAPP.Pages.CRUDteam
 {
@@ -14,11 +15,30 @@ namespace BasketbalAPP.Pages.CRUDteam
         [BindProperty]
         public IEnumerable<Player> DisplayPlayerinTeam { get; set; }
 
-        public void OnGet(int id)
+        public IActionResult OnGet(int id)
         {
-            TeamCollection teamCollection = new TeamCollection();
-            teamCollection.GetPlayers(id);
-            DisplayPlayerinTeam = teamCollection.GetPlayers();
+            Team team = new Team();
+            try
+            {
+                team.GetPlayers(id);
+            }
+            catch (MySqlException e)
+            {
+                var code = e.ErrorCode;
+                if (code == -2147467259)
+                {
+                    return RedirectToPage("/DatabaseConnectionError");
+                }
+                else
+                {
+                    return RedirectToPage("/Error");
+                }
+            }
+            finally
+            {
+                DisplayPlayerinTeam = team.GetPlayers();
+            }
+            return Page();
         }
     }
 }

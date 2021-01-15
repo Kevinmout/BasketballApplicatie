@@ -24,3 +24,16 @@ C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\Circu
 C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\Circustrein + unit testen\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.dll
 C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\Circustrein + unit testen\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.pdb
 C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\Circustrein + unit testen\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.genruntimeconfig.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\Algoritmiek en unit testen\Circustrein + unit testen\Circustrein\bin\Debug\netcoreapp3.1\Circustrein.exe
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\Algoritmiek en unit testen\Circustrein + unit testen\Circustrein\bin\Debug\netcoreapp3.1\Circustrein.deps.json
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\Algoritmiek en unit testen\Circustrein + unit testen\Circustrein\bin\Debug\netcoreapp3.1\Circustrein.runtimeconfig.json
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\Algoritmiek en unit testen\Circustrein + unit testen\Circustrein\bin\Debug\netcoreapp3.1\Circustrein.runtimeconfig.dev.json
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\Algoritmiek en unit testen\Circustrein + unit testen\Circustrein\bin\Debug\netcoreapp3.1\Circustrein.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\Algoritmiek en unit testen\Circustrein + unit testen\Circustrein\bin\Debug\netcoreapp3.1\Circustrein.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\Algoritmiek en unit testen\Circustrein + unit testen\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.csprojAssemblyReference.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\Algoritmiek en unit testen\Circustrein + unit testen\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.AssemblyInfoInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\Algoritmiek en unit testen\Circustrein + unit testen\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.AssemblyInfo.cs
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\Algoritmiek en unit testen\Circustrein + unit testen\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\Algoritmiek en unit testen\Circustrein + unit testen\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\Algoritmiek en unit testen\Circustrein + unit testen\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 5\Algoritmiek en unit testen\Circustrein + unit testen\Circustrein\obj\Debug\netcoreapp3.1\Circustrein.genruntimeconfig.cache

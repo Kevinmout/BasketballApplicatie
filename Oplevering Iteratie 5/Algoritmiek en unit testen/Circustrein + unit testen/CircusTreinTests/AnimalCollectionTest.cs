@@ -1,5 +1,6 @@
 using Circustrein;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 
 namespace CircusTreinTests
 {
@@ -20,8 +21,12 @@ namespace CircusTreinTests
             
             //Act
             animalCollection.AddAnimal(animal);
-            
+
             //Assert
+            foreach(var item in animalCollection.GetAnimals())
+            {
+                Assert.AreEqual(animal, item);
+            }
             Assert.AreEqual(1, animalCollection.GetAnimals().Count);
         }
     }

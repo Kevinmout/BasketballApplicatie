@@ -48,12 +48,8 @@ namespace ContainerVervoer
         }
 
 
-
-
-
-
         //First Step
-        public void AvailableSpace() //done
+        public void AvailableSpace()
         {
             for (int i = 0; i < width; i++)
             {
@@ -159,11 +155,6 @@ namespace ContainerVervoer
         }
 
 
-
-
-
-
-
         public void SwapStacks()
         {
             if (bValuable == true)
@@ -174,36 +165,11 @@ namespace ContainerVervoer
                 {
                     tempStacks.Add(stacks.ElementAt(i));
                 }
+                stacks.ElementAt(1).BValuable = true;
                 tempStacks.Add(stacks.ElementAt(1));
                 stacks = tempStacks;
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -219,84 +185,6 @@ namespace ContainerVervoer
         {
             Console.WriteLine(error);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        ////Fourth Step
-        //public Stack BuildStack()
-        //{
-        //    FillTempLists();
-        //    if (CheckWeightBalance() == false)
-        //    {
-        //        ErrorHandler("No Combination Possible");
-        //    }
-        //    MergeTempLists();
-        //    if (TryAddStackToExistingStack() == false)
-        //    {
-        //        ErrorHandler("Stack too high or too heavy.");
-        //        // Add to next Row
-        //    }
-        //    else
-        //    {
-        //        // Add to this Row
-        //        stacks.Add(stack);
-        //        stack = null;
-        //    }
-        //    return stack;
-        //}
-
-
-        ////Fifth Step
-        //public void FillTempLists()
-        //{
-        //    stack.FillTemp(sortingArray, allContainers);
-        //    stack.Sort();
-        //}
-
-        ////Sixth Step
-        //public bool CheckWeightBalance()
-        //{
-        //    return stack.CompareWeights();
-        //}
-
-        ////Seventh Step
-        //public void MergeTempLists()
-        //{
-        //    stack.AddContainersToTempStack();
-        //}
-
-        ////Eighth Step
-        //public bool TryAddStackToExistingStack()
-        //{
-        //    return stack.TryAddContainersOnStack();
-        //}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }

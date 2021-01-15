@@ -11,25 +11,23 @@ namespace Logic
 {
     public class TeamCollection
     {
-        List<Player> players;
-        public List<Player> GetPlayers()
-        {
-            return players;
-        }
+
         private List<Team> teams;
         public List<Team> GetTeams()
         {
             return teams;
         }
 
+        private readonly ITeamDal dal;
+
         public TeamCollection()
         {
             teams = new List<Team>();
-            players = new List<Player>();
+            dal = PlayerFactory.GetTeamDal();
+
         }
         public void GetAllTeams()
         {
-            ITeamDal dal = PlayerFactory.GetTeamDal();
             foreach (var a in dal.GetData())
             {
                 teams.Add(new Team()
@@ -41,26 +39,13 @@ namespace Logic
             }
         }
 
-        public void GetPlayers(int id)
-        {
-            ITeamDal dal = PlayerFactory.GetTeamDal();
-            foreach (var a in dal.GetById(id))
-            {
-                players.Add(new Player()
-                {
-                    LastName = a.LastName,
-                    FirstName = a.FirstName
-                });
-            }
 
-        }
 
 
         //CRUD
         public void CreateTeam(Team team)
         {
             teams.Add(team);
-            ITeamDal dal = PlayerFactory.GetTeamDal();
             dal.Create(new TeamDto
             {
                 Name = team.Name,
@@ -70,7 +55,6 @@ namespace Logic
 
         public Team ReadTeam(int id)
         {
-            ITeamDal dal = PlayerFactory.GetTeamDal();
             TeamDto teamDto = dal.GetTeamById(id);
             return new Team()
             {
@@ -82,7 +66,6 @@ namespace Logic
 
         public void UpdateTeam(Team team, int id)
         {
-            ITeamDal dal = PlayerFactory.GetTeamDal();
             dal.Edit(new TeamDto
             {
                 IdTeam = id,
@@ -93,7 +76,6 @@ namespace Logic
         public void DeleteTeam(Team team)
         {
             teams.Remove(team);
-            ITeamDal dal = PlayerFactory.GetTeamDal();
             dal.Delete(team.IdTeam);
         }
 

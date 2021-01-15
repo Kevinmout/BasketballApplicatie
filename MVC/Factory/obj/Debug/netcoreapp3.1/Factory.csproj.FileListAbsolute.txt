@@ -1,0 +1,28 @@
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Factory\bin\Debug\netcoreapp3.1\Factory.deps.json
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Factory\bin\Debug\netcoreapp3.1\Factory.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Factory\bin\Debug\netcoreapp3.1\Factory.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Factory\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Factory\bin\Debug\netcoreapp3.1\Logic.Interface.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Factory\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Factory\bin\Debug\netcoreapp3.1\Logic.Interface.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Factory\obj\Debug\netcoreapp3.1\Factory.csprojAssemblyReference.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Factory\obj\Debug\netcoreapp3.1\Factory.AssemblyInfoInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Factory\obj\Debug\netcoreapp3.1\Factory.AssemblyInfo.cs
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Factory\obj\Debug\netcoreapp3.1\Factory.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Factory\obj\Debug\netcoreapp3.1\Factory.csproj.CopyComplete
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Factory\obj\Debug\netcoreapp3.1\Factory.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\Oplevering Iteratie 4\BasketbalAppInversion\Factory\obj\Debug\netcoreapp3.1\Factory.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\MVC\Factory\bin\Debug\netcoreapp3.1\Factory.deps.json
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\MVC\Factory\bin\Debug\netcoreapp3.1\Factory.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\MVC\Factory\bin\Debug\netcoreapp3.1\Factory.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\MVC\Factory\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\MVC\Factory\bin\Debug\netcoreapp3.1\Logic.Interface.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\MVC\Factory\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\MVC\Factory\bin\Debug\netcoreapp3.1\Logic.Interface.pdb
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\MVC\Factory\obj\Debug\netcoreapp3.1\Factory.csprojAssemblyReference.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\MVC\Factory\obj\Debug\netcoreapp3.1\Factory.AssemblyInfoInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\MVC\Factory\obj\Debug\netcoreapp3.1\Factory.AssemblyInfo.cs
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\MVC\Factory\obj\Debug\netcoreapp3.1\Factory.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\MVC\Factory\obj\Debug\netcoreapp3.1\Factory.csproj.CopyComplete
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\MVC\Factory\obj\Debug\netcoreapp3.1\Factory.dll
+C:\Users\Kevin\Documents\GitHub\BasketballApplicatie\MVC\Factory\obj\Debug\netcoreapp3.1\Factory.pdb

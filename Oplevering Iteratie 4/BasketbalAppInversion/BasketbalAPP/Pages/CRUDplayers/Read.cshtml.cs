@@ -15,10 +15,26 @@ namespace BasketbalAPP.Pages
         [BindProperty]
         public PlayerInfo DisplayPlayer { get; set; }
 
-        public void OnGet(int id)
+        public IActionResult OnGet(int id)
         {
             PlayerCollection playerCollection = new PlayerCollection();
-            DisplayPlayer = playerCollection.ReadInfo(id);
+            try
+            {
+                DisplayPlayer = playerCollection.ReadInfo(id);
+            }
+            catch (MySqlException e)
+            {
+                var code = e.ErrorCode;
+                if (code == -2147467259)
+                {
+                    return RedirectToPage("/DatabaseConnectionError");
+                }
+                else
+                {
+                    return RedirectToPage("/Error");
+                }
+            }
+            return Page();
         }
 
     }

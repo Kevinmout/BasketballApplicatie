@@ -21,9 +21,11 @@ namespace ContainerVervoer
         private readonly int unevenRowWidth;
 
         Container maxContainer;
-        private List<Container> leftSide { get; set; }
-        private List<Container> rightSide { get; set; }
 
+        private List<Container> leftSide { get; set; }
+
+        private List<Container> rightSide { get; set; }
+        public bool BValuable { get; set; }
 
         public Stack(int unevenRowWidth, int width)
         {
@@ -118,18 +120,17 @@ namespace ContainerVervoer
         //Merge the containers lists to one list, Maybe you AddRange
         public void AddContainersToTempStack()
         {
-            foreach (var item in leftSide)
+            int indexV = leftSide.FindIndex(x => x.IsValuable == true);
+            if (indexV >= 0)
             {
-                containersOnStack.Add(item);
+                BValuable = true;
             }
+            containersOnStack.AddRange(leftSide);
             if (unevenRowWidth == 1)
             {
                 containersOnStack.Add(maxContainer);
             }
-            foreach (var item in rightSide)
-            {
-                containersOnStack.Add(item);
-            }
+            containersOnStack.AddRange(rightSide);
         }
 
         public List<Container> GetContainersOnStack()

@@ -98,15 +98,18 @@ namespace ContainerVervoer
         {
             // make list of containers to fill the last row
             List<Container> containersForLastRow = new List<Container>();
-            List<Container> cnFirst = new List<Container>();
+            if (cn.Count > 0)
+            {
+                List<Container> cnFirst = new List<Container>();
+                cnFirst = cn.GetRange(0, Width).ToList();
+                containersForLastRow.AddRange(cnFirst);
+            }
             List<Container> cnEnd = new List<Container>();
-            cnFirst = cn.GetRange(0, Width ).ToList();
             cv = cv.GetRange(0, Width).ToList();
             if (cn.Count > Width)
             {
                 cnEnd = cn.GetRange(Width, cn.Count - Width).ToList();
             }
-            containersForLastRow.AddRange(cnFirst);
             containersForLastRow.AddRange(cv);
             containersForLastRow.AddRange(cnEnd);
             return containersForLastRow;
@@ -114,7 +117,7 @@ namespace ContainerVervoer
 
 
 
-        public void AddFirstLastRow(List<Container> listForLastRow, bool bCool)
+        public List<Container> AddFirstLastRow(List<Container> listForLastRow, bool bCool)
         {
             bValuable = bCool;
             Row row = new Row(listForLastRow,unevenRowWidth,Width,Height, bValuable);
@@ -123,9 +126,10 @@ namespace ContainerVervoer
             row.EvenOrUnevenHeight();
             row.AddStacks();
             row.FillStacks();
+            return listForLastRow;
         }
 
-        public void AddRow(List<Container> containers)
+        public void AddRowBetweenFirstAndLast(List<Container> containers)
         {
             bValuable = false;
             containers = containers.OrderByDescending(w => w.Weight).ToList();

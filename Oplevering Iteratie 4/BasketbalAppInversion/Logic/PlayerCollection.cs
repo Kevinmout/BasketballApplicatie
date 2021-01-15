@@ -59,7 +59,6 @@ namespace Logic
 
 
 
-        //CRUD
 
         //Create
         public void CreatePlayer(Player player)

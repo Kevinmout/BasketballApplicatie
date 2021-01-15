@@ -1,0 +1,56 @@
+﻿@using Logic;
+@model ViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+<h2>@ViewBag.Message</h2>
+
+<div class="text-center">
+    <h1>CRUD without Entity Framework</h1>
+    <a asp-page="CRUDplayers/Create">Create New</a>
+    <hr />
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Active Team</th>
+        </tr>
+        @foreach (var player in Model.Players)
+        {
+            <tr>
+                <td>@player.IdPlayer</td>
+                <td>@player.FirstName</td>
+                <td>@player.LastName</td>
+                <td>@player.ActiveTeam</td>
+                <td>
+                    <a asp-page="CRUDplayers/Update" asp-route-Id="@player.IdPlayer">Edit</a>
+                    <a asp-page="CRUDplayers/Read" asp-route-Id="@player.IdPlayer">Read</a>
+                    <a asp-page="CRUDplayers/Delete" asp-route-Id="@player.IdPlayer">Delete</a>
+                    <a asp-page="CRUDinTeam/AddToTeam" asp-route-Id="@player.IdPlayer">Add</a>
+                </td>
+            </tr>
+        }
+    </table>
+
+
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Owner</th>
+        </tr>
+        @foreach (var team in Model.Teams)
+        {
+            <tr>
+                <td>@team.Name</td>
+                <td>@team.Owner</td>
+                <td>
+                    <a asp-page="CRUDplayers/Update" asp-route-Id="@team.IdTeam">Edit</a>
+                    <a asp-page="CRUDplayers/Read" asp-route-Id="@team.IdTeam">Read</a>
+                    <a asp-page="CRUDplayers/Delete" asp-route-Id="@team.IdTeam">Delete</a>
+                    <a asp-page="CRUDinTeam/AddToTeam" asp-route-Id="@team.IdTeam">Add</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
