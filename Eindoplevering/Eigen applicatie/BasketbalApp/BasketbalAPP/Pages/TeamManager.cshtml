@@ -1,0 +1,44 @@
+﻿@page
+@using Logic; 
+@model BasketbalAPP.Pages.PlayersToAdd.ControllerModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="text-center">
+    <h1>Players and Teams</h1>
+    <hr />
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Team Name</th>
+            <th>Owner</th>
+        </tr>
+        @foreach (var team in Model.Teams)
+        {
+            <tr>
+                <td>@team.IdTeam</td>
+                <td>@team.Name</td>
+                <td>@team.Owner</td>
+
+            </tr>
+        }
+    </table>
+
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Active Team</th>
+        </tr>
+        @foreach (var player in Model.Players)
+        {
+            <tr>
+                <td>@player.IdPlayer</td>
+                <td>@player.FirstName</td>
+                <td>@player.LastName</td>
+                <td>@player.ActiveTeam</td>
+            </tr>
+        }
+    </table>
+</div>

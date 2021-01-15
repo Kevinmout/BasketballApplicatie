@@ -1,0 +1,32 @@
+﻿@page
+@model BasketbalAPP.Pages.TeamModel
+@{
+    ViewData["Title"] = "Team page";
+}
+
+<div class="text-center">
+    <h1>Teams</h1>
+    <a asp-page="CRUDteam/Create">Create New</a>
+    <hr />
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Team Name</th>
+            <th>Owner</th>
+        </tr>
+        @foreach (var team in Model.GetTeams)
+        {
+            <tr>
+                <td>@team.IdTeam</td>
+                <td>@team.Name</td>
+                <td>@team.Owner</td>
+                <td>
+                    <a asp-page="CRUDteam/Update" asp-route-Id="@team.IdTeam">Edit</a>
+                    <a asp-page="CRUDteam/Read" asp-route-Id="@team.IdTeam">Read</a>
+                    <a asp-page="CRUDteam/Delete" asp-route-Id="@team.IdTeam">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+
+</div>
