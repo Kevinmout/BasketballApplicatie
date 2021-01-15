@@ -7,6 +7,8 @@ De circustrein heb ik ge-unit test.
 Containervervoer heb ik ge-unit test.
 De circustrein voldoet aan alle eisen.
 Containervervoer voldoet aan alle eisen.
+Voor de containervervoer opdracht heb ik een flowchart gemaakt
+met toelichting.
 
 ---Documentatie
 Hier staan alle documenten.
